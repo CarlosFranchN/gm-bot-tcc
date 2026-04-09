@@ -1,14 +1,6 @@
 {
-    "resumo_geral": "**Resumo Executivo da Aventura:**\n\nPerdido no deserto de Anauroch, o aventureiro desceu para uma câmara inferior em uma estrutura de pedra com o brasão de 'Olho e Coroa'. A câmara contém restos fragmentados de duas estátuas de guerreiros destruídas violentamente, dez candelabros de ouro com tochas apagadas e um grande baú de madeira fechado. Um fraco assobio de vento sugere uma passagem oculta além do baú. A sede é um perigo iminente, e a violência das estátuas indica que o que protege a água é perigoso. O jogador está na câmara inferior, cauteloso. Itens coletados/perdidos: Cantil perdido. NPCs encontrados/derrotados: Nenhum.",
+    "resumo_geral": "**Resumo Executivo da Aventura:**\n\nPerdido no deserto de Anauroch, o aventureiro desceu para uma câmara inferior em uma estrutura de pedra com o brasão de 'Olho e Coroa'. A câmara contém restos fragmentados de duas estátuas de guerreiros destruídas violentamente, dez candelabros de ouro com tochas apagadas e um grande baú de madeira fechado. Um fraco assobio de vento sugere uma passagem oculta além do baú. O aventureiro descobriu uma fresta estreita na parede de onde emana um ar fresco, indicando um local mais profundo na estrutura. A sede é um perigo iminente. O jogador está na câmara inferior, perto da fresta na parede. Itens coletados/perdidos: Cantil perdido. NPCs encontrados/derrotados: Nenhum.",
     "historico_recente": [
-        {
-            "role": "user",
-            "content": "Investigar a origem do assobio do vento na parede além do baú."
-        },
-        {
-            "role": "assistant",
-            "content": "Com a garganta arranhando e os músculos gritando por descanso, você se move com cautela, os olhos fixos na parede além do baú de madeira. O assobio do vento, antes sutil, intensifica-se à medida que você se aproxima, transformando-se em um sussurro constante que parece carregar um eco de algo distante. Seus dedos roçam a pedra fria e, então, você a encontra: uma fresta estreita e irregular entre os blocos de pedra, quase imperceptível à primeira vista, mas que serve como a fonte do som. É pequena demais para passar, talvez até para espiar adequadamente, mas ao aproximar o rosto, você sente um fluxo de ar inconfundível, mais fresco do que o ar estagnado da câmara. Há um sopro de vida ou movimento vindo de algum lugar mais profundo na estrutura, um lembrete gelado de que esta cripta não está completamente isolada. A fresta parece apenas uma rachadura, mas a brisa que dela emana é intrigante, um convite silencioso para descobrir o que jaz além. A promessa de água, no entanto, não está ali. A desidratação e a exaustão são uma dor constante, fazendo cada decisão pesar como chumbo.\nOpções: Examinar o baú de madeira com mais detalhe, procurando por fechaduras, armadilhas ou inscrições., Procurar por um mecanismo oculto na parede ao redor da fresta, ou uma forma de ampliá-la para espiar melhor., Tentar pegar uma das tochas apagadas dos candelabros de ouro para ter uma fonte de luz."
-        },
         {
             "role": "user",
             "content": "Tentar pegar uma das tochas apagadas dos candelabros de ouro para ter uma fonte de luz."
@@ -16,6 +8,14 @@
         {
             "role": "assistant",
             "content": "Com as mãos tremendo ligeiramente pela exaustão, você estende a mão para um dos candelabros de ouro puro. O metal é frio ao toque, ricamente detalhado, mas você se foca na tocha em si. O material é um pano grosso enrolado firmemente em um bastão de madeira, impregnado com alguma substância seca e resinosa. Com um puxão suave, a tocha se solta facilmente do seu encaixe, liberando uma pequena nuvem de poeira ancestral. Ela é mais pesada do que você esperava, um objeto sólido e funcional, mas completamente apagada. Não há brasa, nem faísca, apenas a promessa de luz se você puder encontrar uma forma de acendê-la. O cheiro de resina e madeira envelhecida paira no ar. Segurando a tocha, você sente um pequeno pingo de esperança, uma ferramenta potencial para dissipar as sombras que parecem crescer à medida que a desidratação aperta seu corpo, fazendo sua visão piscar nas bordas. O assobio do vento na parede além do baú continua, um lembrete constante de que há mais a ser descoberto.\nOpções: Examinar o baú de madeira com mais detalhe, procurando por fechaduras, armadilhas ou inscrições., Inspecionar a parede além do baú com mais atenção, procurando por qualquer indício de uma passagem secreta ou mecanismo., Procurar por uma forma de acender a tocha que você pegou."
+        },
+        {
+            "role": "user",
+            "content": "Esperar"
+        },
+        {
+            "role": "assistant",
+            "content": "A decisão de esperar, na quietude sufocante da câmara, cobra um preço imediato. O ar parado parece sugar a umidade restante de seus pulmões, e sua garganta se fecha em um nó doloroso. A tocha em sua mão, antes um símbolo de esperança, agora é apenas um peso inerte, e a resina seca cheira a cinzas de promessas não cumpridas. As bordas da sua visão piscam com pontos negros, e o assobio do vento na fresta da parede, antes intrigante, agora soa como um sussurro zombeteiro, ecoando a sua própria fraqueza. Cada batida do seu coração ressoa com o grito de seu corpo por água e descanso, mas nenhum deles se manifesta. A dor de cabeça lateja, e a confusão começa a se instalar, tornando cada pensamento um esforço monumental. O tempo parece se esticar e se contrair, e a única certeza é que a sede está se tornando uma tortura excruciante.\nOpções: Focar em encontrar um método para acender a tocha, talvez procurando por algo inflamável na câmara., Reexaminar o grande baú de madeira, procurando por detalhes antes ignorados, como um mecanismo de abertura ou brasões., Investigar a parede ao redor da fresta, buscando por alavancas, botões ou qualquer indício de uma passagem secreta."
         }
     ]
 }
