@@ -1,0 +1,5 @@
+[{
+  "pergunta": "Como faço para consertar o portal interdimensional para Waterdeep que está na sala 4?",
+  "resposta_esperada": "Não existem informações no PDF sobre portais interdimensionais ou a cidade de Waterdeep na sala 4 ou em qualquer lugar do santuário.",
+  "tipo": "robustez_negativa"
+}]

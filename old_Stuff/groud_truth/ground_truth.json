@@ -1,0 +1,52 @@
+[
+  {
+    "pergunta": "O que são as Scimitar Spires e qual sua importância estratégica para quem está perdido?",
+    "resposta_esperada": "São três picos montanhosos que servem como ponto de referência geográfico. Sua importância é indicar a proximidade com a Black Road, onde o jogador pode encontrar caravanas ou nômades Bedine para obter ajuda e água.",
+    "tipo": "lore_geografico"
+  },
+  {
+    "pergunta": "O que o símbolo 'Eye and Crown' representa e qual a natureza do seu antigo dono, Isset Thul Kaas?",
+    "resposta_esperada": "Representa o deus-rei Isset Thul Kaas. Ele era um governante antigo conhecido por sua extrema crueldade, poder tirânico e por proteger seus domínios com armadilhas mortais.",
+    "tipo": "lore_historia"
+  },
+  {
+    "pergunta": "Qual é a função original do santuário e como ele operava para os viajantes no passado?",
+    "resposta_esperada": "O santuário servia como um posto de troca divina: viajantes deixavam oferendas no baú e, em troca, o sistema mecânico do templo liberava um fluxo de água potável.",
+    "tipo": "interpretativo_funcional"
+  },
+  {
+    "pergunta": "Por que o poço do santuário secou e quem é o responsável direto por isso?",
+    "resposta_esperada": "O poço secou porque o item mágico 'Decanter of Endless Water' foi removido do seu pedestal. O responsável foi um Dragonborn chamado Hiskan, que tentou roubá-lo e morreu na queda.",
+    "tipo": "causalidade"
+  },
+  {
+    "pergunta": "Qual é a trágica ironia da existência de Ankohep como guardião do templo?",
+    "resposta_esperada": "Ankohep é um servo condenado eternamente. A ironia reside no fato de ele ser forçado a proteger um templo que não cumpre mais sua função, punido por uma traição antiga ao deus-rei.",
+    "tipo": "interpretativo_personagem"
+  },
+  {
+    "pergunta": "Como o puzzle das letras no corredor reflete a personalidade do deus-rei Isset Thul Kaas?",
+    "resposta_esperada": "O puzzle exige que o visitante pise nas letras que formam o nome do rei ('Isset Thul Kaas'), refletindo seu egocentrismo e a exigência de veneração absoluta até para permitir a passagem.",
+    "tipo": "interpretativo_mecanica"
+  },
+  {
+    "pergunta": "De que forma o ambiente da câmara de Ankohep (sarcófago, órgãos, bandagens) reforça o tema de mumificação e servidão eterna?",
+    "resposta_esperada": "A presença de frascos com órgãos e o livro de rituais indica que o local não é apenas um túmulo, mas um laboratório de preservação para manter Ankohep em um estado de servidão imortal.",
+    "tipo": "lore_ambiental"
+  },
+  {
+    "pergunta": "O que a inscrição 'Ninguém pode sair até que o guardião descanse' implica para o destino do jogador?",
+    "resposta_esperada": "Implica que a saída do templo é selada magicamente ou mecanicamente assim que Ankohep desperta, forçando um confronto direto ou a resolução do conflito para que a liberdade seja recuperada.",
+    "tipo": "causalidade_narrativa"
+  },
+  {
+    "pergunta": "Como o amuleto de Ankohep funciona como uma 'armadilha narrativa' para jogadores gananciosos?",
+    "resposta_esperada": "O amuleto é um tesouro valioso que atrai a ganância, mas possuí-lo pode transmitir a 'Mummy Rot', transformando a recompensa em uma maldição que drena a vida do jogador.",
+    "tipo": "interpretativo_regra"
+  },
+  {
+    "pergunta": "Se um jogador decidir destruir o coração de Ankohep em vez de lutar, o que isso revela sobre a vulnerabilidade do guardião?",
+    "resposta_esperada": "Revela que a imortalidade de Ankohep é artificial e depende de seus órgãos preservados; destruir o coração é atacar a fonte de sua energia vital, ignorando sua resistência física.",
+    "tipo": "causalidade_mecanica"
+  }
+]

@@ -1,0 +1,102 @@
+[
+    {
+        "pergunta": "O que são as Scimitar Spires e qual sua importância estratégica para quem está perdido?",
+        "mestre": [
+            {
+                "type": "text",
+                "text": "Com base no texto fornecido, aqui estão as informações sobre as **Scimitar Spires**:\n\n**O que são:**\nAs Scimitar Spires são três picos (montanhas ou formações rochosas) localizados à distância no deserto.\n\n**Importância estratégica:**\nPara um grupo perdido, elas funcionam como um ponto de referência vital por dois motivos principais:\n\n1.  **Localização da Rota:** Se as formações forem de fato as Scimitar Spires, isso indica que a **Black Road** (Estrada Negra) passa nas proximidades.\n2.  **Possibilidade de Contato:** A proximidade com a estrada aumenta drasticamente as chances de o grupo encontrar viajantes, especificamente caravanas de mercadores **Zhentarim** ou grupos de **Bedine** (nômades locais), que são descritos como generosos e hospitaleiros, oferecendo uma oportunidade de sobrevivência, suprimentos ou orientação.",
+                "extras": {
+                    "signature": "EjQKMgG+Pvb7fe+U609jD40l1iTD9/aHZD2Rp8bf3bMNnAjRe8kyKxP6O6gExEDb6fqiq+HM"
+                }
+            }
+        ],
+        "gabarito": "São três picos montanhosos que servem como ponto de referência geográfico. Sua importância é indicar a proximidade com a Black Road, onde o jogador pode encontrar caravanas ou nômades Bedine para obter ajuda e água.",
+        "nota": 5.0,
+        "detalhes": {
+            "fidelidade": 5.0,
+            "recuperacao": 5.0,
+            "relevancia": 5.0
+        },
+        "justificativa": "A resposta foi completa, precisa e cobriu todos os pontos do gabarito, adicionando detalhes contextuais pertinentes."
+    },
+    {
+        "pergunta": "O que o símbolo 'Eye and Crown' representa e qual a natureza do seu antigo dono, Isset Thul Kaas?",
+        "mestre": [
+            {
+                "type": "text",
+                "text": "Com base no texto fornecido, aqui estão as informações:\n\n*   **O que o símbolo representa:** O \"Eye and Crown\" (Olho e Coroa) é o símbolo de um deus-rei chamado **Isset Thul Kaas**, que governou a região há muito tempo. O símbolo também identifica o santuário como um local de parada onde seus seguidores costumavam descansar e fazer oferendas.\n*   **A natureza de Isset Thul Kaas:** Ele era conhecido por sua **crueldade** e por ser extremamente zeloso com suas propriedades, protegendo-as com **armadilhas perigosas**. Além disso, ele é descrito como um deus-rei a quem os viajantes do deserto ofereciam tesouros em troca de água fresca.",
+                "extras": {
+                    "signature": "EjQKMgG+Pvb7Eb1lQE0r6QCdCM0iX2t+sxSHm+uxqzDK97wUT5loPGkF5HOUhxaK3QBpEG1V"
+                }
+            }
+        ],
+        "gabarito": "Representa o deus-rei Isset Thul Kaas. Ele era um governante antigo conhecido por sua extrema crueldade, poder tirânico e por proteger seus domínios com armadilhas mortais.",
+        "nota": 5.0,
+        "detalhes": {
+            "fidelidade": 5.0,
+            "recuperacao": 5.0,
+            "relevancia": 5.0
+        },
+        "justificativa": "A resposta abordou todos os pontos do gabarito com precisão, fornecendo detalhes adicionais coerentes sobre a natureza do personagem."
+    },
+    {
+        "pergunta": "Qual é a função original do santuário e como ele operava para os viajantes no passado?",
+        "mestre": [
+            {
+                "type": "text",
+                "text": "Com base no contexto fornecido, a função original do santuário e seu modo de operação eram os seguintes:\n\n*   **Função:** O santuário servia como um ponto de parada (waypoint) para os seguidores do antigo deus-rei Isset Thul Kaas, permitindo que eles descansassem em suas jornadas pela região.\n*   **Operação:** O santuário funcionava através de um sistema de troca: os viajantes do deserto faziam oferendas de seus bens e tesouros ao deus-rei e, em troca, recebiam o acesso a água potável fresca. O local era dedicado à adoração de Isset Thul Kaas, um governante conhecido por sua crueldade e por proteger suas propriedades com armadilhas perigosas.",
+                "extras": {
+                    "signature": "EjQKMgG+Pvb7E/Yhb54gurhPKdEgT5QWOSyXL+ocjxSzdvRU1z9if9Y0Qf4qJ6Gv+iACbMKm"
+                }
+            }
+        ],
+        "gabarito": "O santuário servia como um posto de troca divina: viajantes deixavam oferendas no baú e, em troca, o sistema mecânico do templo liberava um fluxo de água potável.",
+        "nota": 5.0,
+        "detalhes": {
+            "fidelidade": 5.0,
+            "recuperacao": 5.0,
+            "relevancia": 5.0
+        },
+        "justificativa": "A resposta reflete perfeitamente o gabarito, detalhando o sistema de troca de oferendas por água, e adiciona contexto histórico coerente."
+    },
+    {
+        "pergunta": "Por que o poço do santuário secou e quem é o responsável direto por isso?",
+        "mestre": [
+            {
+                "type": "text",
+                "text": "Com base no texto fornecido, aqui estão as respostas para a sua pergunta:\n\n*   **Por que o poço secou?** O poço secou porque o *Decanter of Endless Water* (Decantador de Água Infinita), que era a fonte da água, foi removido de seu pedestal original e caiu no fundo do poço, onde permaneceu fora do alcance de Ankohep. Com o tempo, a água que restava foi drenada por outros visitantes e pelo sistema de roldanas.\n*   **Quem é o responsável direto?** O responsável direto é um **Dragonborn chamado Hiskan**. Ele roubou o *Decanter* do pedestal, o que despertou Ankohep (a múmia). Durante o confronto, Hiskan foi atingido por um golpe de Ankohep e caiu no poço, morrendo lá embaixo com o item em sua posse.",
+                "extras": {
+                    "signature": "EjQKMgG+Pvb7NaBU2Qig08lYmIKQfQoCINh7L4fD9rqO+I2s2a8Uh9xp9XVimJeqdaoCRoz7"
+                }
+            }
+        ],
+        "gabarito": "O poço secou porque o item mágico 'Decanter of Endless Water' foi removido do seu pedestal. O responsável foi um Dragonborn chamado Hiskan, que tentou roubá-lo e morreu na queda.",
+        "nota": 5.0,
+        "detalhes": {
+            "fidelidade": 5.0,
+            "recuperacao": 5.0,
+            "relevancia": 5.0
+        },
+        "justificativa": "A resposta foi completa, precisa e incluiu todos os elementos do gabarito, fornecendo contexto adicional coerente."
+    },
+    {
+        "pergunta": "Qual é a trágica ironia da existência de Ankohep como guardião do templo?",
+        "mestre": [
+            {
+                "type": "text",
+                "text": "A trágica ironia da existência de Ankohep reside no fato de que ele é um **traidor condenado a proteger aquilo que ele mesmo tentou usurpar ou desonrar.**\n\nPodemos detalhar essa ironia em três pontos principais extraídos do texto:\n\n1.  **Servidão Eterna ao Inimigo:** Ankohep traiu o deus-rei Isset Thul Kaas \"há muito tempo\". Como punição, ele não recebeu a morte, mas sim uma maldição que o obriga a cumprir exatamente as ordens daquele a quem ele traiu. Ele se tornou o zelador do tesouro que, presumivelmente, ele cobiçava ou não respeitava.\n2.  **Um Guardião Inútil/Degradado:** A ironia atinge um nível físico e patético na descrição dos seus recursos. Ele deveria comandar os \"Guardiões de Isset Thul Kaas\", mas as estátuas estão destruídas e, na prática, ele só consegue invocar uma única \"Garra Rastejante\" (*Crawling Claw*). O guardião de um deus-rei poderoso tornou-se uma sombra decadente de si mesmo, incapaz de exercer o poder que o cargo exigiria.\n3.  **O Vigilante Prisioneiro:** Embora o texto diga que Ankohep pode \"ver toda a atividade no santuário\" e tem o poder de \"Dreadful All-Seeing Eye\", essa onisciência não é um privilégio de um senhor, mas uma obrigação de um prisioneiro. Ele está preso à sua sarcófago, condenado a observar eternamente intrusos saquearem o tesouro que ele é forçado a guardar, agindo apenas como um mecanismo de defesa automático para o templo que ele, no fundo, desprezou.\n\nEm resumo: **Ankohep é um traidor que foi transformado na ferramenta de segurança do sistema que ele tentou derrubar**, forçado a zelar por riquezas que nunca poderá possuir, enquanto sua própria \"potência\" como guardião se tornou uma caricatura decadente (as estátuas quebradas).",
+                "extras": {
+                    "signature": "EjQKMgG+Pvb7GTOA6VC5PscBCjQ4kCsEpQ7NCMQEDkabw1ideO0wT7ro+fvwEPQRdGTbW0DY"
+                }
+            }
+        ],
+        "gabarito": "Ankohep é um servo condenado eternamente. A ironia reside no fato de ele ser forçado a proteger um templo que não cumpre mais sua função, punido por uma traição antiga ao deus-rei.",
+        "nota": 5.0,
+        "detalhes": {
+            "fidelidade": 5.0,
+            "recuperacao": 5.0,
+            "relevancia": 5.0
+        },
+        "justificativa": "A resposta foi excelente, cobrindo todos os pontos do gabarito e enriquecendo a explicação com detalhes contextuais precisos sobre a decadência do templo e a natureza da punição."
+    }
+]

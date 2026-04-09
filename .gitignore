@@ -1,0 +1,18 @@
+# Ambientes Virtuais
+venv/
+env/
+
+# Chaves e Segredos (MUITO IMPORTANTE)
+.env
+
+# Banco de Dados Vetorial (Pode ficar gigante)
+db/chroma_dnd/
+
+# Python Cache
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Arquivos do SO
+.DS_Store
+Thumbs.db

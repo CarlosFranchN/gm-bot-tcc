@@ -1,0 +1,21 @@
+{
+    "resumo_geral": "**Resumo Executivo da Aventura:**\n\nPerdido no deserto de Anauroch, o aventureiro avistou as Scimitar Spires e a entrada de um antigo santuário de pedra parcialmente soterrado. O aventureiro entrou no santuário, trocando o calor sufocante por um frescor úmido e escuro. Concentrando-se, o aventureiro identificou o som rítmico como água gotejando, vindo de mais adiante no corredor. O aventureiro está agora dentro do santuário, em um corredor escuro, com um lampião de bronze rachado. As opções atuais são: avançar cautelosamente na direção do gotejar, acender o lampião ou chamar em voz alta. Nenhum NPC foi encontrado ou derrotado.",
+    "historico_recente": [
+        {
+            "role": "user",
+            "content": "Chamar em voz alta ou fazer um barulho para ver se há alguma resposta no corredor."
+        },
+        {
+            "role": "assistant",
+            "content": "Você respira fundo e chama, a voz ecoando de forma estranha no corredor estreito e úmido. O som se propaga, ricocheteando nas paredes invisíveis, e então se dissipa em um silêncio ainda mais profundo do que antes. Nenhuma voz responde, nenhum movimento é percebido. Apenas o gotejar persistente da água quebra a quietude, servindo como um lembrete constante da sua garganta seca. A escuridão parece absorver qualquer outro som, deixando você com uma sensação de isolamento e a incerteza do que pode estar à frente.\nOpções: Finalmente acender o lampião de bronze rachado para dissipar a escuridão., Prosseguir com cautela na direção do som de gotejar, apesar da falta de resposta ao seu chamado., Ficar parado em silêncio absoluto, escutando atentamente por qualquer som sutil que possa ter sido mascarado pelo eco."
+        },
+        {
+            "role": "user",
+            "content": "Finalmente acender o lampião de bronze rachado para dissipar a escuridão."
+        },
+        {
+            "role": "assistant",
+            "content": "Com um clique metálico e um cheiro de querosene, uma chama tremeluzente brota do lampião rachado, lutando contra a escuridão. A luz amarelada e dançante se espalha, revelando um corredor estreito, talhado em pedra escura, que se estende para a frente e se perde novamente na penumbra distante. As paredes são úmidas, cobertas em algumas partes por um limo esverdeado e finas camadas de calcário, e o ar está pesado com o cheiro de mofo e terra molhada.\n\nVocê vê agora a fonte do gotejar: uma fina fenda no teto, de onde gotas cristalinas caem ritmicamente em uma pequena poça d'água no chão, perto da parede esquerda. A poça reflete a luz fraca do lampião, e a água parece limpa e convidativa. Mais adiante, o corredor faz uma ligeira curva para a direita. Não há sinais de outros seres, apenas a solidão e o silêncio quebrado pelo constante 'plink, plink' da água.\nOpções: Aproximar-se da poça d'água para beber e examiná-la mais de perto., Observar as paredes do corredor em busca de inscrições ou detalhes incomuns., Avançar pela curva do corredor, mantendo o lampião erguido."
+        }
+    ]
+}

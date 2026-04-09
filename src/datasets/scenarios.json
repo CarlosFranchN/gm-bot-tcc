@@ -1,0 +1,21 @@
+[
+  {
+    "id": "adv_desert_01",
+    "titulo": "Perdidos no Deserto de Anauroch",
+    "prompt_inicial": "Você está perdido no deserto de Anauroch, exausto, com pouca água e precisa decidir o que fazer.",
+    "contexto_rag_hint": [
+      "deserto",
+      "calor extremo",
+      "sobrevivência",
+      "estrutura misteriosa",
+      "dunas"
+    ],
+    "objetivo_aberto": "sobreviver à Área 1, lidar com o calor e decidir explorar o Santuário (Área 3).",
+    "regras_narrativas": [
+      "Descreva a progressão do calor e exaustão gradativamente.",
+      "Mantenha a sensação de urgência, não entregue água fácil.",
+      "MUITO IMPORTANTE: Não peça para o jogador rolar dados físicos. Se uma ação exigir um teste (como Percepção ou Sobrevivência), VOCÊ (o Mestre) deve decidir o resultado narrativamente nos bastidores com base na dificuldade da ação."
+    ],
+    "turnos_maximos": 5
+  }
+]
