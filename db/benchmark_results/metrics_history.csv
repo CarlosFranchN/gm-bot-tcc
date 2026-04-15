@@ -1,0 +1,6 @@
+﻿id_turno;id_sessao;modelo;arquivo_origem;turno;style_rev;event_caus;adherence;time_order
+adv_desert_01_1776227690_T1;adv_desert_01_1776227690;meu-bot-rag-v1;transcript_adv_desert_01_1776227690.json;1;1.0;1.0;0.875;1.0
+adv_desert_01_1776227690_T2;adv_desert_01_1776227690;meu-bot-rag-v1;transcript_adv_desert_01_1776227690.json;2;1.0;1.0;0.75;1.0
+adv_desert_01_1776227690_T3;adv_desert_01_1776227690;meu-bot-rag-v1;transcript_adv_desert_01_1776227690.json;3;1.0;0.917;0.875;1.0
+adv_desert_01_1776227690_T4;adv_desert_01_1776227690;meu-bot-rag-v1;transcript_adv_desert_01_1776227690.json;4;1.0;0.958;0.875;1.0
+adv_desert_01_1776227690_T5;adv_desert_01_1776227690;meu-bot-rag-v1;transcript_adv_desert_01_1776227690.json;5;1.0;1.0;1.0;1.0

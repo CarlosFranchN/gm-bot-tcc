@@ -1,0 +1,60 @@
+{
+    "medias_globais": {
+        "STYLE_REV": 1.0,
+        "EVENT_CAUS": 0.975,
+        "ADHERENCE": 0.875,
+        "TIME_ORDER": 1.0
+    },
+    "detalhes_por_turno": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 1.0,
+                "ADHERENCE": 0.875,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é excelente e segue a instrução de descrever o calor opressor após a ação. As opções são variadas e relevantes para o cenário de sobrevivência. A nota de aderência teve um pequeno decréscimo apenas porque o PDF menciona uma 'pequena estrutura ou estátua' e o mestre especificou como 'obelisco', além de situar o sol no horizonte (pôr do sol) enquanto o texto diz ser tarde (afternoon), mas nada que prejudique a experiência."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 1.0,
+                "ADHERENCE": 0.75,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, respeitando a transição para a Área 2 (descoberta da estrutura). Contudo, o mestre ignorou a aplicação mecânica dos testes de Resistência de Constituição (DC 10) e Sobrevivência (DC 12) previstos no PDF para essa transição e local."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 0.875,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração foi excelente em capturar o calor opressivo descrito no PDF. O mestre moveu corretamente o jogador da Área 1 para a Área 2 (a estrutura). A única ressalva técnica é que o PDF exige um teste de Resistência de Constituição (DC 10) ao chegar na duna/estrutura, e o mestre narrou a falha/exaustão automaticamente em vez de solicitar o dado, embora isso tenha servido bem à dramaticidade da cena."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.958,
+                "ADHERENCE": 0.875,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é excelente, utilizando descrições sensoriais ricas (o som metálico, o ar frio) que reforçam a imersão no cenário de Anauroch. As opções são claras, relevantes à situação de perigo e oferecem abordagens distintas (confronto, exploração ou cautela). A ordem cronológica é respeitada perfeitamente. A aderência é alta pela consistência com o cenário desértico e ruínas, embora o PDF original não tenha sido fornecido para checagem de fatos específicos."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 1.0,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é altamente imersiva e respeita perfeitamente o conteúdo do PDF. O mestre integrou a sugestão específica de 'Mage Hand' como uma opção criativa e manteve a ameaça mecânica do ataque do escorpião de forma orgânica na narrativa."
+        }
+    ]
+}

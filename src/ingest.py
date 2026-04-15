@@ -6,10 +6,12 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_community.vectorstores import Chroma
 import google.generativeai as genai
+from pathlib import Path
 
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 def configure_api():
-    env_path = os.path.join(os.path.dirname(__file__), '.env')
+    env_path = PROJECT_ROOT / 'src' / '.env'
     print(env_path)
     load_dotenv(env_path)
     api_key = os.getenv("GOOGLE_API_KEY")
@@ -58,8 +60,7 @@ def get_text_chunks(documents):
     return chunks
 
 def create_and_save_chroma(chunks):
-    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    db_path = os.path.join(base_dir, "db", "chroma_dnd")
+    db_path = PROJECT_ROOT / "db" / "chroma_dnd"
     
     print(f"\nIniciando a vetorização e salvando no ChromaDB em: {db_path}...")
     
@@ -68,16 +69,18 @@ def create_and_save_chroma(chunks):
     vectorstore = Chroma.from_documents(
         documents=chunks,
         embedding=embeddings,
-        persist_directory=db_path
+        persist_directory=str(db_path)
     )
     print("\n✅ Banco ChromaDB criado e salvo com sucesso!")
 
 if __name__ == "__main__":
     configure_api()
-    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    data_dir = os.path.join(base_dir, "data")
     
-    if not os.path.exists(data_dir) or not os.listdir(data_dir):
+    # Usa o PROJECT_ROOT para ir direto na pasta data/ original
+    data_dir = PROJECT_ROOT / "data"
+    
+    # Verifica se a pasta existe e se tem arquivos dentro
+    if not data_dir.exists() or not any(data_dir.iterdir()):
         print(f"Erro: A pasta '{data_dir}' não existe ou está vazia.")
         print("Coloque seus arquivos PDF lá dentro (ex: regras.pdf, lore.pdf).")
         exit()
@@ -87,12 +90,11 @@ if __name__ == "__main__":
     
     print(f"\nTotal de pedaços (chunks) com metadados gerados: {len(text_chunks)}")
     
-    print(f"\nTotal de pedaços (chunks) com metadados gerados: {len(text_chunks)}")
-    
     if len(text_chunks) == 0:
         print("\n❌ ERRO CRÍTICO: Nenhum texto extraído. Abortando banco de dados.")
         exit()
-    # Para evitar rate limit na API do Google durante uma ingestão muito grande:
+        
+    # Pausa para estabilizar API
     time.sleep(2) 
     
     create_and_save_chroma(text_chunks)
