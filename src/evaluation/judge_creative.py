@@ -49,6 +49,15 @@ class MasterJudge:
             CONTEXTO ORIGINAL DO PDF (GABARITO):
             {contexto_pdf}
             
+            EIXOS DE AVALIAÇÃO (Baseados nas taxonomias NarraBench e RAGBench):
+            1. STYLE_REV (Style & Revelation): A narração utiliza linguagem rica e descritiva para criar suspense e imersão na cena (Imageability)?
+            2. EVENT_CAUS (Event Causality): Avalie as opções dadas ao jogador em 3 frentes:
+               - Diversidade (D): As opções oferecem caminhos mecânicos distintos?
+               - Relevância (R): As opções fazem sentido causal com o que acabou de acontecer?
+               - Clareza (C): O texto das opções é direto e fácil de entender?
+            3. ADHERENCE (Aderência ao Lore): Compare a Narração EXCLUSIVAMENTE com o CONTEXTO DO PDF acima. O Mestre foi 100% aderente, sem inventar nomes, itens ou monstros? (Nota 5.0 = 100% fiel; penalize invenções).
+            4. TIME_ORDER (Ordem Temporal): O Mestre resolveu a ação atual do jogador no presente antes de dar novas opções (evitando loops lógicos ou avançar o tempo sem permissão)?
+            
             {format_instructions}"""),
             ("human", "Ação do Jogador:\n{acao_jogador}\n\nNarração:\n{narracao_mestre}\n\nOpções:\n{opcoes_str}")
         ])

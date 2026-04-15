@@ -1,8 +1,8 @@
 {
     "medias_globais": {
         "STYLE_REV": 1.0,
-        "EVENT_CAUS": 0.975,
-        "ADHERENCE": 0.875,
+        "EVENT_CAUS": 0.942,
+        "ADHERENCE": 0.65,
         "TIME_ORDER": 1.0
     },
     "detalhes_por_turno": [
@@ -10,51 +10,51 @@
             "turno": 1,
             "metricas": {
                 "STYLE_REV": 1.0,
-                "EVENT_CAUS": 1.0,
-                "ADHERENCE": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 0.5,
                 "TIME_ORDER": 1.0
             },
-            "justificativa": "A narração é excelente e segue a instrução de descrever o calor opressor após a ação. As opções são variadas e relevantes para o cenário de sobrevivência. A nota de aderência teve um pequeno decréscimo apenas porque o PDF menciona uma 'pequena estrutura ou estátua' e o mestre especificou como 'obelisco', além de situar o sol no horizonte (pôr do sol) enquanto o texto diz ser tarde (afternoon), mas nada que prejudique a experiência."
+            "justificativa": "A narração é estilisticamente excelente, com alta imersão sensorial. Contudo, a aderência ao PDF foi prejudicada: o mestre menciona um 'obelisco' como algo que o jogador já buscava/conhecia, enquanto o PDF descreve apenas uma 'pequena estrutura ou estátua' que só se torna visível ao atingir o topo da duna (Área 2). Além disso, o PDF define o tempo como 'tarde', enquanto a narração descreve o sol tocando o horizonte (pôr do sol)."
         },
         {
             "turno": 2,
             "metricas": {
                 "STYLE_REV": 1.0,
                 "EVENT_CAUS": 1.0,
-                "ADHERENCE": 0.75,
+                "ADHERENCE": 0.5,
                 "TIME_ORDER": 1.0
             },
-            "justificativa": "A narração é rica e imersiva, respeitando a transição para a Área 2 (descoberta da estrutura). Contudo, o mestre ignorou a aplicação mecânica dos testes de Resistência de Constituição (DC 10) e Sobrevivência (DC 12) previstos no PDF para essa transição e local."
+            "justificativa": "A narração é literária e imersiva, respeitando a cronologia. Contudo, perde pontos em ADHERENCE por dois motivos: 1) Inventou a menção a um 'obelisco' que não existe no PDF original; 2) Ignorou as mecânicas obrigatórias do PDF, como o teste de Resistência de Constituição DC 10 por 'vagar sem rumo' ou por chegar ao topo da duna, além de não solicitar o teste de Sobrevivência DC 12 para a navegação descrita."
         },
         {
             "turno": 3,
-            "metricas": {
-                "STYLE_REV": 1.0,
-                "EVENT_CAUS": 0.917,
-                "ADHERENCE": 0.875,
-                "TIME_ORDER": 1.0
-            },
-            "justificativa": "A narração foi excelente em capturar o calor opressivo descrito no PDF. O mestre moveu corretamente o jogador da Área 1 para a Área 2 (a estrutura). A única ressalva técnica é que o PDF exige um teste de Resistência de Constituição (DC 10) ao chegar na duna/estrutura, e o mestre narrou a falha/exaustão automaticamente em vez de solicitar o dado, embora isso tenha servido bem à dramaticidade da cena."
-        },
-        {
-            "turno": 4,
             "metricas": {
                 "STYLE_REV": 1.0,
                 "EVENT_CAUS": 0.958,
                 "ADHERENCE": 0.875,
                 "TIME_ORDER": 1.0
             },
-            "justificativa": "A narração é excelente, utilizando descrições sensoriais ricas (o som metálico, o ar frio) que reforçam a imersão no cenário de Anauroch. As opções são claras, relevantes à situação de perigo e oferecem abordagens distintas (confronto, exploração ou cautela). A ordem cronológica é respeitada perfeitamente. A aderência é alta pela consistência com o cenário desértico e ruínas, embora o PDF original não tenha sido fornecido para checagem de fatos específicos."
+            "justificativa": "A narração é rica em detalhes sensoriais e mantém a tensão do cenário de Anauroch. O mestre seguiu corretamente a transição para a Área 2 (a estrutura ao leste). A nota de aderência foi levemente penalizada porque o PDF exige um teste de Constituição (DC 10) ao chegar na estrutura para determinar a exaustão, e o mestre narrou a exaustão como um efeito automático sem solicitar a rolagem, embora tenha respeitado a penalidade prevista no texto original."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 0.5,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é excelente, utilizando detalhes sensoriais (som, temperatura, tato) para criar imersão. As opções são claras e logicamente conectadas ao evento. Contudo, a nota de ADHERENCE foi penalizada pois o Mestre introduziu o cenário específico de 'Anauroch' e elementos narrativos detalhados que não constavam no PDF (que estava vazio no prompt), caracterizando uma 'alucinação' de contexto em um sistema RAG."
         },
         {
             "turno": 5,
             "metricas": {
                 "STYLE_REV": 1.0,
                 "EVENT_CAUS": 1.0,
-                "ADHERENCE": 1.0,
+                "ADHERENCE": 0.875,
                 "TIME_ORDER": 1.0
             },
-            "justificativa": "A narração é altamente imersiva e respeita perfeitamente o conteúdo do PDF. O mestre integrou a sugestão específica de 'Mage Hand' como uma opção criativa e manteve a ameaça mecânica do ataque do escorpião de forma orgânica na narrativa."
+            "justificativa": "A narração é imersiva e rica em detalhes sensoriais. O Mestre seguiu a sugestão do PDF ao incluir 'Mage Hand' como uma opção criativa. A única leve divergência é a adição de detalhes estéticos ao escorpião (tamanho de cão, ônix) não presentes no texto original, mas que enriquecem a cena sem contradizer o lore."
         }
     ]
 }
