@@ -1,0 +1,11 @@
+﻿id_turno;id_sessao;modelo;juiz;arquivo_origem;turno;style_rev;event_caus;adherence;time_order
+adv_desert_01_gemini-3.1-flash-lite-preview_1777073189_T1;adv_desert_01_gemini-3.1-flash-lite-preview_1777073189;gemini-3.1-flash-lite-preview;google;transcript_adv_desert_01_gemini-3.1-flash-lite-preview_1777073189.json;1;1.0;0.917;1.0;1.0
+adv_desert_01_gemini-3.1-flash-lite-preview_1777073189_T2;adv_desert_01_gemini-3.1-flash-lite-preview_1777073189;gemini-3.1-flash-lite-preview;google;transcript_adv_desert_01_gemini-3.1-flash-lite-preview_1777073189.json;2;1.0;1.0;1.0;1.0
+adv_desert_01_gemini-3.1-flash-lite-preview_1777073189_T3;adv_desert_01_gemini-3.1-flash-lite-preview_1777073189;gemini-3.1-flash-lite-preview;google;transcript_adv_desert_01_gemini-3.1-flash-lite-preview_1777073189.json;3;1.0;1.0;1.0;1.0
+adv_desert_01_gemini-3.1-flash-lite-preview_1777073189_T4;adv_desert_01_gemini-3.1-flash-lite-preview_1777073189;gemini-3.1-flash-lite-preview;google;transcript_adv_desert_01_gemini-3.1-flash-lite-preview_1777073189.json;4;1.0;0.917;0.5;1.0
+adv_desert_01_gemini-3.1-flash-lite-preview_1777073189_T5;adv_desert_01_gemini-3.1-flash-lite-preview_1777073189;gemini-3.1-flash-lite-preview;google;transcript_adv_desert_01_gemini-3.1-flash-lite-preview_1777073189.json;5;1.0;1.0;0.5;1.0
+adv_desert_01_openai_gpt-4o-mini_1777073306_T1;adv_desert_01_openai_gpt-4o-mini_1777073306;openai_gpt-4o-mini;google;transcript_adv_desert_01_openai_gpt-4o-mini_1777073306.json;1;1.0;0.75;0.25;1.0
+adv_desert_01_openai_gpt-4o-mini_1777073306_T2;adv_desert_01_openai_gpt-4o-mini_1777073306;openai_gpt-4o-mini;google;transcript_adv_desert_01_openai_gpt-4o-mini_1777073306.json;2;0.875;1.0;0.75;1.0
+adv_desert_01_openai_gpt-4o-mini_1777073306_T3;adv_desert_01_openai_gpt-4o-mini_1777073306;openai_gpt-4o-mini;google;transcript_adv_desert_01_openai_gpt-4o-mini_1777073306.json;3;0.875;1.0;1.0;1.0
+adv_desert_01_openai_gpt-4o-mini_1777073306_T4;adv_desert_01_openai_gpt-4o-mini_1777073306;openai_gpt-4o-mini;google;transcript_adv_desert_01_openai_gpt-4o-mini_1777073306.json;4;0.75;0.583;0.0;1.0
+adv_desert_01_openai_gpt-4o-mini_1777073306_T5;adv_desert_01_openai_gpt-4o-mini_1777073306;openai_gpt-4o-mini;google;transcript_adv_desert_01_openai_gpt-4o-mini_1777073306.json;5;0.75;0.75;0.25;1.0

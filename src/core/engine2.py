@@ -12,6 +12,10 @@ from dotenv import load_dotenv
 from pydantic import BaseModel, Field, ValidationError
 from langchain_chroma import Chroma
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
+from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
+
+from langchain_openai import ChatOpenAI 
+
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
 
@@ -20,23 +24,48 @@ from core.memory import ConversationMemory
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 
+PROVEDOR_MESTRE = "openrouter"
+
 # =============================================================================
 # 1. CONFIGURAÇÃO DE EXPERIMENTO (O "Ouro" para o seu TCC)
 # =============================================================================
 @dataclass
 class ExpConfig:
-    # llm_model: str = "gemini-2.5-flash"
-    llm_model: str = "gemini-3.1-flash-lite-preview"
-    embedding_model: str = "gemini-embedding-001"
-    temperature: float = 0.8
+    # 👉 1. A Chave Mestra: Qual provedor vamos usar hoje?
+    provedor: str = "openrouter" # Opções: "google", "openai", "openrouter"
     
-    # RAG: Busca até 10, mas só aceita os muito relevantes
+    # 👉 2. Variáveis vazias que o código vai preencher sozinho
+    llm_mestre: str = ""
+    llm_resumo: str = ""
+    
+    # Mantemos o embedding do Google fixo para não quebrar o banco ChromaDB
+    embedding_model: str = "gemini-embedding-001" 
+    
+    # 👉 3. Hiperparâmetros
+    temperature: float = 0.8
     retrieval_k: int = 10          
     similarity_threshold: float = 0.65 
     max_lore_tokens: int = 1500    
     
     db_path: Path = PROJECT_ROOT / "db" / "chroma_dnd"
     save_path: Path = PROJECT_ROOT / "db" / "savegame.json"
+
+    def __post_init__(self):
+        """Mágica: Auto-configura os modelos corretos dependendo do provedor escolhido!"""
+        if self.provedor == "google":
+            self.llm_mestre = "gemini-3.1-flash-lite-preview" # ou "gemini-2.5-flash"
+            self.llm_resumo = "gemini-2.5-flash-lite"
+            
+        elif self.provedor == "openai":
+            self.llm_mestre = "gpt-4o-mini"
+            self.llm_resumo = "gpt-4o-mini"
+            
+        elif self.provedor == "openrouter":
+            self.llm_mestre = "openai/gpt-4o-mini" # Pode trocar por "meta-llama/llama-3-8b-instruct"
+            self.llm_resumo = "openai/gpt-4o-mini"
+            
+        else:
+            raise ValueError(f"Provedor '{self.provedor}' inválido no ExpConfig.")
 
 # =============================================================================
 # 2. LOGGERS E SCHEMA
@@ -67,17 +96,53 @@ class RAGEngine:
         load_dotenv()
         
         # Conexão com Modelos
-        self.embeddings = GoogleGenerativeAIEmbeddings(model=self.cfg.embedding_model)
+        self.embeddings = GoogleGenerativeAIEmbeddings(
+            model=self.cfg.embedding_model,
+            google_api_key=os.getenv("GOOGLE_API_KEY_MESTRE")
+        )
         self.vectorstore = Chroma(
             persist_directory=str(self.cfg.db_path), 
             embedding_function=self.embeddings
         )
         
-        # LLM Principal e Resumidor
-        self.llm_mestre = ChatGoogleGenerativeAI(model=self.cfg.llm_model, temperature=self.cfg.temperature)
-        llm_resumo = ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite", temperature=0.3)
-        
-        # Memória Inteligente (Sua lógica original de volta!)
+        if self.cfg.provedor == "google":
+            print(f"🟢 Mestre GEMINI ligado: {self.cfg.llm_mestre}")
+            self.llm_mestre = ChatGoogleGenerativeAI(
+                model=self.cfg.llm_mestre, 
+                temperature=self.cfg.temperature,
+                google_api_key=os.getenv("GOOGLE_API_KEY_MESTRE")
+            )
+            llm_resumo = ChatGoogleGenerativeAI(
+                model=self.cfg.llm_resumo, 
+                temperature=0.3,
+                google_api_key=os.getenv("GOOGLE_API_KEY_MESTRE")
+            )
+            
+        elif self.cfg.provedor == "openai":
+            print(f"🔵 Mestre OPENAI ligado: {self.cfg.llm_mestre}")
+            self.llm_mestre = ChatOpenAI(
+                model=self.cfg.llm_mestre, 
+                temperature=self.cfg.temperature
+            )
+            llm_resumo = ChatOpenAI(
+                model=self.cfg.llm_resumo, 
+                temperature=0.3
+            )
+            
+        elif self.cfg.provedor == "openrouter":
+            print(f"🟣 Mestre OPENROUTER ligado: {self.cfg.llm_mestre}")
+            self.llm_mestre = ChatOpenAI(
+                api_key=os.getenv("OPENROUTER_API_KEY"),
+                base_url="https://openrouter.ai/api/v1",
+                model=self.cfg.llm_mestre,
+                temperature=self.cfg.temperature
+            )
+            llm_resumo = ChatOpenAI(
+                api_key=os.getenv("OPENROUTER_API_KEY"),
+                base_url="https://openrouter.ai/api/v1",
+                model=self.cfg.llm_resumo,
+                temperature=0.3
+            )
         self.memory = ConversationMemory(llm_resumo, max_turnos_recentes=2)
         self.carregar_progresso()
         
@@ -201,3 +266,37 @@ class RAGEngine:
                 dados_save = json.load(f)
                 self.memory.resumo_geral = dados_save.get("resumo_geral", "")
                 self.memory.historico_recente = dados_save.get("historico_recente", [])
+                
+if __name__ == "__main__":
+    import asyncio
+    import pprint
+
+    async def rodar_teste():
+        print("🔧 Iniciando Teste do RAGEngine...")
+        
+        # 1. Configura qual provedor você quer testar agora
+        # Mude para "google" ou "openrouter" para ver a mágica acontecer!
+        config_teste = ExpConfig(provedor="google") 
+        
+        try:
+            # 2. Liga o Motor
+            engine = RAGEngine(config=config_teste)
+            print("\n✅ Motor inicializado com sucesso!")
+            
+            # 3. Simula uma ação do jogador
+            acao_jogador = "Eu pego a minha tocha, olho para a escuridão do deserto e procuro por ruínas."
+            print(f"\n👤 Jogador: {acao_jogador}")
+            print("⏳ Mestre está pensando (buscando no PDF e gerando texto)...\n")
+            
+            # 4. Gera o turno
+            resultado = await engine.gerar_turno_async(user_input=acao_jogador)
+            
+            # 5. Imprime o JSON estruturado bonito na tela
+            print("🎲 RESPOSTA DO MESTRE (JSON Gerado):")
+            pprint.pprint(resultado, indent=2, width=100)
+            
+        except Exception as e:
+            print(f"\n❌ Erro durante o teste: {e}")
+
+    # Roda a função assíncrona
+    asyncio.run(rodar_teste())

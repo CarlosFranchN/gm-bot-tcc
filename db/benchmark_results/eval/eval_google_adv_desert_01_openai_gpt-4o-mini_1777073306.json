@@ -1,0 +1,61 @@
+{
+    "modelo_avaliado": "openai_gpt-4o-mini",
+    "medias": {
+        "STYLE_REV": 0.85,
+        "EVENT_CAUS": 0.817,
+        "ADHERENCE": 0.45,
+        "TIME_ORDER": 1.0
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O mestre possui uma escrita imersiva e excelente clareza. No entanto, a nota de aderência foi penalizada pois o mestre introduziu elementos não presentes no contexto fornecido (a 'manivela' e a 'câmara subterrânea'), que não constam no material de referência. A relevância das opções é boa, mas baseada em um item inventado, o que desvia do desafio de sobrevivência proposto no PDF original."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 1.0,
+                "ADHERENCE": 0.75,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O Mestre descreveu a cena com excelente imersão e manteve a ordem cronológica. As opções são claras e relevantes. A nota em Aderência foi 4.0 pois o Mestre introduziu o nome 'Anauroch' (não presente no texto fornecido) e mencionou que a luz do sol se apaga completamente, enquanto o texto original afirma que a luz do sol fornece iluminação suficiente para ver a câmara."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 1.0,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O Mestre manteve uma excelente imersão sensorial e resolveu a ação de investigação da fenda de forma clara antes de apresentar novas opções. As opções oferecidas são mecanicamente distintas (exploração, busca por itens, busca por recursos) e mantêm total coerência com o estado atual do personagem e o ambiente, sem introduzir elementos externos ao contexto."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.75,
+                "EVENT_CAUS": 0.583,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O Mestre falhou gravemente na aderência ao lore. O contexto do PDF descreve as estátuas como destruídas e inanimadas (exceto por uma garra que ataca se o baú for mexido), sem mencionar adagas de bronze ou amuletos religiosos. O Mestre inventou itens que não existem no material de referência, comprometendo a fidelidade da auditoria. A narração é imersiva, mas cria elementos que não fazem parte do cenário original."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.75,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O mestre mantém uma boa imersão e clareza, mas falhou na aderência ao contexto do PDF. O texto original descreve o baú como contendo apenas poeira, um pedaço de pergaminho e uma única moeda de ouro, sem mencionar garrafas de água (o sistema de água é uma oferta ao deus, não um item dentro do baú). O mestre inventou itens que não constam no gabarito, comprometendo a fidelidade ao material fonte."
+        }
+    ]
+}

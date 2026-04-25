@@ -14,12 +14,12 @@ def configure_api():
     env_path = PROJECT_ROOT / 'src' / '.env'
     print(env_path)
     load_dotenv(env_path)
-    api_key = os.getenv("GOOGLE_API_KEY")
+    api_key = os.getenv("GOOGLE_API_KEY_MESTRE")
     if not api_key:
         raise ValueError("ERRO: Chave GOOGLE_API_KEY não encontrada no arquivo .env!")
     
     genai.configure(api_key=api_key)
-    os.environ["GOOGLE_API_KEY"] = api_key
+    os.environ["GOOGLE_API_KEY_MESTRE"] = api_key
 
 def process_pdfs_in_directory(directory_path):
     documents = []
@@ -64,7 +64,10 @@ def create_and_save_chroma(chunks):
     
     print(f"\nIniciando a vetorização e salvando no ChromaDB em: {db_path}...")
     
-    embeddings = GoogleGenerativeAIEmbeddings(model="gemini-embedding-001")
+    embeddings = GoogleGenerativeAIEmbeddings(
+        model="gemini-embedding-001",
+        google_api_key=os.getenv("GOOGLE_API_KEY_MESTRE")
+    )
     
     vectorstore = Chroma.from_documents(
         documents=chunks,

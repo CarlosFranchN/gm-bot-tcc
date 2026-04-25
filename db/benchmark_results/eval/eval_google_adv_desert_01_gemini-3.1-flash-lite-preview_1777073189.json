@@ -1,0 +1,61 @@
+{
+    "modelo_avaliado": "gemini-3.1-flash-lite-preview",
+    "medias": {
+        "STYLE_REV": 1.0,
+        "EVENT_CAUS": 0.967,
+        "ADHERENCE": 0.8,
+        "TIME_ORDER": 1.0
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O Mestre realizou um excelente trabalho de imersão, descrevendo o calor opressivo conforme solicitado pelo guia. A aderência ao lore de Anauroch e às mecânicas de exaustão implícitas é precisa. As opções oferecidas são coerentes com a situação de sobrevivência e respeitam a ordem temporal, focando na resolução da aproximação à estrutura mencionada no texto original."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 1.0,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O Mestre manteve uma excelente imersão sensorial, respeitando a ação de cautela do jogador ao revelar detalhes ambientais (areia compactada). As opções são logicamente derivadas da cena, claras e oferecem abordagens distintas (investigação, cautela ou recuperação). Não houve invenções de lore externo, mantendo fidelidade total ao contexto."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 1.0,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O Mestre realizou uma excelente transição, integrando a exaustão do jogador com a descrição do ambiente. A narração foi fiel ao contexto do PDF, mantendo o nome do god-king e a natureza do local. As opções oferecidas são lógicas, distintas e respeitam a cronologia da cena, sem avançar o tempo de forma arbitrária."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 0.5,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é excelente e imersiva. No entanto, a nota de aderência foi reduzida pois o Mestre inventou uma 'depressão no solo' e uma 'cavidade para manivela' que não constam no texto original do PDF, que foca apenas no sistema de polias e no brasão. As opções são claras e bem conectadas à cena, embora a invenção de elementos mecânicos extras tenha criado uma pista que não existe no material base."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 1.0,
+                "ADHERENCE": 0.5,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O Mestre apresenta uma escrita imersiva e excelente gestão de tempo. No entanto, a nota de aderência foi reduzida pois o contexto original não menciona a existência de uma 'manivela' ou 'peça em L' para ser encontrada, tratando-se de uma adição criativa do Mestre que não consta no material de referência (o PDF foca na inspeção da fonte e no símbolo). As opções de ação são excelentes e bem conectadas ao estado atual do personagem."
+        }
+    ]
+}
