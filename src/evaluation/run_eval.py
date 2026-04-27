@@ -40,6 +40,13 @@ def executar_tribunal_completo(provedor: str = "google"):
         print(f"\n⚖️ ANALISANDO PROCESSO: {nome_arquivo}")
         modelo_alvo = utils.extrair_modelo_do_nome(nome_arquivo, config.target_model)
         
+        if "_baseline_" in nome_arquivo:
+            modo_teste = "Baseline (Sem RAG)"
+        else:
+            modo_teste = "RAG Ligado"
+            
+        print(f"🎯 Réu: {modelo_alvo} | Modo: {modo_teste}")
+        
         with open(arquivo_path, 'r', encoding='utf-8') as f:
             turnos_jogo = json.load(f)
 
@@ -76,6 +83,8 @@ def executar_tribunal_completo(provedor: str = "google"):
             # Salva o JSON individual de conferência
             resumo_final = {
                 "modelo_avaliado": modelo_alvo,
+                "juiz_utilizado": provedor,
+                "modo_teste": modo_teste, # 👉 Salvando no JSON também
                 "medias": {k: round(v/contagem_valida, 3) for k, v in somas_norm.items()},
                 "detalhes": relatorio_do_arquivo
             }
@@ -88,10 +97,11 @@ def executar_tribunal_completo(provedor: str = "google"):
                 id_sessao=id_sessao, 
                 modelo=modelo_alvo, 
                 juiz_utilizado=provedor, 
+                modo_rag=modo_teste,
                 nome_arquivo=nome_arquivo, 
                 relatorio=relatorio_do_arquivo
             )
-            print(f"✅ Concluído: {modelo_alvo} avaliado com sucesso.")
+            # print(f"✅ Concluído: {modelo_alvo} avaliado com sucesso.")
             print(f"✅ Concluído: {modelo_alvo} julgado por {provedor}.")
             processados += 1
             time.sleep(10) # Proteção contra rate limit entre arquivos

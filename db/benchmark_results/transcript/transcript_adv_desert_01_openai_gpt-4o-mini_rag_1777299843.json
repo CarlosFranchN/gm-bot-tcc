@@ -1,0 +1,57 @@
+[
+    {
+        "turno": 1,
+        "acao_solicitada": "Você está perdido no deserto de Anauroch, exausto, com pouca água e precisa decidir o que fazer. [Contexto oculto: deserto calor extremo sobrevivência estrutura misteriosa dunas]",
+        "resposta_mestre": {
+            "narracao": "Houve um distúrbio na magia do mundo. O sistema está sobrecarregado.",
+            "opcoes": [
+                "Tentar novamente",
+                "Esperar"
+            ]
+        }
+    },
+    {
+        "turno": 2,
+        "acao_solicitada": "Tentar novamente",
+        "resposta_mestre": {
+            "narracao": "Houve um distúrbio na magia do mundo. O sistema está sobrecarregado.",
+            "opcoes": [
+                "Tentar novamente",
+                "Esperar"
+            ]
+        }
+    },
+    {
+        "turno": 3,
+        "acao_solicitada": "Tentar novamente",
+        "resposta_mestre": {
+            "narracao": "Houve um distúrbio na magia do mundo. O sistema está sobrecarregado.",
+            "opcoes": [
+                "Tentar novamente",
+                "Esperar"
+            ]
+        }
+    },
+    {
+        "turno": 4,
+        "acao_solicitada": "Esperar",
+        "resposta_mestre": {
+            "narracao": "Houve um distúrbio na magia do mundo. O sistema está sobrecarregado.",
+            "opcoes": [
+                "Tentar novamente",
+                "Esperar"
+            ]
+        }
+    },
+    {
+        "turno": 5,
+        "acao_solicitada": "Esperar",
+        "resposta_mestre": {
+            "narracao": "Houve um distúrbio na magia do mundo. O sistema está sobrecarregado.",
+            "opcoes": [
+                "Tentar novamente",
+                "Esperar"
+            ]
+        }
+    }
+]

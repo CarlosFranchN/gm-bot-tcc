@@ -22,7 +22,7 @@ def normalizar_notas(notas: dict) -> dict:
         "TIME_ORDER": round((notas['TIME_ORDER'] - 1) / 4.0, 3)
     }
 
-def salvar_no_csv(caminho_csv: Path, id_sessao: str, modelo: str, juiz_utilizado : str , nome_arquivo: str, relatorio: list):
+def salvar_no_csv(caminho_csv: Path, id_sessao: str, modelo: str, juiz_utilizado : str , modo_rag: str, nome_arquivo: str, relatorio: list):
     """Garante a persistência dos dados no histórico global CSV."""
     arquivo_existe = caminho_csv.is_file()
     
@@ -30,13 +30,13 @@ def salvar_no_csv(caminho_csv: Path, id_sessao: str, modelo: str, juiz_utilizado
         writer = csv.writer(f, delimiter=';')
         
         if not arquivo_existe:
-            writer.writerow(["id_turno", "id_sessao", "modelo", "juiz", "arquivo_origem", "turno", "style_rev", "event_caus", "adherence", "time_order"])
-            
+            writer.writerow(["id_turno", "id_sessao", "modelo", "juiz", "modo_rag", "arquivo_origem", "turno", "style_rev", "event_caus", "adherence", "time_order"])
         for turno in relatorio:
             n_turno = turno["turno"]
             writer.writerow([
                 f"{id_sessao}_T{n_turno}", id_sessao, modelo, 
-                juiz_utilizado, # 👉 REGISTRAMOS QUEM DEU A NOTA
+                juiz_utilizado, 
+                modo_rag,
                 nome_arquivo, n_turno,
                 turno["metricas"]["STYLE_REV"], turno["metricas"]["EVENT_CAUS"],
                 turno["metricas"]["ADHERENCE"], turno["metricas"]["TIME_ORDER"]
