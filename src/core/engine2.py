@@ -31,17 +31,18 @@ PROVEDOR_MESTRE = "openrouter"
 # =============================================================================
 @dataclass
 class ExpConfig:
-    # 👉 1. A Chave Mestra: Qual provedor vamos usar hoje?
+    
     provedor: str = "openrouter" # Opções: "google", "openai", "openrouter"
     
-    # 👉 2. Variáveis vazias que o código vai preencher sozinho
+    usar_rag: bool = True
+    
     llm_mestre: str = ""
     llm_resumo: str = ""
     
-    # Mantemos o embedding do Google fixo para não quebrar o banco ChromaDB
+    
     embedding_model: str = "gemini-embedding-001" 
     
-    # 👉 3. Hiperparâmetros
+    
     temperature: float = 0.8
     retrieval_k: int = 10          
     similarity_threshold: float = 0.65 
@@ -185,25 +186,34 @@ class RAGEngine:
         }
 
         try:
-            # 1. RAG COM FILTRO INTELIGENTE
-            docs_scores = self.vectorstore.similarity_search_with_score(user_input, k=self.cfg.retrieval_k)
-            
+            # 1. RAG COM FILTRO INTELIGENTE E CHAVE DE ABLAÇÃO
+            # Valores padrão (Caso o RAG esteja desligado - BASELINE)
+            contexto_lore = "Nenhum contexto adicional. O Mestre deve usar seu próprio conhecimento."
             context_parts = []
             tokens_injetados = 0
+            qtd_docs_recuperados = 0 
             
-            for doc, score in docs_scores:
-                # O Chroma retorna distância (menor é mais parecido). Ignora se for muito distante.
-                if score > self.cfg.similarity_threshold:
-                    continue
+            # 🎛️ O INTERRUPTOR MÁGICO DO TCC: Só faz a busca se usar_rag for True
+            if getattr(self.cfg, 'usar_rag', True):
+                docs_scores = self.vectorstore.similarity_search_with_score(user_input, k=self.cfg.retrieval_k)
+                qtd_docs_recuperados = len(docs_scores)
                 
-                doc_tokens = self._get_token_count(doc.page_content)
-                if tokens_injetados + doc_tokens > self.cfg.max_lore_tokens:
-                    break # Orçamento de tokens atingido!
-                
-                context_parts.append(doc.page_content)
-                tokens_injetados += doc_tokens
+                for doc, score in docs_scores:
+                    # O Chroma retorna distância (menor é mais parecido). Ignora se for muito distante.
+                    if score > self.cfg.similarity_threshold:
+                        continue
+                    
+                    doc_tokens = self._get_token_count(doc.page_content)
+                    if tokens_injetados + doc_tokens > self.cfg.max_lore_tokens:
+                        break # Orçamento de tokens atingido!
+                    
+                    context_parts.append(doc.page_content)
+                    tokens_injetados += doc_tokens
 
-            contexto_lore = "\n\n".join(context_parts)
+                if context_parts:
+                    contexto_lore = "\n\n".join(context_parts)
+
+            # Prepara a memória
             contexto_memoria = self.memory.obter_contexto_formatado()
 
             # 2. GERAÇÃO
@@ -220,22 +230,22 @@ class RAGEngine:
             self.memory.adicionar_turno(user_input, output_formatado)
             self.salvar_progresso()
 
-            # 4. LOG DE SUCESSO NO JSONL
+            # 4. LOG DE SUCESSO NO JSONL (Seguro contra erros de variável)
             metrics.update({
                 "success": True,
                 "latency_s": round(time.time() - start_time, 2),
-                "retrieved_docs": len(docs_scores),
+                "retrieved_docs": qtd_docs_recuperados, # 👉 Usa a variável segura
                 "filtered_docs": len(context_parts),
                 "tokens_injected": tokens_injetados
             })
             metrics_logger.info(json.dumps(metrics, ensure_ascii=False))
 
-                    
-                    # 👉 NOVO: Pega o dicionário seguro do Pydantic e injeta o contexto do PDF para o Juiz!
+            # 👉 Pega o dicionário seguro do Pydantic e injeta o contexto do PDF para o Juiz!
             resultado_final = resposta.model_dump()
             resultado_final["contexto_usado"] = contexto_lore
                     
             return resultado_final
+            
         except Exception as e:
             # LOG DE ERRO NO JSONL
             metrics.update({
@@ -247,7 +257,7 @@ class RAGEngine:
             logger.error(f"Erro no Motor RAG: {e}")
             
             return {
-                "narracao": "Houve um distúrbio na magia do mundo. O Google está sobrecarregado.",
+                "narracao": "Houve um distúrbio na magia do mundo. O sistema está sobrecarregado.",
                 "opcoes": ["Tentar novamente", "Esperar"]
             }
 

@@ -6,48 +6,47 @@ import time
 import asyncio
 from pathlib import Path
 
-# Hack para encontrar a pasta core
+# Certifique-se de que o nome do arquivo da engine está correto (engine ou engine2)
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
 from core.engine2 import RAGEngine, ExpConfig
 
-async def executar_benchmark(provedor_teste: str = "google"):
-    # 1. Carrega o cenário usando Pathlib
+# 👉 1. ADICIONAMOS O PARÂMETRO 'usar_rag'
+async def executar_benchmark(provedor_teste: str = "google", usar_rag: bool = True):
     PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent 
     caminho_cenario = PROJECT_ROOT / "datasets" / "scenarios.json"
     caminho_transcript = PROJECT_ROOT / "db" / "benchmark_results" / "transcript"
     caminho_transcript.mkdir(parents=True, exist_ok=True)
+    
     with open(caminho_cenario, 'r', encoding='utf-8') as f:
         cenarios = json.load(f)
     
     cenario_atual = cenarios[0]
     
     # =========================================================================
-    # 🧠 CONFIGURAÇÃO DA BATERIA DE TESTES (O "Piloto" do seu TCC)
+    # 🧠 CONFIGURAÇÃO DA BATERIA DE TESTES
     # =========================================================================
-    # Escolha quem vai ser testado: "google", "openai" ou "openrouter"
+    # 👉 2. INJETAMOS A CHAVE DE ABLAÇÃO NA CONFIGURAÇÃO
+    config = ExpConfig(
+        provedor=provedor_teste,
+        usar_rag=usar_rag 
+    )
     
-    config_teste = ExpConfig(provedor=provedor_teste)
-    # =========================================================================
+    modo_texto = "COM RAG LIGADO" if usar_rag else "BASELINE (SEM RAG)"
 
-    print("\n" + "="*50)
+    print("\n" + "="*60)
     print(f"🚀 INICIANDO RPGBENCH: {cenario_atual['titulo']}")
-    print(f"🤖 Motor Avaliado: {config_teste.llm_mestre} (via {provedor_teste.upper()})")
-    print("="*50)
+    print(f"🤖 Motor Avaliado: {config.llm_mestre} (via {provedor_teste.upper()})")
+    print(f"🎛️  Modo de Teste: {modo_texto}")
+    print("="*60)
     
-    # Extrai as regras e dicas do JSON e formata como texto
     regras_lista = cenario_atual.get('regras_narrativas', [])
     regras_cena = "\n".join([f"- {regra}" for regra in regras_lista])
-    
     dicas_rag = " ".join(cenario_atual.get('contexto_rag_hint', []))
     
-    # 2. Inicializa o Motor PASSANDO A CONFIGURAÇÃO
-    engine = RAGEngine(config=config_teste)
+    engine = RAGEngine(config=config)
     transcript = []
     
     print("\n[ROBÔ]: Solicitando introdução baseada no cenário...")
-    
-    # O "Chute Inicial" embutido com as dicas ocultas
     acao_atual = f"{cenario_atual['prompt_inicial']} [Contexto oculto para a busca: {dicas_rag}]"
     
     for turno in range(1, cenario_atual["turnos_maximos"] + 1):
@@ -81,13 +80,13 @@ async def executar_benchmark(provedor_teste: str = "google"):
             print("⏳ Aguardando 10s para estabilizar a API...")
             await asyncio.sleep(10)
 
-    # 4. Salva o resultado da simulação
-    caminho_transcript.mkdir(parents=True, exist_ok=True)
-    
+    # 👉 3. NOMENCLATURA INTELIGENTE PARA O TRIBUNAL
     timestamp = int(time.time())
-    # Opcional: Adiciona o nome do modelo no arquivo para ficar mais fácil de achar!
-    nome_modelo_limpo = config_teste.llm_mestre.replace("/", "_")
-    arquivo_saida = caminho_transcript / f"transcript_{cenario_atual['id']}_{nome_modelo_limpo}_{timestamp}.json"
+    nome_modelo_limpo = config.llm_mestre.replace("/", "_")
+    modo_tag = "rag" if usar_rag else "baseline"
+    
+    # Ex: transcript_cenario1_gpt-4o-mini_baseline_171000000.json
+    arquivo_saida = caminho_transcript / f"transcript_{cenario_atual['id']}_{nome_modelo_limpo}_{modo_tag}_{timestamp}.json"
     
     with open(arquivo_saida, 'w', encoding='utf-8') as f:
         json.dump(transcript, f, ensure_ascii=False, indent=4)
@@ -96,23 +95,18 @@ async def executar_benchmark(provedor_teste: str = "google"):
 
 if __name__ == "__main__":
     
-    provedores_para_testar = ["google","openrouter"]
+    provedores_para_testar = ["google", "openrouter"]
+    # 👉 4. A MATRIZ DE ABLAÇÃO AUTOMÁTICA
+    modos_de_teste = [True, False] # True = RAG, False = Baseline
     
     for provedor in provedores_para_testar:
-        print(f"\n{'#'*60}")
-        print(f"🔥 INICIANDO BATERIA DE TESTES PARA O PROVEDOR: {provedor.upper()}")
-        print(f"{'#'*60}\n")
-        
-        try:
-            # Chama a função passando o provedor da vez
-            asyncio.run(executar_benchmark(provedor_teste=provedor))
-            
-            # Dá um respiro para a API não bloquear a sua chave por spam
-            print(f"✅ Teste com {provedor} finalizado. Pausando 15s antes do próximo...")
-            time.sleep(15) 
-            
-        except Exception as e:
-            print(f"❌ Erro ao testar o provedor {provedor}: {e}")
-            continue # Se um der erro, ele não para o script, apenas pula para o próximo!
+        for usar_rag_agora in modos_de_teste:
+            try:
+                asyncio.run(executar_benchmark(provedor_teste=provedor, usar_rag=usar_rag_agora))
+                print(f"✅ Teste concluído. Pausando 15s antes do próximo...")
+                time.sleep(15) 
+            except Exception as e:
+                print(f"❌ Erro ao testar {provedor} (RAG={usar_rag_agora}): {e}")
+                continue 
             
     print("\n🎉 TODAS AS BATERIAS DE TESTE FORAM CONCLUÍDAS COM SUCESSO!")
