@@ -57,7 +57,7 @@ async def jogar_partida(engine: RAGEngine, bot: RandomBot, cenario: dict) -> lis
         })
         
         if turno < cenario["turnos_maximos"]:
-            await asyncio.sleep(20) # Respiro da API
+            await asyncio.sleep(25) # Respiro da API
             
     return transcript
 

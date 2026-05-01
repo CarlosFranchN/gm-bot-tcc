@@ -59,24 +59,33 @@ def executar_tribunal_completo(provedor: str = "google"):
             print(f"  🔍 Julgando Turno {turno['turno']}...")
             
             resp = turno['resposta_mestre']
-            notas_brutas = juiz.avaliar_turno_completo(
-                acao_jogador=turno['acao_solicitada'],
-                narracao_mestre=resp.get('narracao', ''),
-                opcoes_mestre=resp.get('opcoes', []),
-                contexto_pdf=resp.get('contexto_usado', 'Nenhum')
-            )
-
-            if notas_brutas:
-                contagem_valida += 1
-                notas_n = utils.normalizar_notas(notas_brutas)
+            
+            try:
+                notas_brutas = juiz.avaliar_turno_completo(
+                    acao_jogador=turno['acao_solicitada'],
+                    narracao_mestre=resp.get('narracao', ''),
+                    opcoes_mestre=resp.get('opcoes', []),
+                    contexto_pdf=resp.get('contexto_usado', 'Nenhum')
+                )
                 
-                for k in somas_norm: somas_norm[k] += notas_n[k]
+                if notas_brutas:
+                    contagem_valida += 1
+                    notas_n = utils.normalizar_notas(notas_brutas)
+                    
+                    for k in somas_norm: somas_norm[k] += notas_n[k]
 
-                relatorio_do_arquivo.append({
-                    "turno": turno['turno'],
-                    "metricas": notas_n,
-                    "justificativa": notas_brutas['justificativa']
-                })
+                    relatorio_do_arquivo.append({
+                        "turno": turno['turno'],
+                        "metricas": notas_n,
+                        "justificativa": notas_brutas['justificativa']
+                    })
+                    
+                # 👉 AQUI ESTÁ A MAGIA! Dá um pequeno respiro ao Juiz entre cada turno.
+                time.sleep(5) 
+                
+            except Exception as e:
+                print(f"   ❌ Erro ao julgar o turno {turno['turno']}: {e}")
+                time.sleep(5) # Descansa um pouco antes de tentar o próximo
 
         # 4. Finalização do Arquivo
         if contagem_valida > 0:

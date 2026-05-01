@@ -1,0 +1,63 @@
+{
+    "modelo_avaliado": "gemini-3.1-flash-lite-preview_rag_rep1",
+    "juiz_utilizado": "google",
+    "modo_teste": "RAG Ligado",
+    "medias": {
+        "STYLE_REV": 1.0,
+        "EVENT_CAUS": 1.0,
+        "ADHERENCE": 0.975,
+        "TIME_ORDER": 1.0
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 1.0,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O Mestre realizou uma excelente transposição do material original. A narração capturou a atmosfera de opressão térmica exigida pelo PDF, as opções oferecidas estão perfeitamente alinhadas com as mecânicas de jogo (Sobrevivência, Percepção e exploração de terreno) e não houve qualquer desvio ou invenção fora do contexto fornecido."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 1.0,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O Mestre realizou uma narração excelente, mantendo a imersão sensorial descrita no PDF (calor, exaustão, visão da estrutura). As opções oferecidas são mecanicamente relevantes e seguem estritamente as regras de Sobrevivência e exploração do material original, sem introduzir elementos externos ou saltos temporais indevidos."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 1.0,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O Mestre executou a ação de Sobrevivência com perfeição, descrevendo o efeito mecânico (proteção contra o calor) e narrativo. A aderência ao PDF é total, respeitando as condições climáticas e a localização da estrutura (Área 2/3). As opções oferecidas são claras, mecanicamente distintas e respeitam a ordem cronológica da cena."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 1.0,
+                "ADHERENCE": 0.875,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O Mestre realizou uma excelente narração imersiva, respeitando a progressão dos sintomas de calor. A aderência ao lore é quase perfeita, com uma pequena imprecisão terminológica ao traduzir 'Scimitar Spires' como 'Sondas de Escimitar' (o termo correto seria 'Espiras' ou 'Picos'), mas manteve a fidelidade mecânica e narrativa. A resolução da ação de percepção foi clara e as opções oferecidas são mecanicamente relevantes e bem estruturadas."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 1.0,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O Mestre realizou uma excelente transposição do material original. A narração é imersiva, respeita rigorosamente o lore (Sondas de Escimitar, Bedine, efeitos do calor) e mantém a ordem cronológica ao resolver a ação de busca antes de apresentar novas escolhas. As opções oferecidas são mecanicamente distintas e coerentes com a urgência da situação descrita no PDF."
+        }
+    ]
+}

@@ -22,6 +22,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from core.memory import ConversationMemory
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+
 # =============================================================================
 # 1. CONFIGURAÇÃO DE EXPERIMENTO (O "Ouro" para o seu TCC)
 # =============================================================================
@@ -47,15 +48,17 @@ class ExpConfig:
     def __post_init__(self):
         """Mágica: Auto-configura os modelos corretos dependendo do provedor escolhido!"""
         if self.provedor == "google":
-            self.llm_mestre = "gemini-3.1-flash-lite" # Atualize conforme a versão de sua preferência
-            self.llm_resumo = "gemini-2.5-flash"
+            # 👉 Usar o modelo canónico evita problemas de "preview" e tem 1.500 RPD
+            self.llm_mestre = "gemini-2.5-flash" 
+            # O llm_resumo não importa aqui, pois será forçado para o Llama no __init__
+            self.llm_resumo = "gemini-2.5-flash" 
             
         elif self.provedor == "openai":
             self.llm_mestre = "gpt-4o-mini"
             self.llm_resumo = "gpt-4o-mini"
             
         elif self.provedor == "openrouter":
-            self.llm_mestre = "openai/gpt-4o-mini" # Pode trocar por "meta-llama/llama-3-8b-instruct"
+            self.llm_mestre = "openai/gpt-4o-mini" 
             self.llm_resumo = "openai/gpt-4o-mini"
             
         else:
@@ -100,13 +103,18 @@ class RAGEngine:
         
         if self.cfg.provedor == "google":
             print(f"🟢 Mestre GEMINI ligado: {self.cfg.llm_mestre}")
+            
+            # MESTRE (Criativo)
             self.llm_mestre = ChatGoogleGenerativeAI(
-                model=self.cfg.llm_mestre, 
+                model=self.cfg.llm_mestre,
                 temperature=self.cfg.temperature
             )
+            
+            # SECRETÁRIO (Resumo)
+            print(f"🤖 Secretário de Memória ligado (Gemini Flash)")
             llm_resumo = ChatGoogleGenerativeAI(
                 model=self.cfg.llm_resumo, 
-                temperature=0.3
+                temperature=0.1
             )
             
         elif self.cfg.provedor == "openai":

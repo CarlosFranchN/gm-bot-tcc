@@ -1,0 +1,63 @@
+{
+    "modelo_avaliado": "gemini-2.5-flash_rag_rep1",
+    "juiz_utilizado": "google",
+    "modo_teste": "RAG Ligado",
+    "medias": {
+        "STYLE_REV": 1.0,
+        "EVENT_CAUS": 0.967,
+        "ADHERENCE": 0.95,
+        "TIME_ORDER": 1.0
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O Mestre realizou uma excelente adaptação do texto original, mantendo a atmosfera de urgência e o tom descritivo solicitado. A aderência ao lore é total, sem invenções. As opções são claras e relevantes, embora a opção [3] pudesse ser mais específica em relação às consequências mecânicas (como o risco de exaustão mencionado no PDF) para aumentar a profundidade estratégica."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 1.0,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O Mestre incorporou perfeitamente os elementos sensoriais de calor sugeridos no texto (pés queimando, tontura, ar cintilante) e manteve a fidelidade total ao lore (Scimitar Spires, Black Road, a duna maior). As opções oferecidas são mecanicamente coerentes com o sistema de exploração do PDF e a progressão temporal foi respeitada."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é excelente, evocando forte imersão sensorial. As opções são claras e logicamente conectadas à ação do jogador. Como não há contexto fornecido no PDF, a nota de aderência é máxima por padrão, pois não houve contradição ou invenção de elementos externos ao cenário genérico estabelecido."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 1.0,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O Mestre entregou uma narração imersiva e sensorial de alta qualidade. As opções são mecanicamente distintas (avanço, conservação ou reconhecimento), logicamente conectadas ao estado de exaustão do personagem e claras. Como não há contexto no PDF, a nota de aderência é neutra/máxima por não haver contradições. A ordem temporal foi respeitada, resolvendo o deslocamento antes de oferecer novas escolhas."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 1.0,
+                "ADHERENCE": 0.75,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é excelente e imersiva, capturando bem o tom de sobrevivência. O Mestre resolveu a ação de subir a duna (Area 2) com sucesso. A nota em aderência foi 4.0 pois, embora o conteúdo esteja correto, o Mestre descreveu a estrutura ao 'Sul', enquanto o PDF original especifica que a estrutura está a 'Leste'. Além disso, o Mestre omitiu a solicitação do teste de Constituição (DC 10) para exaustão, que é uma mecânica obrigatória descrita no gabarito para quem atinge o topo da duna."
+        }
+    ]
+}

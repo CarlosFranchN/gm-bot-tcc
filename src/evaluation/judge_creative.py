@@ -119,14 +119,15 @@ class MasterJudge:
                 return resultado.model_dump()
                 
             except Exception as e:
-                if "429" in str(e):
+                erro_msg = str(e)
+                # 👉 CORREÇÃO: Agora o Juiz também sobrevive ao Erro 503 (Servidor Lotado)
+                if "429" in erro_msg or "503" in erro_msg:
                     tempo_espera = 15 * (tentativa + 1)
-                    print(f"⏳ Cota excedida. Aguardando {tempo_espera}s...")
+                    print(f"⏳ Instabilidade na API ({'429' if '429' in erro_msg else '503'}). Aguardando {tempo_espera}s...")
                     time.sleep(tempo_espera)
                 else:
                     print(f"❌ Erro de parsing do Juiz na tentativa {tentativa+1}: {e}")
                     
-        # Se falhar todas as tentativas, retorna None para não sujar o CSV
         return None
 
 # def run_benchmark_evaluation():
