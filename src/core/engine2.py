@@ -9,39 +9,32 @@ from dataclasses import dataclass, asdict
 from typing import List, Dict, Any
 
 from dotenv import load_dotenv
-from pydantic import BaseModel, Field, ValidationError
+from pydantic import BaseModel, Field
 from langchain_chroma import Chroma
-from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
 from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
-
 from langchain_openai import ChatOpenAI 
 
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
 
+# Ajuste de path para importação da memória
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from core.memory import ConversationMemory
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
-
-PROVEDOR_MESTRE = "openrouter"
-
 # =============================================================================
 # 1. CONFIGURAÇÃO DE EXPERIMENTO (O "Ouro" para o seu TCC)
 # =============================================================================
 @dataclass
 class ExpConfig:
     
-    provedor: str = "openrouter" # Opções: "google", "openai", "openrouter"
-    
+    provedor: str = "google" # Opções: "google", "openai", "openrouter"
     usar_rag: bool = True
     
     llm_mestre: str = ""
     llm_resumo: str = ""
     
-    
     embedding_model: str = "gemini-embedding-001" 
-    
     
     temperature: float = 0.8
     retrieval_k: int = 10          
@@ -54,8 +47,8 @@ class ExpConfig:
     def __post_init__(self):
         """Mágica: Auto-configura os modelos corretos dependendo do provedor escolhido!"""
         if self.provedor == "google":
-            self.llm_mestre = "gemini-3.1-flash-lite-preview" # ou "gemini-2.5-flash"
-            self.llm_resumo = "gemini-2.5-flash-lite"
+            self.llm_mestre = "gemini-3.1-flash-lite" # Atualize conforme a versão de sua preferência
+            self.llm_resumo = "gemini-2.5-flash"
             
         elif self.provedor == "openai":
             self.llm_mestre = "gpt-4o-mini"
@@ -75,7 +68,7 @@ class ExpConfig:
 metrics_logger = logging.getLogger("benchmark")
 metrics_logger.setLevel(logging.INFO)
 if not metrics_logger.handlers:
-    handler = logging.FileHandler("experiment_metrics.jsonl", encoding="utf-8", mode="a")
+    handler = logging.FileHandler(PROJECT_ROOT / "db" / "benchmark_results" / "experiment_metrics.jsonl", encoding="utf-8", mode="a")
     handler.setFormatter(logging.Formatter("%(message)s"))
     metrics_logger.addHandler(handler)
 
@@ -94,13 +87,12 @@ class TurnoRPG(BaseModel):
 class RAGEngine:
     def __init__(self, config: ExpConfig = ExpConfig()):
         self.cfg = config
-        load_dotenv()
+        load_dotenv() # Carrega chaves do .env automaticamente
         
         # Conexão com Modelos
-        self.embeddings = GoogleGenerativeAIEmbeddings(
-            model=self.cfg.embedding_model,
-            google_api_key=os.getenv("GOOGLE_API_KEY_MESTRE")
-        )
+        # 👉 Langchain já puxa a GOOGLE_API_KEY automaticamente do ambiente
+        self.embeddings = GoogleGenerativeAIEmbeddings(model=self.cfg.embedding_model)
+        
         self.vectorstore = Chroma(
             persist_directory=str(self.cfg.db_path), 
             embedding_function=self.embeddings
@@ -110,13 +102,11 @@ class RAGEngine:
             print(f"🟢 Mestre GEMINI ligado: {self.cfg.llm_mestre}")
             self.llm_mestre = ChatGoogleGenerativeAI(
                 model=self.cfg.llm_mestre, 
-                temperature=self.cfg.temperature,
-                google_api_key=os.getenv("GOOGLE_API_KEY_MESTRE")
+                temperature=self.cfg.temperature
             )
             llm_resumo = ChatGoogleGenerativeAI(
                 model=self.cfg.llm_resumo, 
-                temperature=0.3,
-                google_api_key=os.getenv("GOOGLE_API_KEY_MESTRE")
+                temperature=0.3
             )
             
         elif self.cfg.provedor == "openai":
@@ -144,6 +134,7 @@ class RAGEngine:
                 model=self.cfg.llm_resumo,
                 temperature=0.3
             )
+            
         self.memory = ConversationMemory(llm_resumo, max_turnos_recentes=2)
         self.carregar_progresso()
         
@@ -168,11 +159,12 @@ class RAGEngine:
         self.chain = self.prompt | self.llm_mestre | self.parser
 
     def _get_token_count(self, text: str) -> int:
-        """Conta tokens NATIVAMENTE sem usar gambiarras do tiktoken."""
+        """Conta tokens. Fallback de 4 chars/token se o provedor não suportar contagem local (ex: Gemini)."""
         try:
-            return self.llm_mestre.get_num_tokens(text)
+            if hasattr(self.llm_mestre, 'get_num_tokens'):
+                return self.llm_mestre.get_num_tokens(text)
+            return len(text) // 4
         except Exception:
-            # Fallback seguro caso a API engasgue, usando estimativa de caracteres
             return len(text) // 4 
 
     async def gerar_turno_async(self, user_input: str, regras: str = "", session_id: str = "default") -> Dict[str, Any]:
@@ -186,32 +178,43 @@ class RAGEngine:
         }
 
         try:
-            # 1. RAG COM FILTRO INTELIGENTE E CHAVE DE ABLAÇÃO
-            # Valores padrão (Caso o RAG esteja desligado - BASELINE)
-            contexto_lore = "Nenhum contexto adicional. O Mestre deve usar seu próprio conhecimento."
+            # =========================================================
+            # 1. RAG: BUSCA DO GABARITO (Sempre acontece para o Juiz)
+            # =========================================================
+            contexto_gabarito = "Nenhum contexto encontrado no PDF."
             context_parts = []
             tokens_injetados = 0
-            qtd_docs_recuperados = 0 
             
-            # 🎛️ O INTERRUPTOR MÁGICO DO TCC: Só faz a busca se usar_rag for True
-            if getattr(self.cfg, 'usar_rag', True):
-                docs_scores = self.vectorstore.similarity_search_with_score(user_input, k=self.cfg.retrieval_k)
-                qtd_docs_recuperados = len(docs_scores)
+            docs_scores = self.vectorstore.similarity_search_with_score(user_input, k=self.cfg.retrieval_k)
+            qtd_docs_recuperados = len(docs_scores)
+            
+            for doc, score in docs_scores:
+                # O Chroma retorna distância (menor é mais parecido). Ignora se for muito distante.
+                if score > self.cfg.similarity_threshold:
+                    continue
                 
-                for doc, score in docs_scores:
-                    # O Chroma retorna distância (menor é mais parecido). Ignora se for muito distante.
-                    if score > self.cfg.similarity_threshold:
-                        continue
-                    
-                    doc_tokens = self._get_token_count(doc.page_content)
-                    if tokens_injetados + doc_tokens > self.cfg.max_lore_tokens:
-                        break # Orçamento de tokens atingido!
-                    
-                    context_parts.append(doc.page_content)
-                    tokens_injetados += doc_tokens
+                doc_tokens = self._get_token_count(doc.page_content)
+                if tokens_injetados + doc_tokens > self.cfg.max_lore_tokens:
+                    break # Orçamento de tokens atingido!
+                
+                context_parts.append(doc.page_content)
+                tokens_injetados += doc_tokens
 
-                if context_parts:
-                    contexto_lore = "\n\n".join(context_parts)
+            if context_parts:
+                contexto_gabarito = "\n\n".join(context_parts)
+
+            # =========================================================
+            # 2. O INTERRUPTOR DE ABLAÇÃO (Afeta apenas o Mestre)
+            # =========================================================
+            contexto_lore = "Nenhum contexto adicional. O Mestre deve usar seu próprio conhecimento."
+            
+            if getattr(self.cfg, 'usar_rag', True):
+                # O RAG tá ligado! Entrega a "cola" pro Mestre.
+                contexto_lore = contexto_gabarito
+            else:
+                # O RAG tá desligado (Baseline). O Mestre fica sem a cola.
+                qtd_docs_recuperados = 0
+                tokens_injetados = 0
 
             # Prepara a memória
             contexto_memoria = self.memory.obter_contexto_formatado()
@@ -230,19 +233,23 @@ class RAGEngine:
             self.memory.adicionar_turno(user_input, output_formatado)
             self.salvar_progresso()
 
-            # 4. LOG DE SUCESSO NO JSONL (Seguro contra erros de variável)
+            # 4. LOG DE SUCESSO NO JSONL 
             metrics.update({
                 "success": True,
                 "latency_s": round(time.time() - start_time, 2),
-                "retrieved_docs": qtd_docs_recuperados, # 👉 Usa a variável segura
-                "filtered_docs": len(context_parts),
+                "retrieved_docs": qtd_docs_recuperados,
+                "filtered_docs": len(context_parts) if getattr(self.cfg, 'usar_rag', True) else 0,
                 "tokens_injected": tokens_injetados
             })
             metrics_logger.info(json.dumps(metrics, ensure_ascii=False))
 
-            # 👉 Pega o dicionário seguro do Pydantic e injeta o contexto do PDF para o Juiz!
+            # =========================================================
+            # 5. SALVANDO PARA O TRIBUNAL (O Juiz recebe o Gabarito!)
+            # =========================================================
             resultado_final = resposta.model_dump()
-            resultado_final["contexto_usado"] = contexto_lore
+            
+            # 👉 Injeta o contexto verdadeiro do PDF para que o Juiz avalie rigorosamente
+            resultado_final["contexto_usado"] = contexto_gabarito
                     
             return resultado_final
             
@@ -257,11 +264,12 @@ class RAGEngine:
             logger.error(f"Erro no Motor RAG: {e}")
             
             return {
+                "raciocinio_estado": "O sistema encontrou um erro técnico.",
                 "narracao": "Houve um distúrbio na magia do mundo. O sistema está sobrecarregado.",
                 "opcoes": ["Tentar novamente", "Esperar"]
             }
 
-    # --- GERENCIAMENTO DE SAVE (Sua lógica original) ---
+    # --- GERENCIAMENTO DE SAVE ---
     def salvar_progresso(self):
         dados_save = {
             "resumo_geral": self.memory.resumo_geral,
@@ -284,24 +292,18 @@ if __name__ == "__main__":
     async def rodar_teste():
         print("🔧 Iniciando Teste do RAGEngine...")
         
-        # 1. Configura qual provedor você quer testar agora
-        # Mude para "google" ou "openrouter" para ver a mágica acontecer!
         config_teste = ExpConfig(provedor="google") 
         
         try:
-            # 2. Liga o Motor
             engine = RAGEngine(config=config_teste)
             print("\n✅ Motor inicializado com sucesso!")
             
-            # 3. Simula uma ação do jogador
             acao_jogador = "Eu pego a minha tocha, olho para a escuridão do deserto e procuro por ruínas."
             print(f"\n👤 Jogador: {acao_jogador}")
             print("⏳ Mestre está pensando (buscando no PDF e gerando texto)...\n")
             
-            # 4. Gera o turno
             resultado = await engine.gerar_turno_async(user_input=acao_jogador)
             
-            # 5. Imprime o JSON estruturado bonito na tela
             print("🎲 RESPOSTA DO MESTRE (JSON Gerado):")
             pprint.pprint(resultado, indent=2, width=100)
             

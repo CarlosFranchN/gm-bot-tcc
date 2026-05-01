@@ -57,7 +57,7 @@ async def jogar_partida(engine: RAGEngine, bot: RandomBot, cenario: dict) -> lis
         })
         
         if turno < cenario["turnos_maximos"]:
-            await asyncio.sleep(10) # Respiro da API
+            await asyncio.sleep(20) # Respiro da API
             
     return transcript
 
@@ -65,12 +65,12 @@ async def jogar_partida(engine: RAGEngine, bot: RandomBot, cenario: dict) -> lis
 # 3. O GERENTE DO ARQUIVO (Apenas Salva Dados)
 # =========================================================================
 def _salvar_transcript(transcript: list, cenario_id: str, config: ExpConfig, base_dir: Path, repeticao: int = 1):
-    """Lida com a burocracia de criar pastas e gerar o nome do arquivo JSON."""
     pasta_saida = base_dir / "transcript"
     pasta_saida.mkdir(parents=True, exist_ok=True)
     
     timestamp = int(time.time())
-    modelo_limpo = config.llm_mestre.replace("/", "_")
+    # 👉 Um nível extra de proteção no nome do ficheiro
+    modelo_limpo = config.llm_mestre.replace("/", "_").replace(":", "-")
     modo_tag = "rag" if config.usar_rag else "baseline"
     
     nome_arquivo = f"transcript_{cenario_id}_{modelo_limpo}_{modo_tag}_rep{repeticao}_{timestamp}.json"
@@ -100,6 +100,8 @@ async def executar_benchmark(provedor_teste: str = "google", usar_rag: bool = Tr
         
         # 2. Prepara os "Atores" para esta rodada específica
         config = ExpConfig(provedor=provedor_teste, usar_rag=usar_rag)
+        if config.save_path.exists():
+            config.save_path.unlink()
         engine = RAGEngine(config=config)
         bot = RandomBot()
         
@@ -130,11 +132,17 @@ async def executar_benchmark(provedor_teste: str = "google", usar_rag: bool = Tr
 if __name__ == "__main__":
     provedores = ["google", "openrouter"]
     modos_rag = [True, False] 
+    NUMERO_REPETICOES = 1  # 👉 Define aqui o número mágico!
     
     for provedor in provedores:
         for rag_ligado in modos_rag:
             try:
-                asyncio.run(executar_benchmark(provedor_teste=provedor, usar_rag=rag_ligado))
+                # 👉 Passa a variável para a função!
+                asyncio.run(executar_benchmark(
+                    provedor_teste=provedor, 
+                    usar_rag=rag_ligado, 
+                    repeticoes=NUMERO_REPETICOES 
+                ))
                 time.sleep(15) 
             except Exception as e:
                 print(f"❌ Erro ao testar {provedor} (RAG={rag_ligado}): {e}")
