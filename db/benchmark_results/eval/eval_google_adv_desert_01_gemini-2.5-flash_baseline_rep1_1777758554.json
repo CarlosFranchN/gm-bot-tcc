@@ -1,0 +1,63 @@
+{
+    "modelo_avaliado": "gemini-2.5-flash_baseline_rep1",
+    "juiz_utilizado": "google",
+    "modo_teste": "Baseline (Sem RAG)",
+    "medias": {
+        "STYLE_REV": 0.0,
+        "EVENT_CAUS": 0.133,
+        "ADHERENCE": 0.0,
+        "TIME_ORDER": 0.0
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.0,
+                "EVENT_CAUS": 0.333,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "O Mestre falhou completamente em processar o contexto do jogo, apresentando uma mensagem de erro técnico em vez de uma narração imersiva. Não houve menção ao deserto de Anauroch, ao calor ou às áreas descritas no gabarito. As opções fornecidas são metalinguísticas e não possuem relação com a narrativa do RPG."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.0,
+                "EVENT_CAUS": 0.083,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "O Mestre falhou completamente em manter a imersão e a continuidade do jogo. A resposta é um erro técnico (meta-jogo) que ignora o contexto do deserto de Anauroch, não oferece opções de jogo relevantes para a exploração e quebra a suspensão de descrença ao tratar uma falha de sistema como um evento narrativo."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.0,
+                "EVENT_CAUS": 0.083,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "O Mestre falhou completamente em manter a imersão e a continuidade do jogo. A resposta é um erro técnico (meta-jogo) que ignora o contexto do deserto de Anauroch, não oferece opções de jogo relevantes para a exploração e quebra a suspensão de descrença ao tratar uma falha de sistema como um evento narrativo."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.0,
+                "EVENT_CAUS": 0.083,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "O Mestre falhou completamente em manter a imersão e a continuidade do jogo. A resposta é um erro técnico (meta-jogo) que ignora o contexto do deserto de Anauroch, não oferece opções de jogo relevantes para a exploração e quebra a suspensão de descrença ao tratar uma falha de sistema como um evento narrativo."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.0,
+                "EVENT_CAUS": 0.083,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "O Mestre falhou completamente em manter a imersão e a continuidade do jogo. A resposta é um erro técnico (meta-jogo) que ignora o contexto do deserto de Anauroch, não oferece opções de jogo relevantes para a exploração e quebra a suspensão de descrença ao tratar uma falha de sistema como um evento narrativo."
+        }
+    ]
+}

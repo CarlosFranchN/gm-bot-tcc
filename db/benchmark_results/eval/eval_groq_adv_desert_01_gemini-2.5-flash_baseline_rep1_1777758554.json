@@ -1,0 +1,63 @@
+{
+    "modelo_avaliado": "gemini-2.5-flash_baseline_rep1",
+    "juiz_utilizado": "groq",
+    "modo_teste": "Baseline (Sem RAG)",
+    "medias": {
+        "STYLE_REV": 0.25,
+        "EVENT_CAUS": 0.6,
+        "ADHERENCE": 0.0,
+        "TIME_ORDER": 0.0
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.25,
+                "EVENT_CAUS": 0.333,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração não criou suspense ou imersão, as opções não oferecem caminhos mecânicos distintos, não fazem sentido causal com o contexto do deserto de Anauroch e não seguem o contexto original do PDF. Além disso, a conexão com o Mestre foi interrompida, o que não está de acordo com o contexto."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.25,
+                "EVENT_CAUS": 0.667,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração não criou suspense ou imersão, as opções não oferecem caminhos mecânicos distintos, a conexão com o contexto original foi perdida e a resolução da ação atual não foi feita de forma cronológica."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.25,
+                "EVENT_CAUS": 0.583,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração não cria suspense ou imersão, as opções não oferecem caminhos mecânicos distintos, a conexão com o contexto original foi perdida e a resolução da ação atual não foi feita de forma cronológica."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.25,
+                "EVENT_CAUS": 0.667,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração não criou suspense ou imersão, as opções não oferecem caminhos mecânicos distintos, a conexão com o contexto do PDF foi interrompida, e a resolução da ação atual não foi feita antes de dar novas opções."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.25,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração não criou suspense ou imersão, as opções oferecem caminhos distintos, mas a conexão com o contexto original foi perdida, não respeitando o lore estabelecido."
+        }
+    ]
+}

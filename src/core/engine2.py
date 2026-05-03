@@ -24,11 +24,10 @@ from core.memory import ConversationMemory
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 
 # =============================================================================
-# 1. CONFIGURAÇÃO DE EXPERIMENTO (O "Ouro" para o seu TCC)
+# 1. CONFIGURAÇÃO DE EXPERIMENTO
 # =============================================================================
 @dataclass
 class ExpConfig:
-    
     provedor: str = "google" # Opções: "google", "openai", "openrouter"
     usar_rag: bool = True
     
@@ -39,27 +38,26 @@ class ExpConfig:
     
     temperature: float = 0.8
     retrieval_k: int = 10          
-    similarity_threshold: float = 0.65 
+    similarity_threshold: float = 0.80 
     max_lore_tokens: int = 1500    
     
     db_path: Path = PROJECT_ROOT / "db" / "chroma_dnd"
     save_path: Path = PROJECT_ROOT / "db" / "savegame.json"
 
     def __post_init__(self):
-        """Mágica: Auto-configura os modelos corretos dependendo do provedor escolhido!"""
+        """Auto-configura os modelos corretos dependendo do provedor escolhido."""
         if self.provedor == "google":
-            # 👉 Usar o modelo canónico evita problemas de "preview" e tem 1.500 RPD
             self.llm_mestre = "gemini-2.5-flash" 
-            # O llm_resumo não importa aqui, pois será forçado para o Llama no __init__
-            self.llm_resumo = "gemini-2.5-flash" 
+            self.llm_resumo = "gemini-3-flash-preview" 
             
         elif self.provedor == "openai":
             self.llm_mestre = "gpt-4o-mini"
             self.llm_resumo = "gpt-4o-mini"
             
         elif self.provedor == "openrouter":
-            self.llm_mestre = "openai/gpt-4o-mini" 
-            self.llm_resumo = "openai/gpt-4o-mini"
+            if not self.llm_mestre:
+                self.llm_mestre = "qwen/qwen-2.5-32b-instruct" 
+            self.llm_resumo = "openai/gpt-4o-mini" # Usa sempre um modelo barato para o resumo
             
         else:
             raise ValueError(f"Provedor '{self.provedor}' inválido no ExpConfig.")
@@ -67,15 +65,17 @@ class ExpConfig:
 # =============================================================================
 # 2. LOGGERS E SCHEMA
 # =============================================================================
-# Logger de Métricas (Para gerar os gráficos do TCC)
 metrics_logger = logging.getLogger("benchmark")
 metrics_logger.setLevel(logging.INFO)
 if not metrics_logger.handlers:
-    handler = logging.FileHandler(PROJECT_ROOT / "db" / "benchmark_results" / "experiment_metrics.jsonl", encoding="utf-8", mode="a")
+    # Garante que a pasta existe antes de tentar escrever nela
+    log_dir = PROJECT_ROOT / "db" / "benchmark_results"
+    log_dir.mkdir(parents=True, exist_ok=True)
+    
+    handler = logging.FileHandler(log_dir / "experiment_metrics.jsonl", encoding="utf-8", mode="a")
     handler.setFormatter(logging.Formatter("%(message)s"))
     metrics_logger.addHandler(handler)
 
-# Logger padrão para o terminal
 logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)s | %(message)s")
 logger = logging.getLogger("RAGEngine")
 
@@ -85,15 +85,13 @@ class TurnoRPG(BaseModel):
     opcoes: List[str] = Field(description="Lista com 3 opções de ação")
 
 # =============================================================================
-# 3. ENGINE RAG UNIFICADA
+# 3. ENGINE RAG UNIFICADA (O Exoesqueleto Cognitivo)
 # =============================================================================
 class RAGEngine:
-    def __init__(self, config: ExpConfig = ExpConfig()):
-        self.cfg = config
-        load_dotenv() # Carrega chaves do .env automaticamente
+    def __init__(self, config: ExpConfig = None):
+        self.cfg = config if config else ExpConfig()
+        load_dotenv() 
         
-        # Conexão com Modelos
-        # 👉 Langchain já puxa a GOOGLE_API_KEY automaticamente do ambiente
         self.embeddings = GoogleGenerativeAIEmbeddings(model=self.cfg.embedding_model)
         
         self.vectorstore = Chroma(
@@ -101,52 +99,12 @@ class RAGEngine:
             embedding_function=self.embeddings
         )
         
-        if self.cfg.provedor == "google":
-            print(f"🟢 Mestre GEMINI ligado: {self.cfg.llm_mestre}")
-            
-            # MESTRE (Criativo)
-            self.llm_mestre = ChatGoogleGenerativeAI(
-                model=self.cfg.llm_mestre,
-                temperature=self.cfg.temperature
-            )
-            
-            # SECRETÁRIO (Resumo)
-            print(f"🤖 Secretário de Memória ligado (Gemini Flash)")
-            llm_resumo = ChatGoogleGenerativeAI(
-                model=self.cfg.llm_resumo, 
-                temperature=0.1
-            )
-            
-        elif self.cfg.provedor == "openai":
-            print(f"🔵 Mestre OPENAI ligado: {self.cfg.llm_mestre}")
-            self.llm_mestre = ChatOpenAI(
-                model=self.cfg.llm_mestre, 
-                temperature=self.cfg.temperature
-            )
-            llm_resumo = ChatOpenAI(
-                model=self.cfg.llm_resumo, 
-                temperature=0.3
-            )
-            
-        elif self.cfg.provedor == "openrouter":
-            print(f"🟣 Mestre OPENROUTER ligado: {self.cfg.llm_mestre}")
-            self.llm_mestre = ChatOpenAI(
-                api_key=os.getenv("OPENROUTER_API_KEY"),
-                base_url="https://openrouter.ai/api/v1",
-                model=self.cfg.llm_mestre,
-                temperature=self.cfg.temperature
-            )
-            llm_resumo = ChatOpenAI(
-                api_key=os.getenv("OPENROUTER_API_KEY"),
-                base_url="https://openrouter.ai/api/v1",
-                model=self.cfg.llm_resumo,
-                temperature=0.3
-            )
-            
+        # 👉 FÁBRICA DE LLMs (Limpo e organizado num método próprio)
+        self.llm_mestre, llm_resumo = self._inicializar_fabrica_llm()
+        
         self.memory = ConversationMemory(llm_resumo, max_turnos_recentes=2)
         self.carregar_progresso()
         
-        # Parser e Chain
         self.parser = PydanticOutputParser(pydantic_object=TurnoRPG)
         self.prompt = ChatPromptTemplate.from_messages([
             ("system", """Você é um Mestre de RPG para uma aventura SOLO.
@@ -166,8 +124,48 @@ class RAGEngine:
         
         self.chain = self.prompt | self.llm_mestre | self.parser
 
+    def _inicializar_fabrica_llm(self):
+        """Padrão Factory: Retorna a instância do Mestre e do Secretário baseados na config."""
+        
+        if self.cfg.provedor == "google":
+            print(f"🟢 Fábrica: Construindo Mestre GEMINI ({self.cfg.llm_mestre})")
+            mestre = ChatGoogleGenerativeAI(
+                model=self.cfg.llm_mestre,
+                temperature=self.cfg.temperature
+            )
+            # Como a Google não suporta model_kwargs={"response_format"}, contamos apenas com o Pydantic
+            secretario = ChatGoogleGenerativeAI(model=self.cfg.llm_resumo, temperature=0.1)
+            
+        elif self.cfg.provedor == "openai":
+            print(f"🔵 Fábrica: Construindo Mestre OPENAI ({self.cfg.llm_mestre})")
+            mestre = ChatOpenAI(
+                model=self.cfg.llm_mestre, 
+                temperature=self.cfg.temperature,
+                model_kwargs={"response_format": {"type": "json_object"}} # 👉 Trava de Segurança OpenAI
+            )
+            secretario = ChatOpenAI(model=self.cfg.llm_resumo, temperature=0.3)
+            
+        elif self.cfg.provedor == "openrouter":
+            print(f"🟣 Fábrica: Construindo Mestre OPENROUTER ({self.cfg.llm_mestre})")
+            mestre = ChatOpenAI(
+                api_key=os.getenv("OPENROUTER_API_KEY"),
+                base_url="https://openrouter.ai/api/v1",
+                model=self.cfg.llm_mestre,
+                temperature=self.cfg.temperature,
+                model_kwargs={"response_format": {"type": "json_object"}} # 👉 Trava de Segurança Qwen/OpenRouter
+            )
+            secretario = ChatOpenAI(
+                api_key=os.getenv("OPENROUTER_API_KEY"),
+                base_url="https://openrouter.ai/api/v1",
+                model=self.cfg.llm_resumo,
+                temperature=0.3
+            )
+        else:
+            raise ValueError("Provedor não suportado na fábrica.")
+            
+        return mestre, secretario
+
     def _get_token_count(self, text: str) -> int:
-        """Conta tokens. Fallback de 4 chars/token se o provedor não suportar contagem local (ex: Gemini)."""
         try:
             if hasattr(self.llm_mestre, 'get_num_tokens'):
                 return self.llm_mestre.get_num_tokens(text)
@@ -178,7 +176,6 @@ class RAGEngine:
     async def gerar_turno_async(self, user_input: str, regras: str = "", session_id: str = "default") -> Dict[str, Any]:
         start_time = time.time()
         
-        # Setup das métricas
         metrics = {
             "session_id": session_id,
             "action": user_input,
@@ -186,9 +183,7 @@ class RAGEngine:
         }
 
         try:
-            # =========================================================
-            # 1. RAG: BUSCA DO GABARITO (Sempre acontece para o Juiz)
-            # =========================================================
+            # 1. RAG
             contexto_gabarito = "Nenhum contexto encontrado no PDF."
             context_parts = []
             tokens_injetados = 0
@@ -197,13 +192,12 @@ class RAGEngine:
             qtd_docs_recuperados = len(docs_scores)
             
             for doc, score in docs_scores:
-                # O Chroma retorna distância (menor é mais parecido). Ignora se for muito distante.
                 if score > self.cfg.similarity_threshold:
                     continue
                 
                 doc_tokens = self._get_token_count(doc.page_content)
                 if tokens_injetados + doc_tokens > self.cfg.max_lore_tokens:
-                    break # Orçamento de tokens atingido!
+                    break 
                 
                 context_parts.append(doc.page_content)
                 tokens_injetados += doc_tokens
@@ -211,23 +205,18 @@ class RAGEngine:
             if context_parts:
                 contexto_gabarito = "\n\n".join(context_parts)
 
-            # =========================================================
-            # 2. O INTERRUPTOR DE ABLAÇÃO (Afeta apenas o Mestre)
-            # =========================================================
+            # 2. ABLAÇÃO
             contexto_lore = "Nenhum contexto adicional. O Mestre deve usar seu próprio conhecimento."
             
             if getattr(self.cfg, 'usar_rag', True):
-                # O RAG tá ligado! Entrega a "cola" pro Mestre.
                 contexto_lore = contexto_gabarito
             else:
-                # O RAG tá desligado (Baseline). O Mestre fica sem a cola.
                 qtd_docs_recuperados = 0
                 tokens_injetados = 0
 
-            # Prepara a memória
             contexto_memoria = self.memory.obter_contexto_formatado()
 
-            # 2. GERAÇÃO
+            # 3. GERAÇÃO
             resposta: TurnoRPG = await self.chain.ainvoke({
                 "lore": contexto_lore,
                 "memoria": contexto_memoria,
@@ -236,12 +225,12 @@ class RAGEngine:
                 "format_instructions": self.parser.get_format_instructions()
             })
             
-            # 3. SALVA MEMÓRIA
+            # 4. SALVA MEMÓRIA
             output_formatado = f"{resposta.narracao}\nOpções: {', '.join(resposta.opcoes)}"
             self.memory.adicionar_turno(user_input, output_formatado)
             self.salvar_progresso()
 
-            # 4. LOG DE SUCESSO NO JSONL 
+            # 5. LOG DE SUCESSO NO JSONL 
             metrics.update({
                 "success": True,
                 "latency_s": round(time.time() - start_time, 2),
@@ -251,18 +240,17 @@ class RAGEngine:
             })
             metrics_logger.info(json.dumps(metrics, ensure_ascii=False))
 
-            # =========================================================
-            # 5. SALVANDO PARA O TRIBUNAL (O Juiz recebe o Gabarito!)
-            # =========================================================
             resultado_final = resposta.model_dump()
             
-            # 👉 Injeta o contexto verdadeiro do PDF para que o Juiz avalie rigorosamente
-            resultado_final["contexto_usado"] = contexto_gabarito
+            # Correção da Ilusão de Ótica: Grava no log exatamente o que a IA leu
+            if getattr(self.cfg, 'usar_rag', True):
+                resultado_final["contexto_usado"] = contexto_gabarito
+            else:
+                resultado_final["contexto_usado"] = "Nenhum contexto (Baseline)"
                     
             return resultado_final
             
         except Exception as e:
-            # LOG DE ERRO NO JSONL
             metrics.update({
                 "success": False,
                 "error": str(e),
@@ -271,18 +259,21 @@ class RAGEngine:
             metrics_logger.info(json.dumps(metrics, ensure_ascii=False))
             logger.error(f"Erro no Motor RAG: {e}")
             
+            # 👉 Adiciona as opções de recuperação de erro se a API cair para o simulador não congelar
             return {
-                "raciocinio_estado": "O sistema encontrou um erro técnico.",
-                "narracao": "Houve um distúrbio na magia do mundo. O sistema está sobrecarregado.",
-                "opcoes": ["Tentar novamente", "Esperar"]
+                "raciocinio_estado": f"Ocorreu um erro técnico: {e}",
+                "narracao": "Houve um distúrbio na magia do mundo. A conexão com o Mestre foi interrompida temporariamente.",
+                "opcoes": ["Tentar novamente a mesma ação", "Esperar que a conexão volte", "Fazer uma pausa"],
+                "contexto_usado": "Erro de API"
             }
 
-    # --- GERENCIAMENTO DE SAVE ---
     def salvar_progresso(self):
         dados_save = {
             "resumo_geral": self.memory.resumo_geral,
             "historico_recente": self.memory.historico_recente
         }
+        # Cria a pasta caso não exista
+        self.cfg.save_path.parent.mkdir(parents=True, exist_ok=True)
         with open(self.cfg.save_path, 'w', encoding='utf-8') as f:
             json.dump(dados_save, f, ensure_ascii=False, indent=4)
 
@@ -292,31 +283,3 @@ class RAGEngine:
                 dados_save = json.load(f)
                 self.memory.resumo_geral = dados_save.get("resumo_geral", "")
                 self.memory.historico_recente = dados_save.get("historico_recente", [])
-                
-if __name__ == "__main__":
-    import asyncio
-    import pprint
-
-    async def rodar_teste():
-        print("🔧 Iniciando Teste do RAGEngine...")
-        
-        config_teste = ExpConfig(provedor="google") 
-        
-        try:
-            engine = RAGEngine(config=config_teste)
-            print("\n✅ Motor inicializado com sucesso!")
-            
-            acao_jogador = "Eu pego a minha tocha, olho para a escuridão do deserto e procuro por ruínas."
-            print(f"\n👤 Jogador: {acao_jogador}")
-            print("⏳ Mestre está pensando (buscando no PDF e gerando texto)...\n")
-            
-            resultado = await engine.gerar_turno_async(user_input=acao_jogador)
-            
-            print("🎲 RESPOSTA DO MESTRE (JSON Gerado):")
-            pprint.pprint(resultado, indent=2, width=100)
-            
-        except Exception as e:
-            print(f"\n❌ Erro durante o teste: {e}")
-
-    # Roda a função assíncrona
-    asyncio.run(rodar_teste())

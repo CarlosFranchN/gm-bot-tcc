@@ -16,6 +16,8 @@
       "Mantenha a sensação de urgência, não entregue água fácil.",
       "MUITO IMPORTANTE: Não peça para o jogador rolar dados físicos. Se uma ação exigir um teste (como Percepção ou Sobrevivência), VOCÊ (o Mestre) deve decidir o resultado narrativamente nos bastidores com base na dificuldade da ação."
     ],
-    "turnos_maximos": 5
+    "turnos_maximos": 5,
+    
+    "contexto_oficial_para_avaliacao": "GABARITO DO PDF: O deserto de Anauroch é um mar de areia mortal sem oásis na Área 1. A Área 3 é um antigo Santuário em ruínas, parcialmente soterrado, dedicado a uma divindade da água. Não existem monstros de fogo ou itens mágicos espalhados pela areia. O calor causa exaustão mecânica."
   }
 ]

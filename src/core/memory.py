@@ -1,4 +1,5 @@
 from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.output_parsers import StrOutputParser
 
 class ConversationMemory:
     def __init__(self, llm_resumidor, max_turnos_recentes=2):
@@ -43,14 +44,17 @@ class ConversationMemory:
             ("human", "Novos acontecimentos para incluir no resumo:\n{novos_eventos}")
         ])
         
-        chain = prompt_compressao | self.llm
-        resultado = chain.invoke({
+        # 👉 A MÁGICA AQUI: Adicionamos o StrOutputParser() no final da Chain
+        chain = prompt_compressao | self.llm | StrOutputParser()
+        
+        # O resultado agora é GARANTIDAMENTE uma String pura, nunca uma lista!
+        resultado_texto = chain.invoke({
             "resumo_antigo": self.resumo_geral if self.resumo_geral else "A aventura acabou de começar.",
             "novos_eventos": texto_para_resumir
         })
         
-        # Atualiza o resumo oficial
-        self.resumo_geral = resultado.content.strip()
+        # Atualiza o resumo oficial sem medo de o Python reclamar
+        self.resumo_geral = resultado_texto.strip()
         
         # Remove o turno resumido da memória de curto prazo (os 2 primeiros itens)
         self.historico_recente = self.historico_recente[2:]

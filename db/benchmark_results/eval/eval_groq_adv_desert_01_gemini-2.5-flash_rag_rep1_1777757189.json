@@ -1,0 +1,63 @@
+{
+    "modelo_avaliado": "gemini-2.5-flash_rag_rep1",
+    "juiz_utilizado": "groq",
+    "modo_teste": "RAG Ligado",
+    "medias": {
+        "STYLE_REV": 0.95,
+        "EVENT_CAUS": 0.9,
+        "ADHERENCE": 1.0,
+        "TIME_ORDER": 1.0
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando um ambiente hostil e desafiador. As opções oferecidas são relevantes e claras, permitindo ao jogador escolher entre diferentes caminhos. A aderência ao contexto do PDF é total, sem invenções. A resolução cronológica é adequada, respeitando a ordem dos eventos."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando uma atmosfera de desafio e sobrevivência no deserto. As opções oferecidas são relevantes e claras, com uma diversidade razoável. A aderência ao contexto original é total, sem invenções. A resolução da ação do jogador é cronologicamente correta, sem avançar o tempo sem permissão."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes que criam uma atmosfera de desafio e sobrevivência. As opções oferecidas são relevantes e claras, e a resolução da ação do jogador é cronologicamente coerente. A aderência ao contexto é total, sem invenções."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando um cenário de deserto implacável. As opções são relevantes e claras, oferecendo caminhos distintos para o jogador. A ação do jogador é resolvida no presente antes de dar novas opções, e não há invenções que desviem do contexto."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 1.0,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando um cenário de desespero e urgência. As opções oferecidas são diversificadas, relevantes e claras, permitindo ao jogador escolher o próximo passo de forma lógica e coerente. A aderência ao contexto é total, sem invenções ou desvios. A resolução da ação do jogador é feita de forma cronologicamente correta, sem saltos ou avanços indevidos."
+        }
+    ]
+}

@@ -6,11 +6,12 @@ import time
 import asyncio
 from pathlib import Path
 
+# Ajuste de path para importação
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from core.engine2 import RAGEngine, ExpConfig
 
 # =========================================================================
-# 1. A MENTE DO JOGADOR (Fácil de escalar no futuro)
+# 1. A MENTE DO JOGADOR
 # =========================================================================
 class RandomBot:
     """Um robô que joga RPG escolhendo opções aleatoriamente."""
@@ -18,131 +19,156 @@ class RandomBot:
         self.fallback_action = fallback_action
 
     def escolher_acao(self, opcoes: list) -> str:
+        """Escolhe uma opção aleatória da lista ou a ação de fallback."""
         if opcoes:
             return random.choice(opcoes)
         return self.fallback_action
 
+
 # =========================================================================
-# 2. O TABULEIRO (Apenas o Loop do Jogo)
+# 2. O ORQUESTRADOR DE SIMULAÇÃO
 # =========================================================================
-async def jogar_partida(engine: RAGEngine, bot: RandomBot, cenario: dict) -> list:
-    """Realiza o ping-pong entre o Motor (Mestre) e o Bot (Jogador)."""
-    transcript = []
+class SimulationOrchestrator:
+    """Orquestra a configuração, a simulação das partidas e o armazenamento dos logs."""
     
-    regras_cena = "\n".join([f"- {r}" for r in cenario.get('regras_narrativas', [])])
-    dicas_rag = " ".join(cenario.get('contexto_rag_hint', []))
-    
-    acao_atual = f"{cenario['prompt_inicial']} [Contexto oculto: {dicas_rag}]"
-    
-    for turno in range(1, cenario["turnos_maximos"] + 1):
-        print(f"\n🎬 TURNO {turno}/{cenario['turnos_maximos']}")
+    def __init__(self):
+        self.project_root = Path(__file__).resolve().parent.parent.parent
+        self.base_dir_results = self.project_root / "db" / "benchmark_results"
+        self.cenarios = self._carregar_cenarios()
         
-        # 1. O Mestre Narra
-        resultado = await engine.gerar_turno_async(user_input=acao_atual, regras=regras_cena)
+    def _carregar_cenarios(self) -> list:
+        """Carrega a lista de cenários do ficheiro JSON."""
+        caminho_scenarios = self.project_root / "datasets" / "scenarios.json"
+        with open(caminho_scenarios, 'r', encoding='utf-8') as f:
+            return json.load(f)
+
+    async def _jogar_partida(self, engine: RAGEngine, bot: RandomBot, cenario: dict) -> list:
+        """Realiza o ping-pong de turnos entre o Motor (Mestre) e o Bot (Jogador)."""
+        transcript = []
         
-        print(f"📜 MESTRE: {resultado.get('narracao', '')[:100]}...") # Print curto para não poluir a tela
+        regras_cena = "\n".join([f"- {r}" for r in cenario.get('regras_narrativas', [])])
+        dicas_rag = " ".join(cenario.get('contexto_rag_hint', []))
         
-        # 2. O Jogador Escolhe
-        acao_deste_turno = acao_atual
-        opcoes = resultado.get('opcoes', [])
-        acao_atual = bot.escolher_acao(opcoes)
+        acao_atual = f"{cenario['prompt_inicial']} [Contexto oculto: {dicas_rag}]"
         
-        print(f"🤖 ROBÔ ESCOLHEU: {acao_atual}")
+        turnos_maximos = cenario.get("turnos_maximos", 5)
         
-        # 3. Salva no Diário
-        transcript.append({
-            "turno": turno,
-            "acao_solicitada": acao_deste_turno,
-            "resposta_mestre": resultado
-        })
-        
-        if turno < cenario["turnos_maximos"]:
-            await asyncio.sleep(25) # Respiro da API
+        for turno in range(1, turnos_maximos + 1):
+            print(f"\n🎬 TURNO {turno}/{turnos_maximos}")
             
-    return transcript
+            # 1. O Mestre Narra (Com tratamento de excepções e resiliência)
+            try:
+                resultado = await engine.gerar_turno_async(user_input=acao_atual, regras=regras_cena)
+            except Exception as e:
+                print(f"❌ Erro fatal na geração do turno {turno}: {e}")
+                # Regista o erro no transcript e aborta a simulação atual para não gerar lixo
+                transcript.append({"turno": turno, "erro": str(e), "acao_solicitada": acao_atual})
+                break 
+
+            # Feedback visual no terminal
+            narracao_curta = resultado.get('narracao', '')[:100].replace('\n', ' ')
+            print(f"📜 MESTRE: {narracao_curta}...")
+            
+            # 2. O Jogador Escolhe a próxima ação
+            acao_deste_turno = acao_atual
+            opcoes = resultado.get('opcoes', [])
+            acao_atual = bot.escolher_acao(opcoes)
+            
+            print(f"🤖 ROBÔ ESCOLHEU: {acao_atual}")
+            
+            # 3. Salva no Diário
+            transcript.append({
+                "turno": turno,
+                "acao_solicitada": acao_deste_turno,
+                "resposta_mestre": resultado
+            })
+            
+            # Pausa para evitar rate limits da API entre turnos
+            if turno < turnos_maximos:
+                await asyncio.sleep(35) 
+                
+        return transcript
+
+    def _salvar_transcript(self, transcript: list, cenario_id: str, config: ExpConfig, repeticao: int):
+        """Guarda o log da partida em ficheiro JSON formatado."""
+        pasta_saida = self.base_dir_results / "transcript"
+        pasta_saida.mkdir(parents=True, exist_ok=True)
+        
+        timestamp = int(time.time())
+        modelo_limpo = config.llm_mestre.replace("/", "_").replace(":", "-")
+        modo_tag = "rag" if config.usar_rag else "baseline"
+        
+        nome_arquivo = f"transcript_{cenario_id}_{modelo_limpo}_{modo_tag}_rep{repeticao}_{timestamp}.json"
+        arquivo_saida = pasta_saida / nome_arquivo
+        
+        with open(arquivo_saida, 'w', encoding='utf-8') as f:
+            json.dump(transcript, f, ensure_ascii=False, indent=4)
+            
+        print(f"🏁 Transcript salvo em: {arquivo_saida.name}")
+
+    async def executar_benchmark(self, provedor_teste: str = "google", usar_rag: bool = True, repeticoes: int = 1):
+        """Orquestra as múltiplas repetições de um cenário para uma configuração específica."""
+        
+        if not self.cenarios:
+             print("❌ Erro: Nenhum cenário encontrado para jogar.")
+             return
+             
+        cenario_atual = self.cenarios[0] # Para já testa apenas o primeiro cenário
+
+        for i in range(repeticoes):
+            rep_atual = i + 1
+            print(f"\n========================================================")
+            print(f"🔄 REPETIÇÃO {rep_atual}/{repeticoes} | PROVEDOR: {provedor_teste.upper()} | RAG: {usar_rag}")
+            print(f"========================================================")
+            
+            # Prepara a configuração e limpa saves anteriores
+            config = ExpConfig(provedor=provedor_teste, usar_rag=usar_rag)
+            if config.save_path.exists():
+                config.save_path.unlink()
+                
+            engine = RAGEngine(config=config)
+            bot = RandomBot()
+            
+            print(f"🚀 INICIANDO: {cenario_atual['titulo']} | Modelo alvo: {config.llm_mestre}")
+            
+            # Joga a partida e grava os resultados
+            transcript_final = await self._jogar_partida(engine, bot, cenario_atual)
+            
+            self._salvar_transcript(transcript_final, cenario_atual['id'], config, rep_atual)
+
+            # Pausa de segurança entre repetições do mesmo cenário
+            if i < repeticoes - 1:
+                print(f"⏳ Pausa de segurança (20s) a aguardar arrefecimento da API...")
+                await asyncio.sleep(20)
+
+        print(f"\n✅ Bateria de {repeticoes} repetições concluída com sucesso para {provedor_teste} (RAG={usar_rag})!")
+
 
 # =========================================================================
-# 3. O GERENTE DO ARQUIVO (Apenas Salva Dados)
+# 3. GATILHO DA MATRIZ DE ABLAÇÃO
 # =========================================================================
-def _salvar_transcript(transcript: list, cenario_id: str, config: ExpConfig, base_dir: Path, repeticao: int = 1):
-    pasta_saida = base_dir / "transcript"
-    pasta_saida.mkdir(parents=True, exist_ok=True)
-    
-    timestamp = int(time.time())
-    # 👉 Um nível extra de proteção no nome do ficheiro
-    modelo_limpo = config.llm_mestre.replace("/", "_").replace(":", "-")
-    modo_tag = "rag" if config.usar_rag else "baseline"
-    
-    nome_arquivo = f"transcript_{cenario_id}_{modelo_limpo}_{modo_tag}_rep{repeticao}_{timestamp}.json"
-    arquivo_saida = pasta_saida / nome_arquivo
-    
-    with open(arquivo_saida, 'w', encoding='utf-8') as f:
-        json.dump(transcript, f, ensure_ascii=False, indent=4)
-        
-    print(f"🏁 Transcript salvo em: {arquivo_saida.name}")
-
-# =========================================================================
-# 4. O ORQUESTRADOR PRINCIPAL (A antiga Função Deus)
-# =========================================================================
-async def executar_benchmark(provedor_teste: str = "google", usar_rag: bool = True, repeticoes: int = 1):
-    # 1. Carrega os dados iniciais (Apenas uma vez fora do loop)
-    PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent 
-    with open(PROJECT_ROOT / "datasets" / "scenarios.json", 'r', encoding='utf-8') as f:
-        cenarios = json.load(f)
-    
-    cenario_atual = cenarios[0]
-    base_dir_results = PROJECT_ROOT / "db" / "benchmark_results"
-
-    # Inicia o loop de repetições
-    for i in range(repeticoes):
-        rep_atual = i + 1
-        print(f"\n🔄 REPETIÇÃO {rep_atual}/{repeticoes} - {provedor_teste.upper()} (RAG={usar_rag})")
-        
-        # 2. Prepara os "Atores" para esta rodada específica
-        config = ExpConfig(provedor=provedor_teste, usar_rag=usar_rag)
-        if config.save_path.exists():
-            config.save_path.unlink()
-        engine = RAGEngine(config=config)
-        bot = RandomBot()
-        
-        print(f"🚀 JOGANDO: {cenario_atual['titulo']} | Modelo: {config.llm_mestre}")
-        
-        # 3. Deixa eles jogarem!
-        transcript_final = await jogar_partida(engine, bot, cenario_atual)
-        
-        # 👉 4. SALVAMENTO IMEDIATO (Dentro do loop para segurança)
-        # Passamos o 'rep_atual' para que a função de salvar crie nomes únicos
-        _salvar_transcript(
-            transcript_final, 
-            cenario_atual['id'], 
-            config, 
-            base_dir_results,
-            repeticao=rep_atual # Novo parâmetro para o nome do arquivo
-        )
-
-        # Respiro entre repetições
-        if i < repeticoes - 1:
-            print(f"⏳ Pausa de segurança de 20s entre repetições...")
-            await asyncio.sleep(20)
-
-    print(f"\n✅ Bateria de {repeticoes} repetições concluída para {provedor_teste}!")
-# =========================================================================
-# GATILHO DA MATRIZ DE ABLAÇÃO
-# =========================================================================
-if __name__ == "__main__":
-    provedores = ["google", "openrouter"]
+async def main():
+    """Função de entrada que define a matriz de testes."""
+    # provedores = ["google", "openrouter"]
+    provedores = ["google"]
     modos_rag = [True, False] 
-    NUMERO_REPETICOES = 1  # 👉 Define aqui o número mágico!
+    NUMERO_REPETICOES = 1
+    
+    orquestrador = SimulationOrchestrator()
     
     for provedor in provedores:
         for rag_ligado in modos_rag:
             try:
-                # 👉 Passa a variável para a função!
-                asyncio.run(executar_benchmark(
+                await orquestrador.executar_benchmark(
                     provedor_teste=provedor, 
                     usar_rag=rag_ligado, 
-                    repeticoes=NUMERO_REPETICOES 
-                ))
-                time.sleep(15) 
+                    repeticoes=NUMERO_REPETICOES
+                )
+                print(f"⏳ Pausa de segurança (15s) entre trocas de contexto da matriz...")
+                await asyncio.sleep(15) 
             except Exception as e:
-                print(f"❌ Erro ao testar {provedor} (RAG={rag_ligado}): {e}")
+                print(f"❌ Erro crítico ao testar provedor {provedor} (RAG={rag_ligado}): {e}")
+
+if __name__ == "__main__":
+    # Garante que o loop assíncrono corre de forma correta no ponto de entrada
+    asyncio.run(main())

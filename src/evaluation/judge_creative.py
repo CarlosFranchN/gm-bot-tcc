@@ -26,9 +26,11 @@ class JudgeConfig:
             self.llm_juiz_nome = "gpt-4o"
         elif self.provedor_juiz == "openrouter":
             self.llm_juiz_nome = "openai/gpt-4o"
+        # 👉 NOVA OPÇÃO: Adicionamos a Groq como o nosso Juiz Neutro
+        elif self.provedor_juiz == "groq":
+            self.llm_juiz_nome = "llama-3.3-70b-versatile"
         else:
             raise ValueError(f"Provedor '{self.provedor_juiz}' inválido no JudgeConfig.")
-
 # Carrega o .env automaticamente
 load_dotenv(find_dotenv(), override=True)
 # if not os.getenv("GOOGLE_API_KEY"):
@@ -77,6 +79,16 @@ class MasterJudge:
                 base_url="https://openrouter.ai/api/v1",
                 model=self.cfg.llm_juiz_nome,
                 temperature=0.0
+            )
+        elif self.cfg.provedor_juiz == "groq":
+            self.llm_juiz = ChatOpenAI(
+                api_key=os.getenv("GROQ_API_KEY"), 
+                base_url="https://api.groq.com/openai/v1", 
+                model=self.cfg.llm_juiz_nome, 
+                temperature=0.0, 
+                model_kwargs={
+                    "response_format": {"type": "json_object"} 
+                }
             )
 
         self.parser = PydanticOutputParser(pydantic_object=AvaliacaoJuiz)

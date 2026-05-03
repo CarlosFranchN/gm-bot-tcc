@@ -1,0 +1,63 @@
+{
+    "modelo_avaliado": "gemini-2.5-flash_baseline_rep1",
+    "juiz_utilizado": "groq",
+    "modo_teste": "Baseline (Sem RAG)",
+    "medias": {
+        "STYLE_REV": 0.975,
+        "EVENT_CAUS": 0.9,
+        "ADHERENCE": 0.95,
+        "TIME_ORDER": 1.0
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando um cenário de deserto hostil. As opções são relevantes e claras, oferecendo caminhos distintos para o jogador. A aderência ao contexto é total, sem invenções. A resolução da ação atual é feita no presente, sem avançar o tempo sem permissão."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes que criam uma atmosfera de desafio e exaustão. As opções oferecidas são relevantes e claras, e a resolução da ação do jogador foi feita de forma cronológica correta. A aderência ao contexto original é total, sem invenções."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 0.75,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando uma atmosfera de deserto hostil. As opções são relevantes e claras, oferecendo caminhos distintos. No entanto, a menção a 'paredes que se erguem e caem, formando ângulos estranhos' pode ser considerada uma invenção, pois o contexto original não menciona detalhes arquitetônicos específicos."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando um ambiente hostil e desafiador. As opções são relevantes e claras, oferecendo caminhos distintos para o jogador. A aderência ao contexto é total, sem invenções. A resolução da ação atual é feita de forma cronológica correta."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando uma atmosfera de exaustão e desespero. As opções oferecidas são relevantes e claras, e a resolução da ação do jogador é feita de forma cronológica. A aderência ao contexto original é total, sem invenções."
+        }
+    ]
+}
