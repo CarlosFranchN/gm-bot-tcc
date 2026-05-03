@@ -1,0 +1,21 @@
+{
+    "resumo_geral": "Atualmente, você se encontra no deserto de Anauroch, lutando contra o calor extremo e a exaustão. Após usar a areia para se refrescar, cobrindo seu rosto e pescoço, você sentiu um alívio momentâneo e se levantou, determinada a continuar a marcha em direção à sombra distante que vislumbra. No entanto, a exaustão ainda ameaça dominar seus músculos pesados, e a necessidade de água se torna cada vez mais urgente. Até o momento, você não coletou itens ou encontrou NPCs, mas a situação se torna crítica. Você deve decidir se acelera o passo em direção à sombra, para, descansar ou mudar ligeiramente de direção em busca de um novo caminho. A sobrevivência dessa jornada depende de sua próxima escolha.",
+    "historico_recente": [
+        {
+            "role": "user",
+            "content": "Parar novamente para descansar e tentar recuperar um pouco de energia."
+        },
+        {
+            "role": "assistant",
+            "content": "Você sente que não pode mais continuar sem um breve momento de descanso. Com cada respiração, o ar quente parece pesar sobre seus pulmões, e a areia sob seus pés se torna um convite para a tranquilidade. Você se deixa cair, protegendo os olhos do sol com um dos braços. O calor é opressivo, mas sua mente se torna clara enquanto você tenta relaxar. Você fecha os olhos por um momento e tenta se concentrar na sua respiração, buscando recuperar um pouco de energia. Cada segundo parece um pequeno embate contra a exaustão, mas você sabe que precisa ser rápido. O deserto é implacável, e a sensação de urgência nunca desaparece, mesmo enquanto você descansa.\nOpções: Levantar-se e acelerar o passo em direção à sombra que você viu anteriormente., Continuar descansando por um pouco mais de tempo, tentando recuperar mais energia., Fazer uma inspeção rápida ao redor em busca de sinais de água antes de continuar."
+        },
+        {
+            "role": "user",
+            "content": "Continuar descansando por um pouco mais de tempo, tentando recuperar mais energia."
+        },
+        {
+            "role": "assistant",
+            "content": "Você se deita na areia quente, fechando os olhos e tentando ignorar o calor abrasador que envolve seu corpo. O deserto parece um mar interminável de areia e calor, e a sensação de urgência bate forte em seu peito. Mas você precisa desse tempo. Respirações profundas se tornam seu único refúgio, e você sente um leve frescor na brisa, que parece sussurrar promessas de alívio. Ouvindo o silêncio ao seu redor, sua mente se acalma e, por um momento, você sente que a sombra no horizonte é mais do que uma miragem. Você permite que sua mente vagueie, imaginando como será quando finalmente encontrar água. No entanto, a sensação de cansaço permanece, e você percebe que não pode se dar ao luxo de descansar por muito mais tempo - a necessidade de água se torna cada vez mais premente.\nOpções: Levantar-se e acelerar o passo em direção à sombra que você viu anteriormente., Continuar descansando, mas ficar alerta para qualquer sinal de água nas proximidades., Fazer uma inspeção rápida ao redor antes de se levantar em busca de qualquer sinal de vida ou água."
+        }
+    ]
+}

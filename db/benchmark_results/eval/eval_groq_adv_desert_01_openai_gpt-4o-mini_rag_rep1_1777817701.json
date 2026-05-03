@@ -1,0 +1,63 @@
+{
+    "modelo_avaliado": "openai_gpt-4o-mini_rag_rep1",
+    "juiz_utilizado": "groq",
+    "modo_teste": "RAG Ligado",
+    "medias": {
+        "STYLE_REV": 0.875,
+        "EVENT_CAUS": 0.833,
+        "ADHERENCE": 1.0,
+        "TIME_ORDER": 1.0
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração cria uma atmosfera de desolação e urgência, com linguagem rica e descritiva. As opções oferecem caminhos distintos, relevantes para a situação e claras. A aderência ao contexto é total, sem invenções. A resolução da ação atual é feita no presente, sem avançar o tempo sem permissão."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração cria uma atmosfera intensa e imersiva, com descrições vívidas do calor e da sede. As opções oferecidas são relevantes e claras, e a sequência de eventos segue uma ordem lógica. A aderência ao contexto original é total, sem invenções ou desvios."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração cria uma atmosfera de desespero e urgência, mantendo o jogador imerso. As opções oferecidas são relevantes e claras, permitindo ao jogador decidir o próximo passo de forma lógica. A aderência ao contexto original é total, sem invenções. A resolução da ação atual do jogador é feita de forma cronológica, sem avançar o tempo sem permissão."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando um ambiente sombrio e esquecido. As opções oferecidas são relevantes e claras, permitindo que o jogador explore diferentes caminhos em busca de água. A aderência ao contexto do PDF é total, sem invenções. A resolução cronológica é adequada, resolvendo a ação atual do jogador antes de dar novas opções."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando um senso de urgência e necessidade. As opções oferecidas são relevantes e claras, e a resolução da ação do jogador é feita de forma lógica e cronologicamente correta. A aderência ao contexto original é total, sem invenções ou desvios."
+        }
+    ]
+}

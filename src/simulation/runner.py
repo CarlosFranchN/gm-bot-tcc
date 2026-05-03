@@ -106,7 +106,7 @@ class SimulationOrchestrator:
             
         print(f"🏁 Transcript salvo em: {arquivo_saida.name}")
 
-    async def executar_benchmark(self, provedor_teste: str = "google", usar_rag: bool = True, repeticoes: int = 1):
+    async def executar_benchmark(self, provedor_teste: str = "google", modelo_teste: str = "", usar_rag: bool = True, repeticoes: int = 1):
         """Orquestra as múltiplas repetições de um cenário para uma configuração específica."""
         
         if not self.cenarios:
@@ -118,11 +118,16 @@ class SimulationOrchestrator:
         for i in range(repeticoes):
             rep_atual = i + 1
             print(f"\n========================================================")
-            print(f"🔄 REPETIÇÃO {rep_atual}/{repeticoes} | PROVEDOR: {provedor_teste.upper()} | RAG: {usar_rag}")
+            print(f"🔄 REPETIÇÃO {rep_atual}/{repeticoes} | PROVEDOR: {provedor_teste.upper()} | MODELO: {modelo_teste} | RAG: {usar_rag}")
             print(f"========================================================")
             
-            # Prepara a configuração e limpa saves anteriores
-            config = ExpConfig(provedor=provedor_teste, usar_rag=usar_rag)
+            # 👉 AQUI ESTÁ A CORREÇÃO CRÍTICA!
+            config = ExpConfig(
+                provedor=provedor_teste, 
+                llm_mestre=modelo_teste, # Força o modelo que veio da matriz
+                usar_rag=usar_rag
+            )
+            
             if config.save_path.exists():
                 config.save_path.unlink()
                 
@@ -141,16 +146,16 @@ class SimulationOrchestrator:
                 print(f"⏳ Pausa de segurança (20s) a aguardar arrefecimento da API...")
                 await asyncio.sleep(20)
 
-        print(f"\n✅ Bateria de {repeticoes} repetições concluída com sucesso para {provedor_teste} (RAG={usar_rag})!")
-
+        print(f"\n✅ Bateria de {repeticoes} repetições concluída com sucesso para {modelo_teste} (RAG={usar_rag})!")
 
 # =========================================================================
 # 3. GATILHO DA MATRIZ DE ABLAÇÃO
 # =========================================================================
 async def main():
     """Função de entrada que define a matriz de testes."""
-    # provedores = ["google", "openrouter"]
-    provedores = ["google"]
+    provedores = ["qwen/qwen-2.5-coder-32b-instruct",
+                   "openai/gpt-4o-mini"]
+    # provedores = ["google"]
     modos_rag = [True, False] 
     NUMERO_REPETICOES = 1
     
@@ -160,7 +165,8 @@ async def main():
         for rag_ligado in modos_rag:
             try:
                 await orquestrador.executar_benchmark(
-                    provedor_teste=provedor, 
+                    provedor_teste="openrouter", # Tem que ser a string "openrouter"
+                    modelo_teste=provedor,         # Tem que ser a variável do loop
                     usar_rag=rag_ligado, 
                     repeticoes=NUMERO_REPETICOES
                 )

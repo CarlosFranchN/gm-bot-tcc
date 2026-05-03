@@ -51,13 +51,16 @@ class ExpConfig:
             self.llm_resumo = "gemini-3-flash-preview" 
             
         elif self.provedor == "openai":
-            self.llm_mestre = "gpt-4o-mini"
-            self.llm_resumo = "gpt-4o-mini"
+            if not self.llm_mestre:
+                self.llm_mestre = "gpt-4o-mini"
+            # Secretário é igual ao Mestre
+            self.llm_resumo = self.llm_mestre
             
         elif self.provedor == "openrouter":
             if not self.llm_mestre:
                 self.llm_mestre = "qwen/qwen-2.5-32b-instruct" 
-            self.llm_resumo = "openai/gpt-4o-mini" # Usa sempre um modelo barato para o resumo
+            # 👉 Como você pediu: o Secretário agora é o mesmo modelo que o Mestre testado
+            self.llm_resumo = self.llm_mestre
             
         else:
             raise ValueError(f"Provedor '{self.provedor}' inválido no ExpConfig.")

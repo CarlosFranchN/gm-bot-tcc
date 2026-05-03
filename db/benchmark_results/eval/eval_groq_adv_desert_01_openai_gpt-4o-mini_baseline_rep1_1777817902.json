@@ -1,0 +1,63 @@
+{
+    "modelo_avaliado": "openai_gpt-4o-mini_baseline_rep1",
+    "juiz_utilizado": "groq",
+    "modo_teste": "Baseline (Sem RAG)",
+    "medias": {
+        "STYLE_REV": 0.875,
+        "EVENT_CAUS": 0.867,
+        "ADHERENCE": 0.95,
+        "TIME_ORDER": 1.0
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 0.75,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração cria uma atmosfera de desespero e sobrevivência, com linguagem rica e descritiva. As opções oferecem caminhos distintos, mas a falta de menção explícita ao Santuário em ruínas ou à divindade da água reduz a aderência ao contexto original. A resolução da ação atual do jogador é clara e lógica."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando um ambiente hostil e desafiador. As opções oferecidas são relevantes e claras, embora a diversidade possa ser um pouco limitada. A aderência ao contexto original é perfeita, sem invenções. A resolução da ação atual do jogador é feita de forma cronologicamente correta."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com uma linguagem que cria suspense e transmite a sensação de exaustão e calor. As opções oferecidas são relevantes e fazem sentido com o contexto, embora a diversidade possa ser um pouco limitada. A aderência ao contexto original é total, sem invenções. A resolução da ação do jogador é cronologicamente correta."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração cria uma atmosfera imersiva e rica, com descrições detalhadas do ambiente e dos sentimentos do jogador. As opções oferecidas são relevantes e claras, e a ação atual do jogador é resolvida antes de dar novas opções. A aderência ao contexto original é total, sem invenções."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração cria uma atmosfera imersiva e rica, com descrições que evocam a sensação de calor e urgência. As opções oferecidas são relevantes e claras, e a história segue uma ordem lógica e cronológica. A aderência ao contexto original é total, sem invenções."
+        }
+    ]
+}
