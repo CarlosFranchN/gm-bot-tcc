@@ -1,0 +1,63 @@
+{
+    "modelo_avaliado": "openai_gpt-4o-mini_baseline_rep1",
+    "juiz_utilizado": "google",
+    "modo_teste": "Baseline (Sem RAG)",
+    "medias": {
+        "STYLE_REV": 0.925,
+        "EVENT_CAUS": 0.917,
+        "ADHERENCE": 0.7,
+        "TIME_ORDER": 1.0
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 1.0,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O Mestre realizou uma excelente narração imersiva, respeitando rigorosamente o contexto do PDF (deserto de Anauroch, exaustão mecânica, ausência de oásis). As opções são claras, relevantes e oferecem caminhos distintos sem violar a cronologia ou inventar elementos externos ao gabarito."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O Mestre realizou uma excelente imersão sensorial, respeitando rigorosamente o lore (calor, exaustão, ausência de oásis). A narração descreve a aproximação à Área 3 (Santuário) sem inventar elementos externos. As opções são claras, relevantes e mantêm a ordem cronológica, embora a opção 3 seja mecanicamente arriscada dado o contexto de exaustão, o que é uma escolha válida de design."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O Mestre manteve excelente imersão e aderência estrita ao contexto (Santuário em ruínas, ausência de água imediata, calor persistente). A resolução da ação de entrada foi concluída antes de oferecer novas escolhas. As opções são claras e logicamente conectadas ao ambiente explorado."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é imersiva e bem escrita. No entanto, houve uma falha grave de aderência ao contexto: o gabarito afirma explicitamente que 'não existem itens mágicos espalhados pela areia', e a introdução de uma 'jarra antiga' contradiz a premissa de que o local é um santuário em ruínas sem itens. A resolução temporal foi excelente, mantendo o foco na ação imediata."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O mestre possui uma escrita imersiva e excelente clareza nas opções. No entanto, falhou gravemente na aderência ao lore: o gabarito afirma que o deserto de Anauroch não possui oásis na Área 1 e que a Área 3 é um santuário soterrado. O mestre inventou a presença de água visível ao longe e elementos sensoriais (sussurros, odores) não previstos no contexto, além de sugerir uma geografia que contradiz a aridez absoluta descrita."
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "modelo_avaliado": "qwen_qwen-2.5-72b-instruct_rag_rep1",
+    "juiz_utilizado": "google",
+    "modo_teste": "RAG Ligado",
+    "medias": {
+        "STYLE_REV": 0.725,
+        "EVENT_CAUS": 0.767,
+        "ADHERENCE": 0.5,
+        "TIME_ORDER": 0.65
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 0.75,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O Mestre manteve uma excelente imersão e clareza. A nota em ADHERENCE foi 4.0 pois, embora fiel ao cenário, a opção [2] antecipa a descoberta da estátua (que no PDF só deveria ser revelada após o jogador subir na duna - Área 2), criando um pequeno desvio na progressão lógica do módulo. As opções são mecanicamente relevantes e bem estruturadas."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 0.75,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é excelente e imersiva. O Mestre resolveu a ação de subir a duna corretamente. A nota em Aderência foi 4.0 pois, embora tenha citado corretamente as Scimitar Spires e a estrutura, o texto original sugere que a Black Road cruza perto das Spires, e não como um destino separado, o que pode confundir a navegação. As opções são claras e relevantes."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.0,
+                "EVENT_CAUS": 0.417,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "O sistema falhou ao recuperar o contexto do PDF (Erro de API), resultando em uma quebra total da imersão e da narrativa. As opções apresentadas são metalinguísticas e não possuem relação causal com o mundo do jogo ou com a ação de buscar sombra, impossibilitando a progressão lógica da cena."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.75,
+                "EVENT_CAUS": 0.583,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 0.25
+            },
+            "justificativa": "O Mestre ignorou o contexto do PDF (a armadilha de lâminas e escorpiões) e narrou uma cena genérica de exploração de ruínas. A ordem temporal falhou ao não reconhecer que o jogador estava tentando 'novamente' uma ação em um local já definido como perigoso, tratando a cena como se fosse a primeira vez que o jogador entra no local. As opções não refletem os riscos mecânicos descritos no gabarito."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 1.0,
+                "ADHERENCE": 0.75,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é excelente e imersiva, mantendo a fidelidade aos elementos do PDF. A nota em ADHERENCE foi 4.0 pois o Mestre mencionou símbolos de 'Olho e Coroa' no chão, enquanto o texto original do PDF associa esse símbolo especificamente à fonte externa, não ao interior da câmara. A resolução cronológica e as opções estão perfeitas e bem conectadas ao contexto."
+        }
+    ]
+}

@@ -106,7 +106,7 @@ class TribunalOrchestrator:
                 "metricas": notas_n,
                 "justificativa": notas_brutas['justificativa']
             })
-            time.sleep(10) # Respiro para Rate Limit da Groq
+            time.sleep(30) # Respiro para Rate Limit da Groq
 
         # Finalização e Salvamento
         if contagem_valida > 0:
@@ -149,7 +149,7 @@ class TribunalOrchestrator:
             se_processou = self._processar_arquivo(arquivo_path)
             if se_processou:
                 processados += 1
-                time.sleep(10) # Proteção extra entre arquivos grandes
+                time.sleep(30) # Proteção extra entre arquivos grandes
 
         if processados == 0:
             print("\n✨ Tudo em ordem! Não há novos transcripts para avaliar.")
@@ -158,8 +158,8 @@ class TribunalOrchestrator:
 # EXECUÇÃO DO SCRIPT
 # ==========================================
 if __name__ == "__main__":
-    juizes_para_rodar = ["groq"] 
-    # juizes_para_rodar = ["google"] 
+    # juizes_para_rodar = ["groq"] 
+    juizes_para_rodar = ["google"] 
     
     for provedor in juizes_para_rodar:
         print(f"\n{'#'*60}")

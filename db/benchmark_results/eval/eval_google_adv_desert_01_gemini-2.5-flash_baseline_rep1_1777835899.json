@@ -1,0 +1,63 @@
+{
+    "modelo_avaliado": "gemini-2.5-flash_baseline_rep1",
+    "juiz_utilizado": "google",
+    "modo_teste": "Baseline (Sem RAG)",
+    "medias": {
+        "STYLE_REV": 1.0,
+        "EVENT_CAUS": 0.95,
+        "ADHERENCE": 0.95,
+        "TIME_ORDER": 1.0
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é excelente e imersiva. O Mestre seguiu rigorosamente o lore (Anauroch, exaustão, ausência de oásis). As opções são claras e relevantes, embora a opção 1 seja um pouco contraditória com o fato de não existirem oásis na área, mas é uma escolha lógica do personagem. A ordem temporal foi respeitada."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é excelente, evocando a exaustão mecânica mencionada no contexto. O Mestre manteve a fidelidade ao cenário (deserto sem oásis) e não introduziu elementos externos. As opções são lógicas, claras e respeitam a progressão temporal da cena."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 1.0,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O Mestre realizou uma narração imersiva e sensorial, respeitando rigorosamente o contexto do PDF (Anauroch, exaustão, ruínas). A resolução da ação foi clara, mantendo a ordem cronológica e oferecendo opções lógicas e distintas que derivam diretamente da situação atual do jogador."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O Mestre realizou uma excelente narração imersiva, respeitando rigorosamente o lore (ausência de itens mágicos ou monstros, foco no calor e na exaustão). As opções são lógicas e bem estruturadas. A nota em Diversidade (D) é 4.0 pois a opção [2] é um pouco arriscada dado que o contexto afirma não haver itens espalhados, mas ainda é uma escolha válida de interpretação."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 1.0,
+                "ADHERENCE": 0.75,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é excelente e imersiva. Aderência ao lore é alta, porém o Mestre introduziu um 'brilho fraco' na ruína, o que não está explicitamente no gabarito (que menciona apenas um santuário em ruínas). A resolução temporal foi perfeita e as opções são mecanicamente distintas e relevantes ao estado de exaustão do jogador."
+        }
+    ]
+}

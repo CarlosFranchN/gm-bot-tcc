@@ -9,20 +9,8 @@ from pathlib import Path
 # Ajuste de path para importação
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from core.engine2 import RAGEngine, ExpConfig
+from bots import PlayerBot
 
-# =========================================================================
-# 1. A MENTE DO JOGADOR
-# =========================================================================
-class RandomBot:
-    """Um robô que joga RPG escolhendo opções aleatoriamente."""
-    def __init__(self, fallback_action="Eu continuo explorando com cautela."):
-        self.fallback_action = fallback_action
-
-    def escolher_acao(self, opcoes: list) -> str:
-        """Escolhe uma opção aleatória da lista ou a ação de fallback."""
-        if opcoes:
-            return random.choice(opcoes)
-        return self.fallback_action
 
 
 # =========================================================================
@@ -42,48 +30,59 @@ class SimulationOrchestrator:
         with open(caminho_scenarios, 'r', encoding='utf-8') as f:
             return json.load(f)
 
-    async def _jogar_partida(self, engine: RAGEngine, bot: RandomBot, cenario: dict) -> list:
+    async def _jogar_partida(self, engine: RAGEngine, bot: PlayerBot, cenario: dict) -> list:
         """Realiza o ping-pong de turnos entre o Motor (Mestre) e o Bot (Jogador)."""
         transcript = []
         
         regras_cena = "\n".join([f"- {r}" for r in cenario.get('regras_narrativas', [])])
-        dicas_rag = " ".join(cenario.get('contexto_rag_hint', []))
         
-        acao_atual = f"{cenario['prompt_inicial']} [Contexto oculto: {dicas_rag}]"
+       
+        acao_atual = cenario.get('prompt_inicial', "Você inicia a aventura.")
         
         turnos_maximos = cenario.get("turnos_maximos", 5)
         
         for turno in range(1, turnos_maximos + 1):
             print(f"\n🎬 TURNO {turno}/{turnos_maximos}")
             
-            # 1. O Mestre Narra (Com tratamento de excepções e resiliência)
+            
             try:
                 resultado = await engine.gerar_turno_async(user_input=acao_atual, regras=regras_cena)
             except Exception as e:
                 print(f"❌ Erro fatal na geração do turno {turno}: {e}")
-                # Regista o erro no transcript e aborta a simulação atual para não gerar lixo
-                transcript.append({"turno": turno, "erro": str(e), "acao_solicitada": acao_atual})
+                
+                transcript.append({
+                    "turno": turno, 
+                    "acao_solicitada": acao_atual,
+                    "resposta_mestre": {
+                        "raciocinio_estado": "Ocorreu um erro fatal.",
+                        "narracao": f"A simulação falhou devido a um erro técnico: {str(e)}",
+                        "opcoes": ["..."],
+                        "contexto_usado": "Erro"
+                    }
+                })
                 break 
 
-            # Feedback visual no terminal
+            
             narracao_curta = resultado.get('narracao', '')[:100].replace('\n', ' ')
             print(f"📜 MESTRE: {narracao_curta}...")
             
-            # 2. O Jogador Escolhe a próxima ação
+            
             acao_deste_turno = acao_atual
             opcoes = resultado.get('opcoes', [])
+            
+            
             acao_atual = bot.escolher_acao(opcoes)
             
             print(f"🤖 ROBÔ ESCOLHEU: {acao_atual}")
             
-            # 3. Salva no Diário
+            
             transcript.append({
                 "turno": turno,
                 "acao_solicitada": acao_deste_turno,
                 "resposta_mestre": resultado
             })
             
-            # Pausa para evitar rate limits da API entre turnos
+            
             if turno < turnos_maximos:
                 await asyncio.sleep(35) 
                 
@@ -106,7 +105,7 @@ class SimulationOrchestrator:
             
         print(f"🏁 Transcript salvo em: {arquivo_saida.name}")
 
-    async def executar_benchmark(self, provedor_teste: str = "google", modelo_teste: str = "", usar_rag: bool = True, repeticoes: int = 1):
+    async def executar_benchmark(self, provedor_teste: str = "google", modelo_teste: str = "", usar_rag: bool = True, repeticoes: int = 1 , estilo_bot: str = "explorer"):
         """Orquestra as múltiplas repetições de um cenário para uma configuração específica."""
         
         if not self.cenarios:
@@ -132,7 +131,7 @@ class SimulationOrchestrator:
                 config.save_path.unlink()
                 
             engine = RAGEngine(config=config)
-            bot = RandomBot()
+            bot = PlayerBot(style=estilo_bot)
             
             print(f"🚀 INICIANDO: {cenario_atual['titulo']} | Modelo alvo: {config.llm_mestre}")
             
@@ -153,27 +152,34 @@ class SimulationOrchestrator:
 # =========================================================================
 async def main():
     """Função de entrada que define a matriz de testes."""
-    provedores = ["qwen/qwen-2.5-coder-32b-instruct",
-                   "openai/gpt-4o-mini"]
-    # provedores = ["google"]
+    modelos_para_testar = [
+        {"provedor": "google", "modelo": "gemini-2.5-flash"},
+        {"provedor": "openrouter", "modelo": "openai/gpt-4o-mini"},
+        {"provedor": "openrouter", "modelo": "qwen/qwen-2.5-72b-instruct"}
+    ]
+    
     modos_rag = [True, False] 
     NUMERO_REPETICOES = 1
-    
+    security_pause = 30
     orquestrador = SimulationOrchestrator()
     
-    for provedor in provedores:
+    for config_teste in modelos_para_testar:
+        provedor_atual = config_teste["provedor"]
+        modelo_atual = config_teste["modelo"]
+        
         for rag_ligado in modos_rag:
             try:
                 await orquestrador.executar_benchmark(
-                    provedor_teste="openrouter", # Tem que ser a string "openrouter"
-                    modelo_teste=provedor,         # Tem que ser a variável do loop
+                    provedor_teste=provedor_atual, # Agora ele usa o provedor certo para o modelo certo!
+                    modelo_teste=modelo_atual,         
                     usar_rag=rag_ligado, 
+                    estilo_bot="explorer",
                     repeticoes=NUMERO_REPETICOES
                 )
-                print(f"⏳ Pausa de segurança (15s) entre trocas de contexto da matriz...")
-                await asyncio.sleep(15) 
+                print(f"⏳ Pausa de segurança ({security_pause}s) entre trocas de contexto da matriz...")
+                await asyncio.sleep(security_pause) 
             except Exception as e:
-                print(f"❌ Erro crítico ao testar provedor {provedor} (RAG={rag_ligado}): {e}")
+                print(f"❌ Erro crítico ao testar {modelo_atual} (RAG={rag_ligado}): {e}")
 
 if __name__ == "__main__":
     # Garante que o loop assíncrono corre de forma correta no ponto de entrada

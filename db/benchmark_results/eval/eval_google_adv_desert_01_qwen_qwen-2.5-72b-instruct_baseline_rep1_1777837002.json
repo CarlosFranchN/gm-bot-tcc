@@ -1,0 +1,64 @@
+
+{
+    "modelo_avaliado": "qwen_qwen-2.5-72b-instruct_baseline_rep1",
+    "juiz_utilizado": "google",
+    "modo_teste": "Baseline (Sem RAG)",
+    "medias": {
+        "STYLE_REV": 0.65,
+        "EVENT_CAUS": 0.75,
+        "ADHERENCE": 0.2,
+        "TIME_ORDER": 0.8
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.5,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O estilo é imersivo e a ordem temporal está correta. No entanto, a opção [2] contradiz o gabarito, que afirma explicitamente que não existem oásis na Área 1. A opção [1] sugere uma elevação rochosa que não está no contexto, embora seja uma interpretação aceitável de cenário, mas a menção a oásis viola a regra de aderência ao lore fornecido."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.75,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O mestre mantém uma boa imersão e clareza nas opções. No entanto, falhou gravemente na aderência ao lore: o gabarito afirma explicitamente que não existem oásis na Área 1. Ao narrar a descoberta de uma 'depressão que poderia ser um oásis', o mestre contradiz o contexto fornecido, criando uma falsa expectativa que viola a regra de ouro do cenário."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O mestre falhou gravemente na aderência ao lore: o gabarito afirma explicitamente que o deserto de Anauroch é um mar de areia mortal SEM oásis. Ao inventar um riacho, o mestre contradiz a premissa fundamental do cenário. O estilo narrativo é bom e a ordem temporal está correta, mas a alucinação de conteúdo invalida a fidelidade ao documento base."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.75,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "O mestre mantém uma boa imersão e clareza nas opções. No entanto, falhou gravemente na aderência ao lore: o gabarito afirma que o deserto de Anauroch é um mar de areia sem oásis e que não há água na Área 1. A narração inventou a existência de um 'riacho', o que contradiz diretamente o contexto fornecido."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.0,
+                "EVENT_CAUS": 0.417,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "O Mestre falhou em processar a ação do jogador, apresentando uma mensagem de erro técnico em vez de uma narração imersiva. Não houve descrição do ambiente (Anauroch/Santuário) nem resolução da tentativa de busca por abrigo, quebrando completamente a continuidade e a fidelidade ao contexto fornecido."
+        }
+    ]
+}
