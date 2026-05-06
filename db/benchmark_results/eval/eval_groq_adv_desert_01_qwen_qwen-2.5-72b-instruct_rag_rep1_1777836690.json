@@ -1,0 +1,63 @@
+{
+    "modelo_avaliado": "qwen_qwen-2.5-72b-instruct_rag_rep1",
+    "juiz_utilizado": "groq",
+    "modo_teste": "RAG Ligado",
+    "medias": {
+        "STYLE_REV": 0.725,
+        "EVENT_CAUS": 0.825,
+        "ADHERENCE": 0.8,
+        "TIME_ORDER": 0.95
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração cria uma atmosfera de desespero e urgência, com uma linguagem rica e descritiva. As opções oferecidas são claras e relevantes para a situação, com uma diversidade razoável. A aderência ao contexto do PDF é total, sem invenções. A resolução da ação atual do jogador é feita de forma cronológica correta."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes sobre o ambiente e as sensações do jogador. As opções são claras e relevantes para o contexto, e a ordem temporal é respeitada. A aderência ao PDF é total, sem invenções."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.25,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 0.75
+            },
+            "justificativa": "A narração é breve e não cria muito suspense, mas as opções são claras e relevantes para o contexto de erro de API. A aderência ao contexto é total, sem invenções."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.75,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando um ambiente convincente. As opções oferecidas são claras e relevantes para a situação, permitindo ao jogador escolher diferentes caminhos. No entanto, a aderência ao contexto original do PDF é baixa, pois a narração apresentada não segue o cenário descrito no PDF, introduzindo elementos novos e diferentes."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes que criam uma atmosfera agradável. As opções são claras e relevantes para o contexto, embora possam ser um pouco limitadas em termos de diversidade. A aderência ao contexto original é total, sem invenções. A resolução da ação do jogador é cronologicamente correta."
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "modelo_avaliado": "gemini-2.5-flash_baseline_rep1",
+    "juiz_utilizado": "groq",
+    "modo_teste": "Baseline (Sem RAG)",
+    "medias": {
+        "STYLE_REV": 0.7,
+        "EVENT_CAUS": 0.817,
+        "ADHERENCE": 0.8,
+        "TIME_ORDER": 0.8
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando um cenário vívido do deserto de Anauroch. As opções oferecidas são relevantes e claras, considerando a situação do jogador. A aderência ao contexto original é total, sem invenções. A resolução da ação atual do jogador é feita de forma lógica e cronologicamente correta."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.25,
+                "EVENT_CAUS": 0.667,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração não forneceu uma descrição rica e imersiva, e não seguiu o contexto original do PDF. As opções oferecidas são claras, mas a interrupção da conexão com o Mestre não faz sentido no contexto da história. A ação do jogador não foi resolvida antes de dar novas opções."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando um ambiente hostil e desafiador. As opções oferecidas são relevantes e claras, refletindo a situação de exaustão e desespero do jogador. A aderência ao contexto original é total, sem invenções ou desvios. A resolução da ação atual do jogador é feita de forma cronológica e lógica."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando um cenário de sofrimento e desespero no deserto. As opções oferecidas são relevantes e claras, permitindo ao jogador escolher como proceder diante da descoberta da estrutura. A aderência ao contexto original é total, sem invenções ou desvios. A resolução da ação do jogador é cronologicamente coerente, permitindo ao jogador decidir o próximo passo após a descoberta."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.25,
+                "EVENT_CAUS": 0.667,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração foi interrompida de forma abrupta, sem criar muito suspense ou imersão. As opções oferecidas são relevantes e claras, mas não oferecem muita diversidade. A aderência ao contexto original é mantida, pois não há invenções. A resolução cronológica é adequada, pois a ação atual foi interrompida devido a um distúrbio na magia do mundo."
+        }
+    ]
+}

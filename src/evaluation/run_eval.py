@@ -158,8 +158,8 @@ class TribunalOrchestrator:
 # EXECUÇÃO DO SCRIPT
 # ==========================================
 if __name__ == "__main__":
-    # juizes_para_rodar = ["groq"] 
-    juizes_para_rodar = ["google"] 
+    juizes_para_rodar = ["groq"] 
+    # juizes_para_rodar = ["google"] 
     
     for provedor in juizes_para_rodar:
         print(f"\n{'#'*60}")

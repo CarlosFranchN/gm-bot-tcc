@@ -1,0 +1,63 @@
+{
+    "modelo_avaliado": "gemini-2.5-flash_rag_rep1",
+    "juiz_utilizado": "groq",
+    "modo_teste": "RAG Ligado",
+    "medias": {
+        "STYLE_REV": 0.8,
+        "EVENT_CAUS": 0.867,
+        "ADHERENCE": 1.0,
+        "TIME_ORDER": 0.8
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 1.0,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando um cenário de deserto hostil e desolado. As opções oferecidas são diversas, relevantes e claras, permitindo ao jogador escolher diferentes caminhos. A aderência ao contexto do PDF é total, sem invenções. A resolução cronológica é adequada, respeitando a ordem dos eventos."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e criativa, com detalhes que ajudam a imergir o jogador no ambiente. As opções são claras e relevantes para a situação, e a ordem temporal é respeitada. A aderência ao contexto é total, sem invenções."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes que transportam o jogador para o cenário do deserto. As opções oferecidas são relevantes e claras, com uma diversidade razoável. A aderência ao contexto original é total, sem invenções. A resolução da ação do jogador é cronologicamente correta, sem saltos lógicos."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando uma atmosfera de desespero e necessidade. As opções oferecidas são relevantes e claras, e a sequência de eventos é lógica e cronologicamente correta. A aderência ao contexto original é total, sem invenções ou desvios."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.25,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração foi interrompida devido a um erro de API, o que afetou a imersão. As opções oferecidas são claras e relevantes, mas a ação atual do jogador não foi resolvida antes de dar novas opções."
+        }
+    ]
+}
