@@ -1,0 +1,63 @@
+{
+    "modelo_avaliado": "openai_gpt-4o-mini_baseline_rep1",
+    "juiz_utilizado": "groq",
+    "modo_teste": "Baseline (Sem RAG)",
+    "medias": {
+        "STYLE_REV": 0.85,
+        "EVENT_CAUS": 0.875,
+        "ADHERENCE": 0.95,
+        "TIME_ORDER": 1.0
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração cria uma atmosfera intensa e imersiva, com descrições vívidas do deserto e do estado do jogador. As opções oferecidas são relevantes e fazem sentido no contexto, com uma clareza exemplar. A aderência ao contexto original é total, sem invenções. A resolução da ação atual do jogador é feita de forma cronologicamente correta."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração cria uma atmosfera imersiva e rica, com descrições detalhadas do ambiente e dos efeitos do calor no jogador. As opções oferecidas são claras e relevantes para a situação, permitindo ao jogador escolher entre investigar, descansar ou continuar explorando. A aderência ao contexto original é total, sem invenções ou desvios. A resolução da ação do jogador é cronologicamente correta, sem saltos ou loops lógicos."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração cria uma atmosfera imersiva do deserto, com detalhes sensoriais que ajudam a transportar o jogador para o cenário. As opções oferecidas são relevantes para a situação do jogador e fazem sentido no contexto. A aderência ao contexto original é total, sem invenções. A resolução da ação do jogador é clara e lógica, sem avançar o tempo sem permissão."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 0.75,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes que criam suspense e curiosidade. As opções oferecem caminhos distintos, mas a aderência ao contexto original do PDF é parcialmente comprometida pela menção de vida e marcas de patas, o que não está explícito no contexto original."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.75,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes sobre o ambiente e as sensações do jogador. As opções são claras e relevantes para a situação, oferecendo caminhos distintos para a exploração. A aderência ao contexto original é total, sem invenções. A resolução da ação atual do jogador é feita de forma lógica e cronologicamente correta."
+        }
+    ]
+}

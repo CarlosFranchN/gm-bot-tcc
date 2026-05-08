@@ -1,0 +1,63 @@
+{
+    "modelo_avaliado": "qwen_qwen-2.5-72b-instruct_rag_rep1",
+    "juiz_utilizado": "groq",
+    "modo_teste": "RAG Ligado",
+    "medias": {
+        "STYLE_REV": 0.65,
+        "EVENT_CAUS": 0.717,
+        "ADHERENCE": 0.8,
+        "TIME_ORDER": 0.8
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando um cenário de desolação e necessidade. As opções oferecidas são claras e relevantes para a situação, com uma diversidade razoável. A aderência ao contexto original é total, sem invenções. A resolução da ação atual é feita de forma cronológica correta."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.75,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes que criam uma atmosfera de desafio e incerteza. As opções oferecidas são claras e relevantes para a situação, e a resolução da ação do jogador é feita de forma lógica e cronologicamente correta. A aderência ao contexto do PDF é total, sem invenções ou desvios."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando uma atmosfera desoladora e quente do deserto. As opções oferecidas são relevantes e claras, e a ação do jogador é resolvida de forma lógica e cronológica. A aderência ao contexto do PDF é total, sem invenções."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.0,
+                "EVENT_CAUS": 0.417,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração não criou suspense ou imersão devido ao erro de API, as opções não oferecem caminhos mecânicos distintos em relação à ação original, mas são claras e fazem sentido no contexto do erro. A aderência ao lore é total, pois não houve invenções. A resolução cronológica foi interrompida devido ao erro."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.75,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com uma boa descrição do ambiente. As opções oferecidas são claras e relevantes para a situação, mostrando diversidade em termos de ações possíveis. No entanto, a aderência ao contexto original do PDF é baixa, pois a narração e as opções não seguem o cenário original. A resolução cronológica é adequada, pois a ação atual do jogador é resolvida antes de dar novas opções."
+        }
+    ]
+}

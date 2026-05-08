@@ -1,0 +1,63 @@
+{
+    "modelo_avaliado": "gemini-2.5-flash_rag_rep1",
+    "juiz_utilizado": "groq",
+    "modo_teste": "RAG Ligado",
+    "medias": {
+        "STYLE_REV": 0.9,
+        "EVENT_CAUS": 0.85,
+        "ADHERENCE": 0.95,
+        "TIME_ORDER": 1.0
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração cria uma atmosfera de urgência e desespero, com descrições vívidas do deserto e do estado do jogador. As opções oferecidas são relevantes e claras, e a aderência ao contexto do PDF é total. A resolução cronológica também é adequada, pois o jogador está lidando com a situação atual antes de avançar."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração cria uma atmosfera imersiva e rica, com detalhes sensoriais que transportam o jogador para o cenário desértico. As opções oferecidas são claras, relevantes e diversificadas, permitindo ao jogador escolher diferentes caminhos. A aderência ao contexto original é total, sem invenções ou desvios. A resolução da ação atual do jogador é feita de forma cronológica correta, sem avançar o tempo sem permissão."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando uma atmosfera de desespero e necessidade de alívio. As opções oferecidas são relevantes e claras, e a resolução da ação do jogador é feita de forma cronológica e coerente. A aderência ao contexto do PDF é total, sem invenções ou desvios."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando um ambiente hostil e desafiador. As opções oferecidas são relevantes e claras, permitindo ao jogador escolher o próximo passo de forma lógica. A aderência ao contexto original é total, sem invenções. A resolução da ação do jogador é cronologicamente correta, sem avançar o tempo sem permissão."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 0.75,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes que criam uma atmosfera sombria e misteriosa. As opções oferecidas são claras e relevantes para o contexto, embora possam ser um pouco limitadas em termos de diversidade. A aderência ao contexto original é boa, mas com algumas liberdades criativas. A resolução cronológica é perfeita, com a ação do jogador sendo resolvida antes de apresentar novas opções."
+        }
+    ]
+}

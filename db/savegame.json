@@ -1,21 +1,29 @@
 {
-    "resumo_geral": "**Resumo Executivo:**\n\nVocê está no deserto de Anauroch, exausto e com pouca água. Após investigar um pedaço de madeira semi-enterrado, descobriu que fazia parte de uma antiga estrutura, possivelmente uma tenda ou abrigo. Enquanto cavava, encontrou uma pequena lâmina de metal, que pode ser útil. Suas opções agora são: usar a lâmina para tentar encontrar algo comestível na depressão, continuar a explorar a estrutura em busca de mais recursos, ou subir a depressão e seguir em direção ao norte, utilizando a lâmina como ferramenta. Atualmente, você possui uma pequena lâmina de metal. Você está na depressão no deserto de Anauroch.",
+    "resumo_geral": "O jogador avança com determinação em direção à estrutura misteriosa no deserto de Anauroch, enfrentando a exaustão e o calor escaldante. Após uma jornada que parece uma eternidade, ele chega à antiga construção de pedra, parcialmente enterrada nas dunas. A porta de madeira está meio aberta, oferecendo uma possível esperança de abrigo e água. O jogador precisa decidir se entra na estrutura, explora os arredores em busca de água, ou descansa um pouco perto da estrutura antes de entrar. Atualmente, o jogador está diante da estrutura misteriosa no deserto de Anauroch. Itens: pouca água. NPCs: nenhum encontrado.",
     "historico_recente": [
         {
             "role": "user",
-            "content": "Continuar a explorar a estrutura em busca de mais recursos."
+            "content": "Explorar os arredores da estrutura em busca de água."
         },
         {
             "role": "assistant",
-            "content": "Você continua escavando a areia ao redor da estrutura, usando a lâmina de metal para afastar os grãos de areia que cobrem o que parece ser uma antiga tenda ou abrigo. A madeira está tão desgastada que parece quase fazer parte do deserto, mas suas mãos sentem a textura de um tecido velho e deteriorado. Ao cavar mais fundo, você percebe que há um pequeno compartimento escondido sob a areia. Você abre o compartimento e encontra um cantil de couro, quase completamente vazio, mas com alguns preciosos goles de água no fundo. Além disso, há uma pequena bolsa de couro contendo algumas sementes secas e um pedaço de papiro amarelado.\nOpções: Beber a água do cantil para recuperar parte das suas forças., Examinar o pedaço de papiro para ver se contém alguma informação útil., Continuar a explorar a estrutura em busca de mais itens que possam ajudar na sobrevivência."
+            "content": "Você decide explorar os arredores da estrutura, na esperança de encontrar algum sinal de água. O calor continua intenso, e sua exaustão aumenta a cada passo. A areia ao redor da construção parece inóspita, mas ao se aproximar, você nota algumas marcas estranhas no solo, como se algo tivesse sido arrastado recentemente. Além disso, há alguns arbustos secos, mas que ainda parecem ter algum tipo de vida. O que você fará?\nOpções: Investigar as marcas estranhas no solo., Procurar mais atentamente nos arbustos secos., Entrar na estrutura, na esperança de encontrar água lá dentro."
         },
         {
             "role": "user",
-            "content": "Continuar a explorar a estrutura em busca de mais itens que possam ajudar na sobrevivência."
+            "content": "Tentar novamente a mesma ação"
         },
         {
             "role": "assistant",
-            "content": "Você continua explorando a estrutura, movendo a areia com cuidado para não danificar o que pode ser um achado valioso. O calor do deserto é implacável, e sua exaustão aumenta a cada minuto que passa. A estrutura parece ter sido abandonada há muito tempo, mas sua determinação lhe permite encontrar algumas coisas úteis. Além do cantil e das sementes, você encontra um pequeno saco de couro contendo algumas moedas de cobre e um amuleto simples, feito de um pedaço de madeira esculpido. O amuleto parece ter algum significado simbólico, mas você não tem certeza de sua utilidade. A água no cantil é uma bênção, mas você sabe que precisa encontrar uma fonte mais confiável em breve.\nOpções: Beber a água do cantil para recuperar parte das suas forças., Examinar o pedaço de papiro para ver se contém alguma informação útil., Subir a depressão e seguir em direção ao norte, utilizando os itens encontrados como recursos."
+            "content": "Você continua explorando os arredores da estrutura, sua esperança de encontrar água mantendo-se viva. As marcas estranhas no solo chamam sua atenção mais uma vez. Elas parecem frescas, como se algo pesado tivesse sido arrastado recentemente. Os arbustos secos, embora não prometam muito, ainda parecem conter alguma umidade. O calor é quase insuportável, e você sente a exaustão tomando conta do seu corpo. O que você fará?\nOpções: Investigar as marcas estranhas no solo., Procurar mais atentamente nos arbustos secos., Entrar na estrutura, na esperança de encontrar água lá dentro."
+        },
+        {
+            "role": "user",
+            "content": "Entrar na estrutura, na esperança de encontrar água lá dentro."
+        },
+        {
+            "role": "assistant",
+            "content": "Com a esperança renovada, você se dirige à porta meio aberta da estrutura. O calor do deserto parece diminuir um pouco à medida que você se aproxima da sombra projetada pela construção. A madeira da porta está gasta e rangente, mas ainda firme. Empurrando-a com cuidado, você entra em um ambiente escuro e fresco. O alívio da temperatura é imediato, mas a escuridão é quase total. Seus olhos começam a se ajustar, revelando um espaço abobadado com paredes de pedra desgastadas. O chão é coberto de pó e restos de antigas tapeçarias. No centro da sala, há um antigo poço, mas você não tem certeza se há água nele. A sensação de estar observado paira no ar, e o silêncio é quase opressor. O que você fará?\nOpções: Aproximarse do poço para verificar se há água., Explorar mais a estrutura em busca de outras salas ou recursos., Ficar parado por um momento para recuperar o fôlego e ouvir qualquer sinal de movimento."
         }
     ]
 }

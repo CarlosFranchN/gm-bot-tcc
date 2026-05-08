@@ -1,0 +1,63 @@
+{
+    "modelo_avaliado": "openai_gpt-4o-mini_rag_rep1",
+    "juiz_utilizado": "groq",
+    "modo_teste": "RAG Ligado",
+    "medias": {
+        "STYLE_REV": 0.875,
+        "EVENT_CAUS": 0.85,
+        "ADHERENCE": 1.0,
+        "TIME_ORDER": 1.0
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração cria uma atmosfera de desespero e urgência, imergindo o jogador no cenário. As opções oferecidas são claras e relevantes para a situação, embora a diversidade possa ser um pouco limitada. A aderência ao contexto original é total, e a resolução da ação atual do jogador é feita de forma cronologicamente correta."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes que criam uma atmosfera quente e desgastante. As opções oferecidas são claras e relevantes para a situação, embora possam ser um pouco previsíveis. A aderência ao contexto original é total, sem invenções. A resolução da ação do jogador é cronologicamente correta, sem avançar o tempo sem permissão."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e criativa, utilizando linguagem descritiva para criar suspense e imersão. As opções oferecidas são claras e fazem sentido no contexto da cena. A aderência ao contexto original é total, sem invenções. A resolução da ação do jogador é cronologicamente correta."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e criativa, com detalhes que ajudam a imergir o jogador na cena. As opções oferecidas são relevantes e claras, com uma diversidade razoável. A aderência ao contexto do PDF é total, sem invenções. A resolução da ação do jogador é cronologicamente correta, sem avançar o tempo sem permissão."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes que criam suspense e curiosidade. As opções oferecidas são claras e relevantes para a situação, com uma diversidade razoável. A aderência ao contexto original é total, sem invenções. A resolução da ação do jogador é cronologicamente correta, sem avançar o tempo sem permissão."
+        }
+    ]
+}

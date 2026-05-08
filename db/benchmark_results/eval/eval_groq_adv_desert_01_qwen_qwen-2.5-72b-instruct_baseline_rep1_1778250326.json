@@ -1,0 +1,63 @@
+{
+    "modelo_avaliado": "qwen_qwen-2.5-72b-instruct_baseline_rep1",
+    "juiz_utilizado": "groq",
+    "modo_teste": "Baseline (Sem RAG)",
+    "medias": {
+        "STYLE_REV": 0.725,
+        "EVENT_CAUS": 0.825,
+        "ADHERENCE": 1.0,
+        "TIME_ORDER": 1.0
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração cria uma atmosfera de deserto hostil, com linguagem rica e descritiva. As opções oferecem caminhos distintos, embora a relevância e clareza sejam excelentes. A aderência ao contexto original é total, sem invenções. A resolução da ação atual do jogador é clara e cronologicamente correta."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração cria uma atmosfera de desafio e exaustão, com uma linguagem rica e descritiva. As opções oferecem caminhos distintos, mas todas fazem sentido no contexto da cena. A aderência ao contexto original é total, sem invenções. A resolução da ação do jogador é cronologicamente correta."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.25,
+                "EVENT_CAUS": 0.667,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração foi interrompida devido a um distúrbio na magia do mundo, o que não permite uma avaliação detalhada da imersão. As opções oferecidas são relevantes e claras, mas não há diversidade mecânica. A aderência ao contexto original é mantida, pois não há invenções. A ordem temporal é respeitada, pois a ação atual foi interrompida e não há avanço no tempo."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.75,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e criativa, mantendo a imersão do jogador. As opções oferecidas são claras e relevantes para o contexto, permitindo ao jogador escolher diferentes caminhos. A aderência ao contexto original é total, sem invenções. A resolução da ação atual do jogador foi feita de forma lógica e cronológica."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração cria uma atmosfera imersiva e rica, com detalhes que ajudam a visualizar a cena. As opções oferecidas são relevantes e claras, e a ação do jogador é resolvida de forma lógica e cronologicamente correta. A aderência ao contexto original é total, sem invenções."
+        }
+    ]
+}
