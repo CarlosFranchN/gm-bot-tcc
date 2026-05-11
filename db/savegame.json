@@ -1,29 +1,21 @@
 {
-    "resumo_geral": "O jogador avança com determinação em direção à estrutura misteriosa no deserto de Anauroch, enfrentando a exaustão e o calor escaldante. Após uma jornada que parece uma eternidade, ele chega à antiga construção de pedra, parcialmente enterrada nas dunas. A porta de madeira está meio aberta, oferecendo uma possível esperança de abrigo e água. O jogador precisa decidir se entra na estrutura, explora os arredores em busca de água, ou descansa um pouco perto da estrutura antes de entrar. Atualmente, o jogador está diante da estrutura misteriosa no deserto de Anauroch. Itens: pouca água. NPCs: nenhum encontrado.",
+    "resumo_geral": "**Resumo Executivo:**\n\nVocê seguiu em direção à formação rochosa no deserto de Anauroch, encontrando uma ravina estreita cercada por rochas altas que oferecem abrigo contra o sol escaldante. O ambiente é mais fresco, e a areia mais úmida sugere a possibilidade de uma fonte de água nas proximidades. Atualmente, você está na ravina, com as seguintes opções: explorar a ravina em busca de água ou outros recursos, descansar na sombra das rochas para recuperar energia, ou continuar a andar em direção ao norte, apostando tudo na esperança de encontrar algo mais promissor. Nenhum item foi coletado ou perdido, e nenhum NPC foi encontrado ou derrotado.",
     "historico_recente": [
         {
             "role": "user",
-            "content": "Explorar os arredores da estrutura em busca de água."
+            "content": "Continuar a andar em direção ao norte, apostando tudo na esperança de encontrar algo mais promissor."
         },
         {
             "role": "assistant",
-            "content": "Você decide explorar os arredores da estrutura, na esperança de encontrar algum sinal de água. O calor continua intenso, e sua exaustão aumenta a cada passo. A areia ao redor da construção parece inóspita, mas ao se aproximar, você nota algumas marcas estranhas no solo, como se algo tivesse sido arrastado recentemente. Além disso, há alguns arbustos secos, mas que ainda parecem ter algum tipo de vida. O que você fará?\nOpções: Investigar as marcas estranhas no solo., Procurar mais atentamente nos arbustos secos., Entrar na estrutura, na esperança de encontrar água lá dentro."
+            "content": "Você decide continuar a caminhada em direção ao norte, apostando tudo na esperança de encontrar algo mais promissor. O calor é quase insuportável, e a areia sob seus pés parece se mover, fazendo cada passo mais difícil. A exaustão começa a tomar conta do seu corpo, e a cabeça lateja com a desidratação. Você se força a continuar, sabendo que cada minuto que passa diminui suas chances de sobrevivência. Depois de mais uma hora de caminhada, você avista algo no horizonte. Pode ser uma miragem, mas parece ser uma coluna de fumaça subindo no ar. Será que finalmente encontrou algum sinal de vida?\nOpções: Aproximar-se da coluna de fumaça, na esperança de encontrar ajuda., Parar e descansar por um momento, mesmo com o risco, para recuperar um pouco de energia., Continuar a andar em direção ao norte, ignorando a coluna de fumaça e apostando tudo na esperança de encontrar algo mais promissor."
         },
         {
             "role": "user",
-            "content": "Tentar novamente a mesma ação"
+            "content": "Aproximar-se da coluna de fumaça, na esperança de encontrar ajuda."
         },
         {
             "role": "assistant",
-            "content": "Você continua explorando os arredores da estrutura, sua esperança de encontrar água mantendo-se viva. As marcas estranhas no solo chamam sua atenção mais uma vez. Elas parecem frescas, como se algo pesado tivesse sido arrastado recentemente. Os arbustos secos, embora não prometam muito, ainda parecem conter alguma umidade. O calor é quase insuportável, e você sente a exaustão tomando conta do seu corpo. O que você fará?\nOpções: Investigar as marcas estranhas no solo., Procurar mais atentamente nos arbustos secos., Entrar na estrutura, na esperança de encontrar água lá dentro."
-        },
-        {
-            "role": "user",
-            "content": "Entrar na estrutura, na esperança de encontrar água lá dentro."
-        },
-        {
-            "role": "assistant",
-            "content": "Com a esperança renovada, você se dirige à porta meio aberta da estrutura. O calor do deserto parece diminuir um pouco à medida que você se aproxima da sombra projetada pela construção. A madeira da porta está gasta e rangente, mas ainda firme. Empurrando-a com cuidado, você entra em um ambiente escuro e fresco. O alívio da temperatura é imediato, mas a escuridão é quase total. Seus olhos começam a se ajustar, revelando um espaço abobadado com paredes de pedra desgastadas. O chão é coberto de pó e restos de antigas tapeçarias. No centro da sala, há um antigo poço, mas você não tem certeza se há água nele. A sensação de estar observado paira no ar, e o silêncio é quase opressor. O que você fará?\nOpções: Aproximarse do poço para verificar se há água., Explorar mais a estrutura em busca de outras salas ou recursos., Ficar parado por um momento para recuperar o fôlego e ouvir qualquer sinal de movimento."
+            "content": "Com as últimas forças que lhe restam, você se dirige em direção à coluna de fumaça que avistou no horizonte. O ar quente do deserto parece ondular à medida que você se aproxima, e a esperança de encontrar ajuda revitaliza sua determinação. Depois de mais alguns minutos de caminhada, você finalmente consegue distinguir uma estrutura rudimentar à distância. É uma cabana de pedra e madeira, com uma fogueira crepitando ao lado. Você percebe que há alguém lá, e seu coração acelera com a possibilidade de encontrar um aliado ou, pelo menos, recursos para sobreviver. No entanto, a cautela também toma conta de você, pois não sabe quem ou o que pode estar lá.\nOpções: Aproximar-se da cabana e tentar se comunicar com quem estiver lá., Esconder-se nas proximidades para observar a cabana e quem está lá antes de se revelar., Ignorar a cabana e continuar a andar em direção ao norte, mantendo a esperança de encontrar algo mais promissor."
         }
     ]
 }

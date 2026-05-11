@@ -1,0 +1,63 @@
+{
+    "modelo_avaliado": "qwen_qwen-2.5-72b-instruct_baseline_rep1",
+    "juiz_utilizado": "groq",
+    "modo_teste": "Baseline (Sem RAG)",
+    "medias": {
+        "STYLE_REV": 0.875,
+        "EVENT_CAUS": 0.875,
+        "ADHERENCE": 0.8,
+        "TIME_ORDER": 1.0
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 0.75,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração cria uma atmosfera de desespero e urgência, com linguagem rica e descritiva. As opções oferecem caminhos distintos, mas a falta de menção ao Santuário em ruínas e a presença de uma estrutura misteriosa não especificada no contexto original reduz a nota de aderência. A resolução da ação atual do jogador é clara e lógica."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando um ambiente hostil e desafiador. As opções oferecidas são relevantes e claras, e a história segue uma ordem lógica e cronológica. A aderência ao contexto original é total, sem invenções ou desvios."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com uma linguagem descritiva que cria suspense e imersão na cena. As opções oferecidas são claras e fazem sentido causal com o que acabou de acontecer. A aderência ao contexto do PDF é total, sem invenções. A resolução da ação atual do jogador foi feita no presente, antes de dar novas opções."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com uma boa descrição do ambiente e do estado do jogador. As opções são claras e fazem sentido no contexto da história. A aderência ao contexto original é total, sem invenções. A resolução da ação atual do jogador foi feita de forma lógica e cronologicamente correta."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com uma boa descrição do cenário. As opções oferecem caminhos distintos, mas a relevância e clareza são boas. No entanto, a aderência ao contexto original é baixa, pois a cabana e a fogueira não estão presentes no contexto original. A resolução da ação atual do jogador é feita de forma cronológica correta."
+        }
+    ]
+}
