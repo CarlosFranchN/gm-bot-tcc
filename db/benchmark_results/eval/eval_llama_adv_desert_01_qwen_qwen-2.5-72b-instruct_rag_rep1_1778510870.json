@@ -1,0 +1,103 @@
+{
+    "modelo_avaliado": "qwen_qwen-2.5-72b-instruct_rag_rep1",
+    "juiz_utilizado": "llama",
+    "modo_teste": "RAG Ligado",
+    "medias": {
+        "STYLE_REV": 0.833,
+        "EVENT_CAUS": 0.833,
+        "ADHERENCE": 0.889,
+        "TIME_ORDER": 1.0
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com descrições detalhadas do ambiente. As opções oferecidas são relevantes e claras, e a ação do jogador é resolvida de forma lógica e cronologicamente correta. A aderência ao contexto do PDF é perfeita, sem invenções."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e descritiva, criando uma atmosfera imersiva. As opções oferecidas são relevantes e claras, e a ação do jogador é resolvida de forma lógica e cronologicamente correta. A aderência ao contexto do PDF é perfeita, sem invenções."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e descritiva, criando uma boa imersão na cena. As opções oferecidas são relevantes e claras, e a ação do jogador é resolvida de forma lógica e cronologicamente correta. A aderência ao PDF é total, sem invenções."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.75,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com descrições detalhadas do ambiente e do estado do jogador. As opções são claras e relevantes para a situação, e a ordem temporal é respeitada. A aderência ao contexto do PDF é perfeita, sem invenções."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.75,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e descritiva, criando uma atmosfera de calor e dificuldade. As opções oferecidas são diversificadas e relevantes para a situação, e o texto é claro e fácil de entender. A aderência ao contexto é total, sem invenções. A resolução cronológica é correta, resolvendo a ação atual do jogador antes de dar novas opções."
+        },
+        {
+            "turno": 6,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e descritiva, criando uma atmosfera de urgência e desafio. As opções oferecidas são relevantes e claras, e a ação do jogador é resolvida de forma lógica e cronologicamente correta. A aderência ao contexto do PDF é total, sem invenções."
+        },
+        {
+            "turno": 7,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes que criam uma atmosfera fresca e úmida no nível inferior. As opções são claras e relevantes para a situação, e a resolução cronológica é adequada. A aderência ao PDF é total, sem invenções."
+        },
+        {
+            "turno": 8,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes que criam suspense e curiosidade. As opções oferecidas são relevantes e claras, e a resolução da ação do jogador é cronologicamente correta. A aderência ao contexto original é total, sem invenções."
+        },
+        {
+            "turno": 10,
+            "metricas": {
+                "STYLE_REV": 0.75,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e criativa, com opções claras e relevantes. No entanto, o Mestre não seguiu o contexto original do PDF, inventando novos elementos como tochas e cofre de madeira."
+        }
+    ]
+}

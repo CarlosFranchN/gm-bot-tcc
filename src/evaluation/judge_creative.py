@@ -13,6 +13,8 @@ from langchain_core.output_parsers import PydanticOutputParser
 
 from langchain_openai import ChatOpenAI
 
+load_dotenv(find_dotenv(), override=True)
+
 @dataclass
 class JudgeConfig:
     target_model: str = "modelo-desconhecido" 
@@ -24,17 +26,15 @@ class JudgeConfig:
             self.llm_juiz_nome = "gemini-3.1-flash-lite-preview" 
         elif self.provedor_juiz == "openai":
             self.llm_juiz_nome = "gpt-4o"
-        elif self.provedor_juiz == "openrouter":
-            self.llm_juiz_nome = "openai/gpt-4o"
-        # 👉 NOVA OPÇÃO: Adicionamos a Groq como o nosso Juiz Neutro
+        elif self.provedor_juiz == "llama":
+            # 👉 MUDANÇA AQUI: String exata do modelo Llama no OpenRouter
+            # Dica: Se quiser o Juiz mais inteligente do mundo, troque para "meta-llama/llama-3.1-405b-instruct"
+            self.llm_juiz_nome = "meta-llama/llama-3.3-70b-instruct"
         elif self.provedor_juiz == "groq":
             self.llm_juiz_nome = "llama-3.3-70b-versatile"
         else:
             raise ValueError(f"Provedor '{self.provedor_juiz}' inválido no JudgeConfig.")
-# Carrega o .env automaticamente
-load_dotenv(find_dotenv(), override=True)
-# if not os.getenv("GOOGLE_API_KEY"):
-#     raise ValueError("❌ ERRO: GOOGLE_API_KEY não encontrada!")
+
 
 # ==========================================
 # SCHEMA DO JUIZ (Garante o formato exato)
@@ -90,7 +90,14 @@ class MasterJudge:
                     "response_format": {"type": "json_object"} 
                 }
             )
-
+        elif self.cfg.provedor_juiz == "llama":
+            # 👉 MUDANÇA AQUI: Configuração limpa e direta para o OpenRouter
+            self.llm_juiz = ChatOpenAI(
+                api_key=os.getenv("OPENROUTER_API_KEY"),
+                base_url="https://openrouter.ai/api/v1",
+                model=self.cfg.llm_juiz_nome,
+                temperature=0.0
+            )
         self.parser = PydanticOutputParser(pydantic_object=AvaliacaoJuiz)
         
         self.prompt = ChatPromptTemplate.from_messages([
@@ -109,12 +116,23 @@ class MasterJudge:
             3. ADHERENCE (Aderência ao Lore): Compare a Narração EXCLUSIVAMENTE com o CONTEXTO DO PDF acima. O Mestre foi 100% aderente, sem inventar nomes, itens ou monstros? (Nota 5.0 = 100% fiel; penalize invenções).
             4. TIME_ORDER (Ordem Temporal): O Mestre resolveu a ação atual do jogador no presente antes de dar novas opções (evitando loops lógicos ou avançar o tempo sem permissão)?
             
+            CRÍTICO: Você DEVE avaliar TODOS os eixos. O seu retorno deve ser ÚNICA E EXCLUSIVAMENTE um objeto JSON completo, contendo exatamente as chaves abaixo:
+            
+            {{
+                "STYLE_REV": <nota>,
+                "EVENT_CAUS_D": <nota>,
+                "EVENT_CAUS_R": <nota>,
+                "EVENT_CAUS_C": <nota>,
+                "ADHERENCE": <nota>,
+                "TIME_ORDER": <nota>,
+                "justificativa": "<texto curto>"
+            }}
+            
             {format_instructions}"""),
             ("human", "Ação do Jogador:\n{acao_jogador}\n\nNarração:\n{narracao_mestre}\n\nOpções:\n{opcoes_str}")
         ])
         
         self.chain = self.prompt | self.llm_juiz | self.parser
-
     def avaliar_turno_completo(self, acao_jogador, narracao_mestre, opcoes_mestre, contexto_pdf, tentativas=3):
         opcoes_str = "\n".join([f"[{i+1}] {op}" for i, op in enumerate(opcoes_mestre)])
         

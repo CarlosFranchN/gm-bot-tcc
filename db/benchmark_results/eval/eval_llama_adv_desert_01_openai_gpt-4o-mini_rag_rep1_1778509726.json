@@ -1,0 +1,113 @@
+{
+    "modelo_avaliado": "openai_gpt-4o-mini_rag_rep1",
+    "juiz_utilizado": "llama",
+    "modo_teste": "RAG Ligado",
+    "medias": {
+        "STYLE_REV": 0.875,
+        "EVENT_CAUS": 0.837,
+        "ADHERENCE": 0.975,
+        "TIME_ORDER": 1.0
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes que transportam o jogador para o cenário do deserto. As opções oferecidas são claras e relevantes para a situação, com uma boa diversidade de escolhas. A aderência ao contexto original é total, sem invenções. A resolução cronológica é bem feita, respeitando a ordem dos eventos."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com descrições detalhadas do ambiente e dos efeitos do calor no jogador. As opções são claras e relevantes para a situação, e a resolução da ação do jogador é cronologicamente correta. A aderência ao contexto do PDF é total, sem invenções."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes que criam uma atmosfera tranquila e ao mesmo tempo urgente. As opções são claras e fazem sentido com o contexto, embora possam ser um pouco previsíveis. A aderência ao contexto original é total, sem invenções. A resolução da ação do jogador é cronologicamente correta."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com uma linguagem que cria suspense e curiosidade. As opções oferecidas são relevantes e claras, e a ação do jogador é resolvida de forma lógica e cronologicamente correta. A aderência ao contexto do PDF é perfeita, sem invenções ou desvios."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com uma linguagem que cria suspense e tensão. As opções oferecidas são relevantes e claras, e a sequência de eventos é lógica e bem resolvida. A aderência ao contexto do PDF é total, sem invenções ou desvios. A resolução cronológica é correta, com a ação do jogador sendo resolvida no presente antes de dar novas opções."
+        },
+        {
+            "turno": 6,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e criativa, com uma linguagem que evoca a sensação de calor e sede. As opções oferecidas são claras e relevantes para a situação, e a sequência de eventos é lógica e coerente. A aderência ao contexto original é perfeita, sem invenções ou desvios. A resolução cronológica também é correta, com a ação do jogador sendo resolvida antes de apresentar novas opções."
+        },
+        {
+            "turno": 7,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes sensoriais que colocam o jogador no cenário. As opções oferecem caminhos distintos, mas a clareza e relevância delas poderiam ser melhoradas com mais contexto sobre as consequências de cada escolha. A aderência ao PDF é total, sem invenções. A resolução cronológica é bem feita, respeitando a ordem dos eventos."
+        },
+        {
+            "turno": 8,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com uma linguagem que cria suspense e tensão. As opções oferecidas são claras e relevantes para a situação, e a sequência de eventos segue uma ordem lógica e cronológica. A aderência ao contexto do PDF é total, sem invenções ou desvios."
+        },
+        {
+            "turno": 9,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 0.75,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com uma linguagem que cria suspense e curiosidade. As opções oferecidas são claras e relevantes para o contexto, mas a diversidade poderia ser maior. A aderência ao PDF é boa, mas com algumas invenções menores. A resolução cronológica é perfeita, resolvendo a ação atual do jogador antes de dar novas opções."
+        },
+        {
+            "turno": 10,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes sensoriais que ajudam a criar uma atmosfera tensa e curiosa. As opções oferecidas são relevantes e claras, e a ação do jogador é resolvida de forma lógica e cronologicamente correta. A aderência ao contexto do PDF é perfeita, sem invenções ou desvios."
+        }
+    ]
+}

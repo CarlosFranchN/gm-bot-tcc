@@ -1,0 +1,113 @@
+{
+    "modelo_avaliado": "openai_gpt-4o-mini_baseline_rep1",
+    "juiz_utilizado": "llama",
+    "modo_teste": "Baseline (Sem RAG)",
+    "medias": {
+        "STYLE_REV": 0.875,
+        "EVENT_CAUS": 0.871,
+        "ADHERENCE": 0.725,
+        "TIME_ORDER": 1.0
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando um cenário de deserto hostil. As opções oferecem caminhos distintos, mas poderiam ser mais variadas. A relevância e clareza das opções são excelentes. A aderência ao contexto do PDF é total, sem invenções. A resolução da ação atual do jogador é feita no presente, sem avançar o tempo sem permissão."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 0.75,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e descritiva, criando uma atmosfera de suspense e imersão. As opções oferecidas são relevantes e claras, mas poderiam ser mais diversificadas. A aderência ao contexto original é boa, mas a menção à 'antiga ruína' poderia ser mais específica, considerando o contexto do Santuário em ruínas. A resolução cronológica é perfeita, resolvendo a ação atual do jogador antes de dar novas opções."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes que criam uma atmosfera acolhedora e de suspense. As opções oferecidas são relevantes e claras, e a resolução da ação do jogador foi feita de forma cronologicamente correta. A aderência ao contexto original do PDF é total, sem invenções."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e descritiva, criando uma atmosfera imersiva. As opções oferecem caminhos distintos, mas a relevância e clareza são excelentes. A aderência ao contexto do PDF é perfeita, sem invenções. A resolução cronológica é correta, resolvendo a ação atual antes de dar novas opções."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com uma descrição detalhada do ambiente e do estado do jogador. As opções são claras e fazem sentido causal com o que acabou de acontecer. A aderência ao contexto do PDF é perfeita, sem invenções. A resolução cronológica é correta, com a ação atual do jogador resolvida antes de dar novas opções."
+        },
+        {
+            "turno": 6,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes sensoriais que ajudam a criar uma atmosfera sombria e misteriosa. As opções oferecem caminhos distintos, embora a relevância e clareza sejam excelentes. A aderência ao contexto original é total, sem invenções. A resolução cronológica é adequada, resolvendo a ação atual antes de apresentar novas opções."
+        },
+        {
+            "turno": 7,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 0.75,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com uma boa descrição da cena e dos sentidos do jogador. As opções são claras e fazem sentido no contexto, mas a aderência ao lore é questionável devido à menção de uma 'poça d'água suja' que não está presente no contexto original. A resolução cronológica é bem feita, com a ação do jogador sendo resolvida antes de dar novas opções."
+        },
+        {
+            "turno": 8,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes que criam uma atmosfera única. As opções oferecidas são relevantes e claras, mas a diversidade poderia ser maior. A aderência ao contexto original é baixa, pois o Mestre introduziu elementos não presentes no contexto original, como o frasco de vidro e a inscrição antiga. A resolução cronológica é bem feita, pois o Mestre resolveu a ação atual do jogador antes de dar novas opções."
+        },
+        {
+            "turno": 9,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e descritiva, criando uma atmosfera agradável e imersiva. As opções oferecidas são claras e fazem sentido no contexto da cena. No entanto, a aderência ao contexto original do PDF é baixa, pois não há menção à fonte de água ou à caverna no contexto original. Além disso, a introdução de elementos como a inscrição na parede e o frasco de vidro não está presente no contexto original."
+        },
+        {
+            "turno": 10,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com uma linguagem que cria suspense e curiosidade. As opções oferecidas são claras e fazem sentido no contexto da cena. No entanto, a aderência ao lore do PDF é baixa, pois a caverna e a fonte de água não estão presentes no contexto original. A resolução cronológica é correta, pois a ação do jogador é resolvida antes de dar novas opções."
+        }
+    ]
+}

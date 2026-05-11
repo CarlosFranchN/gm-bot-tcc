@@ -1,0 +1,113 @@
+{
+    "modelo_avaliado": "gemini-2.5-flash_rag_rep1",
+    "juiz_utilizado": "llama",
+    "modo_teste": "RAG Ligado",
+    "medias": {
+        "STYLE_REV": 0.887,
+        "EVENT_CAUS": 0.858,
+        "ADHERENCE": 0.988,
+        "TIME_ORDER": 1.0
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando um cenário de deserto hostil e perigoso. As opções oferecidas são relevantes e claras, e a ação do jogador é resolvida no presente. A aderência ao contexto do PDF é total, sem invenções. A única crítica é que as opções poderiam ser mais diversificadas, mas ainda assim são suficientes para avançar a história."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e descritiva, criando uma atmosfera de deserto hostil. As opções oferecidas são relevantes e claras, e a ação do jogador é resolvida de forma lógica e cronológica. A aderência ao contexto original é perfeita, sem invenções ou desvios."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.75,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e descritiva, criando uma atmosfera de calor opressivo e dificuldade. As opções oferecidas são diversificadas e relevantes para a situação, com uma clareza suficiente para que o jogador entenda as consequências de cada escolha. A aderência ao contexto é total, sem invenções ou desvios. A resolução da ação do jogador é imediata e lógica, sem avançar o tempo de forma injustificada."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com descrições detalhadas do ambiente e do estado físico do jogador. As opções oferecidas são claras e relevantes para a situação, e a resolução da ação do jogador é cronologicamente coerente. A aderência ao contexto do PDF é total, sem invenções ou desvios."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e descritiva, criando uma atmosfera de desespero e exaustão. As opções oferecidas são relevantes e claras, e a resolução da ação atual do jogador é feita de forma lógica e cronologicamente correta. A aderência ao contexto do PDF é total, sem invenções ou desvios. As opções oferecem caminhos mecânicos distintos, embora a diversidade possa ser um pouco limitada devido à situação de emergência do jogador."
+        },
+        {
+            "turno": 6,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e descritiva, criando uma atmosfera de desespero e exaustão. As opções oferecidas são relevantes e claras, e a resolução da ação do jogador é cronologicamente coerente. A aderência ao contexto do PDF é total, sem invenções. A única crítica é que as opções poderiam ser um pouco mais diversificadas, mas ainda assim são suficientemente distintas para oferecer escolhas interessantes."
+        },
+        {
+            "turno": 7,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e descritiva, criando uma atmosfera de desespero e exaustão. As opções oferecidas são relevantes e claras, e a resolução da ação do jogador é cronologicamente coerente. A aderência ao contexto do PDF é perfeita, sem invenções ou desvios."
+        },
+        {
+            "turno": 8,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes que criam uma atmosfera de desespero e urgência. As opções oferecidas são relevantes e claras, e a sequência de eventos é lógica e cronologicamente correta. A aderência ao contexto original é perfeita, sem invenções ou desvios. A única dedução na nota de STYLE_REV é devido à possibilidade de uma descrição ainda mais detalhada da área ao redor da entrada do santuário."
+        },
+        {
+            "turno": 9,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 0.875,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes que ajudam a criar uma atmosfera de alívio e curiosidade. As opções oferecidas são relevantes e claras, embora um pouco limitadas em termos de diversidade. A aderência ao contexto original é alta, com apenas pequenas variações na descrição do ambiente. A resolução cronológica é perfeita, com a ação do jogador sendo resolvida antes de apresentar novas opções."
+        },
+        {
+            "turno": 10,
+            "metricas": {
+                "STYLE_REV": 0.75,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes que criam uma atmosfera de mistério e curiosidade. As opções oferecidas são claras e relevantes para a situação, e a resolução da ação do jogador é cronologicamente coerente. A aderência ao contexto do PDF é total, sem invenções ou desvios."
+        }
+    ]
+}
