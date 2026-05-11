@@ -1,0 +1,113 @@
+{
+    "modelo_avaliado": "openai_gpt-4o-mini_baseline_rep1",
+    "juiz_utilizado": "groq",
+    "modo_teste": "Baseline (Sem RAG)",
+    "medias": {
+        "STYLE_REV": 0.875,
+        "EVENT_CAUS": 0.871,
+        "ADHERENCE": 0.825,
+        "TIME_ORDER": 1.0
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração cria uma atmosfera intensa e imersiva do deserto de Anauroch, com detalhes sensoriais que transportam o jogador para o cenário. As opções oferecidas são relevantes e claras, refletindo a situação de emergência do jogador. A aderência ao contexto original é total, sem invenções. A resolução da ação atual do jogador é feita de forma lógica e cronologicamente correta."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando um ambiente hostil e desafiador. As opções oferecidas são relevantes e claras, permitindo ao jogador escolher o próximo passo de forma lógica. A aderência ao contexto original é total, sem invenções ou desvios. A resolução da ação do jogador é cronológica e lógica, sem saltos ou inconsistências."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração cria uma atmosfera imersiva e rica, com detalhes que fazem o jogador se sentir parte da cena. As opções oferecidas são relevantes e claras, e a sequência de eventos segue uma ordem lógica. A aderência ao contexto original é total, sem invenções ou desvios. A resolução da ação do jogador é imediata e coerente."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes que criam uma atmosfera sombria e de necessidade. As opções oferecidas são relevantes e claras, e a sequência de eventos é lógica e cronologicamente correta. A aderência ao contexto original é total, sem invenções ou desvios."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes sensoriais que transportam o jogador para o ambiente. As opções oferecidas são relevantes e claras, embora a diversidade possa ser um pouco limitada. A aderência ao contexto original é perfeita, sem invenções ou desvios. A resolução da ação do jogador é cronologicamente correta, sem loops lógicos ou avanços no tempo sem permissão."
+        },
+        {
+            "turno": 6,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração cria uma atmosfera imersiva e suspense, com descrições ricas da caverna. As opções oferecem caminhos distintos, embora a relevância e clareza sejam excelentes. A aderência ao contexto é total, sem invenções. A resolução da ação atual é clara e no presente."
+        },
+        {
+            "turno": 7,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 0.75,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes que criam suspense e curiosidade. As opções oferecem caminhos distintos, mas a aderência ao contexto original é parcialmente comprometida pela introdução de uma fonte de água limpa, o que não está explícito no contexto original."
+        },
+        {
+            "turno": 8,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com uma linguagem que cria suspense e curiosidade. As opções oferecidas são relevantes e claras, mas a diversidade poderia ser maior. A aderência ao contexto original é baixa, pois o cenário descrito não se encaixa perfeitamente no contexto do deserto de Anauroch e do santuário em ruínas. A resolução cronológica é adequada, pois a ação do jogador é resolvida antes de apresentar novas opções."
+        },
+        {
+            "turno": 9,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com uma linguagem que cria suspense e imersão. As opções oferecem caminhos distintos, mas não são completamente relevantes ao contexto original do PDF. A aderência ao lore é baixa, pois a narração menciona uma fonte de água e uma caverna, que não estão presentes no contexto original. A resolução da ação atual do jogador é feita de forma cronológica correta."
+        },
+        {
+            "turno": 10,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, com uma linguagem que cria suspense e curiosidade. As opções oferecidas são claras e relevantes para o contexto, embora possam ser um pouco limitadas em termos de diversidade. A aderência ao contexto original é total, sem invenções ou desvios. A resolução da ação do jogador é cronologicamente correta, sem avançar o tempo sem permissão."
+        }
+    ]
+}
