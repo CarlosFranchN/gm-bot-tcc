@@ -19,6 +19,8 @@
     ],
     "turnos_maximos": 10,
     
-    "contexto_oficial_para_avaliacao": "GABARITO DO PDF: O deserto de Anauroch é um mar de areia mortal sem oásis na Área 1. A Área 3 é um antigo Santuário em ruínas, parcialmente soterrado, dedicado a uma divindade da água. Não existem monstros de fogo ou itens mágicos espalhados pela areia. O calor causa exaustão mecânica."
+    "contexto_oficial_para_avaliacao": "GABARITO DO PDF (VERDADE ABSOLUTA):\n\nFATOS INVIOLÁVEIS (STATE TRACKING):\n- Área 1 (Deserto): Apenas areia e calor letal (causa exaustão mecânica). Sem oásis.\n- Área 3 (The Desert Shrine): Uma estrutura quadrada PEQUENA (cerca de 20 pés), de um único andar, feita de pedra do deserto.\n- Ponto Focal: Em frente à estrutura há uma FONTE SECA contendo o símbolo de 'Olho e Coroa'.\n- Entrada: Atrás da fonte há uma porta/entrada aberta para o edifício simples.\n\nRESTRIÇÕES NEGATIVAS (PUNIÇÃO DE ALUCINAÇÃO):\n- NÃO É um monólito gigante.\n- NÃO É feito de obsidiana ou pedras escuras.\n- NÃO É uma formação natural erodida pelo vento com fendas.\n- VEREDITO: Qualquer narração que descreva a Área 3 fugindo do conceito de 'pequeno prédio quadrado de pedra com fonte seca' é ALUCINAÇÃO CRÍTICA (Nota 1.0 em ADHERENCE)."
+
+    
   }
 ]
