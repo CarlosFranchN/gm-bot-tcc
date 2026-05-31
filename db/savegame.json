@@ -1,21 +1,45 @@
 {
-    "resumo_geral": "**Resumo Executivo:**\n\nO jogador adentrou a câmara de oferendas (6x3m) do edifício de pedra para escapar do sol. O ambiente é mais ameno, mas a desidratação e exaustão permanecem críticas. A exploração revelou um grande baú de madeira em uma plataforma, restos de estátuas e arandelas de ouro. Um assobio de vento vindo de uma fresta atrás do baú sugere uma passagem ou saída, enquanto a busca por água continua sendo a prioridade máxima de sobrevivência.\n\n**Itens:**\n*   **Perdido:** Último odre de água (na vila arruinada).\n*   **Identificado:** Arandelas de ouro puro (nas paredes).\n*   **Estado:** Sede excruciante e exaustão física severa.\n\n**NPCs:**\n*   **Encontrados:** Predadores noturnos (vila); escorpião solitário (calha); restos de **dois guerreiros humanoides** (estátuas destruídas).\n\n**Localização Atual:** Câmara de Oferendas, Edifício de Pedra, Santuário Antigo, Anauroch. Posicionado diante de um baú de madeira e restos de estátuas.",
+    "resumo_geral": "O grupo, exausto e com água quase acabada, se aproxima cautelosamente de uma antiga construção parcialmente enterrada no deserto de Anauroch. As paredes de pedra desmoronadas criam um cenário assustador, e uma fogueira ainda queima no centro do pátio. O vento sopra areia, dificultando a visão, e um leve sussurro ecoa da estrutura. O coração dos aventureiros bate mais forte ao avistar um contorno escuro se movendo perto da fogueira. O grupo está no meio do deserto, sem itens coletados ou perdidos, e nenhum NPC encontrado ou derrotado. Agora, eles enfrentam a decisão de aproximar-se ainda mais silenciosamente, chamar a atenção do contorno, ou esconder-se e observar por mais tempo.",
     "historico_recente": [
         {
             "role": "user",
-            "content": "Inspecionar o grande baú de madeira no centro da sala."
+            "content": "Tentar novamente a mesma ação"
         },
         {
             "role": "assistant",
-            "content": "Você se arrasta em direção ao baú de madeira, cada movimento uma luta contra a exaustão e a sede que queima sua garganta. O baú é grande e antigo, sua madeira escura e rachada pelo tempo, com marcas de entalhes desgastados quase irreconhecíveis. Com um esforço, você levanta a tampa pesada, que range em protesto, revelando o interior. \n\nNão há riquezas cintilantes aqui, apenas uma camada espessa de poeira que se levanta com o movimento. No canto mais distante, quase escondidos pela penumbra e pela sujeira, você distingue três coisas: um pequeno pedaço de pergaminho enrolado, uma única moeda de ouro que brilha fracamente na pouca luz, e mais nada. A decepção de não encontrar água é palpável, mas a esperança de que esses itens possam ter algum valor ou pista o impulsiona a ignorar, por um momento, a dor excruciante da sede que parece apertar sua cabeça.\nOpções: Pegar o pedaço de pergaminho para ler., Pegar a moeda de ouro., Examinar o baú e a plataforma em busca de compartimentos secretos ou mecanismos ocultos."
+            "content": "Você se move silenciosamente em direção à estrutura, tomando cuidado para não fazer barulho ou atrair atenção indesejada. A areia movediça sob seus pés faz um leve ranger, mas você consegue manter-se o mais discreto possível. À medida que se aproxima, você vê melhor o contorno escuro perto da fogueira. Parece ser uma figura humana, mas está envolta em um manto escuro, dificultando a identificação. A fogueira projeta sombras que dançam nas paredes desmoronadas, criando um ambiente sinistro. A figura parece estar envolvida em alguma atividade, mas você não consegue distinguir o que está fazendo. Você está agora a cerca de 10 metros de distância.\nOpções: Aproximar-se ainda mais silenciosamente, tentando não ser notado., Chamar a atenção da figura, gritando para ver se há alguém amigável., Esconder-se e observar a figura por mais tempo, tentando entender suas intenções."
         },
         {
             "role": "user",
-            "content": "Pegar o pedaço de pergaminho para ler."
+            "content": "Aproximar-se ainda mais silenciosamente, tentando não ser notado."
         },
         {
             "role": "assistant",
-            "content": "Com dedos trêmulos, você estende a mão e pega o pequeno pedaço de pergaminho enrolado. O material é seco e áspero ao toque, e ao desenrolá-lo com cuidado, seus olhos percorrem as palavras antigas, escritas em uma caligrafia elaborada, mas ainda legível. Embora seu corpo clame por água e descanso, a curiosidade o impulsiona a decifrar a mensagem:\n\n*\"Nós vos ofertamos nossas posses, Magnífico Deus-Rei Isset Thul Kaas, e vos louvamos por vossa generosidade.\"*\n\nAs palavras ressoam com a devoção de um tempo esquecido, confirmando que este lugar era um santuário de oferendas. No entanto, elas não oferecem a água que sua garganta ressecada tanto anseia. A moeda de ouro solitária ainda brilha no fundo do baú, uma pequena tentação em meio ao desespero. A sede é uma agonia constante, e a exaustão pesa em cada músculo, mas a busca por uma solução é a única coisa que o mantém de pé.\nOpções: Pegar a moeda de ouro., Examinar o baú e a plataforma em busca de compartimentos secretos ou mecanismos ocultos., Procurar pela origem do assobio do vento ou por outros detalhes nas paredes da sala."
+            "content": "Você se aproxima ainda mais silenciosamente, tomando cuidado para não fazer nenhum ruído que possa alertar a figura perto da fogueira. A areia movediça sob seus pés faz um leve ranger, mas você consegue manter-se o mais discreto possível. Agora, a cerca de 5 metros de distância, você consegue ver melhor a figura. Ela parece estar envolvida em algum tipo de ritual, mexendo em um pequeno objeto perto da fogueira. O contorno é difícil de identificar, mas você percebe que está usando um manto escuro e um capuz que cobre seu rosto. A fogueira projeta sombras sinistras em sua direção. Você está perto o suficiente para ouvir sussurros baixos, mas as palavras são ininteligíveis. O que você fará?\nOpções: Aproximar-se ainda mais, tentando ouvir o que a figura está sussurrando., Revelar-se, gritando para chamar a atenção da figura., Esconder-se atrás de uma das paredes desmoronadas e observar por mais tempo, tentando entender as intenções da figura."
+        },
+        {
+            "role": "user",
+            "content": "Aproximar-se ainda mais, tentando ouvir o que a figura está sussurrando."
+        },
+        {
+            "role": "assistant",
+            "content": "Você se move com extrema cautela, aproximando-se ainda mais da figura. A areia movediça sob seus pés faz um leve ranger, mas você consegue manter-se discreto. Agora, a apenas alguns metros de distância, você consegue ouvir melhor os sussurros. As palavras são quase ininteligíveis, mas você percebe que a figura está murmurando uma espécie de encantamento ou oração. A voz é suave, mas carregada de uma energia mística. As sombras dançam ao redor da fogueira, criando um ambiente sobrenatural. Você está perto o suficiente para ver que a figura está segurando um pequeno amuleto em suas mãos, mexendo nele enquanto sussurra. O que você fará?\nOpções: Aproximar-se ainda mais, tentando entender melhor as palavras do ritual., Revelar-se, chamando a atenção da figura de forma amigável., Esconder-se atrás de uma das paredes desmoronadas e observar por mais tempo, tentando entender as intenções da figura."
+        },
+        {
+            "role": "user",
+            "content": "Aproximar-se ainda mais, tentando entender melhor as palavras do ritual."
+        },
+        {
+            "role": "assistant",
+            "content": "Você se aproxima ainda mais, seus movimentos agora quase imperceptíveis. A fogueira projeta sombras dançantes, e o cheiro de madeira queimada preenche o ar. A figura continua murmurando, e você consegue distinguir algumas palavras: 'escuridão', 'força' e 'proteção'. O amuleto em suas mãos brilha fracamente, e a energia mística no ar é quase palpável. Você está a apenas dois metros de distância, perto o suficiente para ver detalhes do rosto oculto sob o capuz. O que você fará?\nOpções: Aproximar-se ainda mais e tentar tocar o amuleto para entender seu propósito., Revelar-se, chamando a atenção da figura de forma amigável e perguntando o que está acontecendo., Esconder-se atrás de uma das paredes desmoronadas e observar por mais tempo, tentando entender as intenções da figura."
+        },
+        {
+            "role": "user",
+            "content": "Tentar novamente a mesma ação"
+        },
+        {
+            "role": "assistant",
+            "content": "Você se move ainda mais silenciosamente, quase tocando a areia com apenas a ponta dos pés. A fogueira projeta sombras dançantes, e o cheiro de madeira queimada preenche o ar. Agora, você consegue ouvir claramente as palavras murmuradas pela figura: 'escuridão', 'força' e 'proteção'. O amuleto em suas mãos brilha fracamente, e a energia mística no ar é quase palpável. Você está tão perto que quase consegue ver detalhes do rosto oculto sob o capuz. O suor escorre pela sua testa, e o calor do deserto começa a se fazer sentir. A exaustão de sua longa jornada também está pesando, mas a curiosidade e a necessidade de entender o que está acontecendo te mantêm determinado.\nOpções: Aproximar-se ainda mais e tentar tocar o amuleto para entender seu propósito., Revelar-se, chamando a atenção da figura de forma amigável e perguntando o que está acontecendo., Esconder-se atrás de uma das paredes desmoronadas e observar por mais tempo, tentando entender as intenções da figura."
         }
     ]
 }

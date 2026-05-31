@@ -136,18 +136,9 @@ class MasterJudge:
     - CRÍTICO: O Mestre resolveu a intenção do jogador? Se houver muita descrição, mas a ação do jogador não teve desfecho claro, PUNA COM NOTA 1.0. O estado do jogo deve mudar.
     - AGÊNCIA: PUNA com nota 1.0 se o Mestre decidir pelo jogador, rolar dados por ele ou narrar ações futuras do personagem sem dar escolha.
 
-    CRÍTICO: Seu retorno deve ser ÚNICA E EXCLUSIVAMENTE um objeto JSON válido.
-    Inicie a justificativa apontando os ERROS e FALHAS primeiro. Seja direto e técnico.
-
-    {{
-        "STYLE_REV": <nota>,
-        "EVENT_CAUS_D": <nota>,
-        "EVENT_CAUS_R": <nota>,
-        "EVENT_CAUS_C": <nota>,
-        "ADHERENCE": <nota>,
-        "TIME_ORDER": <nota>,
-        "justificativa": "<Erros encontrados primeiro. Acertos depois.>"
-    }}
+    CRÍTICO E OBRIGATÓRIO: Você DEVE avaliar TODOS os eixos. Você está proibido de omitir chaves.
+    O seu retorno deve ser ÚNICA E EXCLUSIVAMENTE um objeto JSON válido, contendo EXATAMENTE todas as chaves exigidas, sem adicionar comentários fora do JSON.
+    
     {format_instructions}"""),
     ("human", "Ação do Jogador:\n{acao_jogador}\n\nNarração do Mestre:\n{narracao_mestre}\n\nOpções Oferecidas:\n{opcoes_str}")
 ])

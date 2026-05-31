@@ -1,0 +1,113 @@
+{
+    "modelo_avaliado": "gemini-2.5-flash_baseline_rep1",
+    "juiz_utilizado": "llama",
+    "modo_teste": "Baseline (Sem RAG)",
+    "medias": {
+        "STYLE_REV": 0.83,
+        "EVENT_CAUS": 0.792,
+        "ADHERENCE": 0.223,
+        "TIME_ORDER": 0.718
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.95,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 0.75
+            },
+            "justificativa": "A narração do Mestre é visceral e imersiva, capturando a essência do deserto de Anauroch e a desesperança do jogador. As opções oferecidas são relevantes e claras, permitindo ao jogador tomar decisões significativas. A aderência ao lore é perfeita, sem invenções ou desvios. A resolução cronológica é boa, mas poderia ser mais clara em termos de consequências imediatas das ações do jogador."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.775,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.75
+            },
+            "justificativa": "A narração é rica e imersiva, criando uma atmosfera de desespero e agonia no deserto. No entanto, a descrição da estrutura como 'imponente, feita de pedra escura e antiga' contradiz o gabarito, que especifica que a estrutura é pequena e feita de pedra do deserto, não escura. Isso resulta em uma nota baixa para ADHERENCE. As opções oferecidas são claras e relevantes para o contexto, mas a diversidade delas poderia ser melhor explorada."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.625
+            },
+            "justificativa": "A narração apresenta uma descrição vívida e imersiva do ambiente, com detalhes sensoriais que transportam o jogador para o cenário. As opções oferecidas são claras e relevantes para o contexto. No entanto, a descrição da estrutura foge completamente do conceito estabelecido no gabarito, sendo descrita como massiva, feita de basalto ou rocha vulcânica escura, e com símbolos estranhos, o que constitui uma alucinação crítica. Além disso, a narração não apresenta um progresso claro na resolução da ação do jogador, apenas descrevendo o ambiente e as opções, sem avançar significativamente na história."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.95
+            },
+            "justificativa": "A narração é rica e imersiva, com descrições vívidas do ambiente e do estado físico do jogador. No entanto, a descrição da estrutura como 'basalto escuro' e 'monolítica' contradiz o gabarito, que especifica que a estrutura é feita de 'pedra do deserto' e é 'pequena'. Além disso, a menção a 'dezenas de metros' de extensão da estrutura também contradiz o gabarito. As opções oferecidas são claras e relevantes para o contexto, e a resolução da ação do jogador é bem feita, com uma descrição detalhada do esforço e da exaustão."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.858,
+                "ADHERENCE": 0.975,
+                "TIME_ORDER": 0.775
+            },
+            "justificativa": "A narração é visceral e imersiva, capturando bem o desespero e a exaustão do personagem. As opções oferecidas são relevantes e claras, permitindo ao jogador decidir o próximo passo de forma significativa. A aderência ao lore é excelente, mantendo a consistência com o cenário estabelecido. A resolução cronológica é boa, pois a ação do jogador tem um desfecho claro e o estado do jogo muda."
+        },
+        {
+            "turno": 6,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.775,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.625
+            },
+            "justificativa": "A narração é rica e imersiva, com uma descrição detalhada do ambiente e dos sentidos do jogador. No entanto, a descrição da estrutura como 'monolítica' e a menção a uma 'fresta' em vez de uma porta/entrada aberta como descrito no gabarito é uma alucinação crítica. As opções oferecidas são claras e relevantes para o contexto, mas a falta de aderência ao lore é um problema significativo."
+        },
+        {
+            "turno": 7,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.775,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.25
+            },
+            "justificativa": "A narração é rica e imersiva, com descrições detalhadas que criam uma atmosfera sombria e misteriosa. No entanto, a falta de aderência ao lore estabelecido é crítica, pois a descrição da estrutura e do ambiente não coincide com o gabarito fornecido. Além disso, a resolução da ação do jogador é lenta e não há um progresso claro na história. As opções oferecidas são claras, mas a diversidade delas é limitada."
+        },
+        {
+            "turno": 8,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 0.7
+            },
+            "justificativa": "A narração é rica e imersiva, criando uma atmosfera de desespero e exaustão. No entanto, a descrição da estrutura como tendo uma 'fresta' e não uma porta/entrada aberta como especificado no gabarito é uma alucinação crítica. Além disso, a menção a 'rochas de basalto' e 'musgo inflamável' não está presente no gabarito, o que também penaliza a aderência. As opções oferecidas são claras e relevantes para o contexto, mas a diversidade delas é limitada."
+        },
+        {
+            "turno": 9,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.95
+            },
+            "justificativa": "A narração é rica e imersiva, com descrições detalhadas do esforço físico e do alívio térmico. No entanto, a descrição do local não se alinha com o gabarito, que especifica uma estrutura quadrada pequena de pedra do deserto com uma fonte seca e uma porta/entrada aberta. A menção a basalto e a falta de luz são invenções que não estão no gabarito, o que justifica a nota baixa em ADHERENCE. As opções oferecidas são claras e relevantes para o contexto, mas a diversidade delas é limitada. A resolução da ação do jogador é clara e eficaz, com um progresso lógico na história."
+        },
+        {
+            "turno": 10,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.858,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.8
+            },
+            "justificativa": "A narração é rica e imersiva, com descrições detalhadas da escuridão, do túnel e do estado físico do jogador. As opções oferecidas são claras e relevantes para o contexto. No entanto, a descrição do túnel e do ambiente não se alinha com o gabarito fornecido, que descreve uma estrutura quadrada pequena com uma fonte seca e um símbolo, o que não é mencionado na narração. Além disso, a menção a basalto e a areia fina não está presente no gabarito, o que justifica a nota baixa em ADHERENCE."
+        }
+    ]
+}

@@ -1,0 +1,113 @@
+{
+    "modelo_avaliado": "openai_gpt-4o-mini_rag_rep1",
+    "juiz_utilizado": "llama",
+    "modo_teste": "RAG Ligado",
+    "medias": {
+        "STYLE_REV": 0.8,
+        "EVENT_CAUS": 0.785,
+        "ADHERENCE": 0.595,
+        "TIME_ORDER": 0.648
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.858,
+                "ADHERENCE": 0.975,
+                "TIME_ORDER": 0.775
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, criando uma atmosfera de desespero e urgência. As opções oferecidas são claras e relevantes para o contexto, permitindo que o jogador tome decisões significativas. A aderência ao PDF é alta, com a descrição do deserto e a situação do jogador alinhada com o contexto original. A resolução cronológica é boa, pois o Mestre apresenta as consequências da ação do jogador de forma clara."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.842,
+                "ADHERENCE": 0.975,
+                "TIME_ORDER": 0.775
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, com detalhes sensoriais que transportam o jogador para o cenário do deserto. A ação do jogador é resolvida de forma clara, com consequências para a exaustão. As opções oferecidas são relevantes e claras, embora um pouco limitadas em termos de diversidade. A aderência ao PDF é alta, com a menção à duna e à estrutura ao horizonte, que pode ser relacionada ao Desert Shrine. A ordem temporal é bem resolvida, com a ação do jogador tendo um desfecho claro."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.858,
+                "ADHERENCE": 0.975,
+                "TIME_ORDER": 0.775
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, com descrições que transportam o jogador para o cenário do deserto. As opções oferecidas são claras e relevantes para o contexto, permitindo ao jogador tomar decisões significativas. A aderência ao PDF é alta, pois o Mestre manteve a essência da estrutura e do ambiente descritos no gabarito. No entanto, a resolução cronológica poderia ser mais clara, pois a ação do jogador não teve um desfecho definitivo."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.775,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.625
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, com detalhes que criam uma atmosfera misteriosa e antiga. A descrição da fonte, do baú e da fenda na parede é bem feita, mantendo o jogador engajado. No entanto, as opções oferecidas, embora claras, não são extremamente diversificadas em termos de consequências imediatas, o que afeta a nota de diversidade. A aderência ao PDF é alta, pois o Mestre manteve a essência da cena descrita no gabarito. A resolução cronológica é razoável, mas poderia ser mais clara em termos de como as ações do jogador afetam o estado do jogo."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.7,
+                "TIME_ORDER": 0.375
+            },
+            "justificativa": "A narração é rica e imersiva, criando uma atmosfera de suspense e curiosidade. As opções oferecidas são claras e relevantes para a situação, mas a diversidade delas é limitada. A aderência ao PDF é boa, mas não perfeita, pois o Mestre adicionou alguns detalhes não presentes no gabarito. A resolução cronológica é um pouco confusa, pois o jogador ainda não abriu o baú, mas a narração já está criando expectativas sobre o que pode estar dentro."
+        },
+        {
+            "turno": 6,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 0.7
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes sensoriais que criam uma atmosfera tensa e misteriosa. As opções oferecidas são claras e relevantes para a situação, mas a diversidade delas é limitada. A aderência ao PDF é baixa, pois o Mestre inventou elementos como o ícone da serpente e a brisa fria, que não estão presentes no gabarito. A resolução cronológica é razoável, pois a ação do jogador tem um desfecho claro, mas a narrativa poderia ser mais concisa e direta."
+        },
+        {
+            "turno": 7,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 0.7
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial e imersiva, com detalhes que criam uma atmosfera tensa e misteriosa. No entanto, a aderência ao lore do PDF é baixa, pois não há menção a elementos específicos do contexto original. As opções oferecidas são claras, mas poderiam ser mais diversificadas em termos de consequências e desfechos. A resolução cronológica é razoável, pois a ação do jogador tem um desfecho claro, mas a narrativa poderia ser mais concisa e direta."
+        },
+        {
+            "turno": 8,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.775,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 0.625
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial e uma atmosfera tensa, o que justifica a nota alta em STYLE_REV. As opções oferecidas são relevantes para o contexto, mas falta diversidade, pois todas elas estão relacionadas à reação imediata ao evento, o que justifica a nota média em EVENT_CAUS_D. A clareza das opções é boa, mas poderia ser melhor se fossem mais detalhadas. A nota em ADHERENCE é baixa porque o Mestre inventou elementos não presentes no PDF, como o ícone da serpente e a reação do baú. A nota em TIME_ORDER é média porque a ação do jogador foi resolvida, mas o desfecho não foi claro."
+        },
+        {
+            "turno": 9,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.742,
+                "ADHERENCE": 0.375,
+                "TIME_ORDER": 0.625
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial e mantém o tom da aventura, o que justifica a nota alta em STYLE_REV. As opções oferecidas são claras e relevantes para o contexto, mas a diversidade delas é um pouco limitada, resultando em notas médias para EVENT_CAUS_D e EVENT_CAUS_R. A clareza das opções é boa, justificando a nota alta em EVENT_CAUS_C. No entanto, a aderência ao PDF é baixa devido à invenção de elementos como a 'luz azulada' e o 'ícone da serpente', que não estão presentes no gabarito. A resolução cronológica é razoável, mas a ação do jogador poderia ter sido resolvida de forma mais clara e direta, resultando em uma nota média para TIME_ORDER."
+        },
+        {
+            "turno": 10,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 0.5
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial e imersiva, especialmente ao detalhar o ícone da serpente e a energia pulsante que emana dele. As opções oferecidas são claras e bem estruturadas, mas a diversidade delas poderia ser maior. A aderência ao PDF é baixa porque o ícone da serpente não é mencionado no contexto original, introduzindo um elemento novo não presente no gabarito. A resolução cronológica é razoável, pois o jogador tem opções para prosseguir, mas a ação do jogador não teve um desfecho claro em termos de progresso na história."
+        }
+    ]
+}

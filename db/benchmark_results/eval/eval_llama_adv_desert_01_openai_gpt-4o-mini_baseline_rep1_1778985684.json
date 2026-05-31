@@ -1,0 +1,113 @@
+{
+    "modelo_avaliado": "openai_gpt-4o-mini_baseline_rep1",
+    "juiz_utilizado": "llama",
+    "modo_teste": "Baseline (Sem RAG)",
+    "medias": {
+        "STYLE_REV": 0.8,
+        "EVENT_CAUS": 0.738,
+        "ADHERENCE": 0.1,
+        "TIME_ORDER": 0.677
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 0.7
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, criando uma atmosfera de desespero e urgência. As opções oferecidas são claras e relevantes para a situação, mas poderiam ser mais diversificadas. A aderência ao lore é perfeita, pois não há invenções ou desvios do contexto original. A resolução cronológica é razoável, pois o jogador tem opções para agir, mas a narração poderia ser mais concisa e direta."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.7
+            },
+            "justificativa": "A narração é rica e imersiva, criando uma atmosfera de desafio e sofrimento. No entanto, a descrição da formação rochosa como um possível abrigo contradiz o gabarito, que especifica a Área 1 como apenas areia e calor letal, sem oásis. Além disso, as opções oferecidas são claras e relevantes para o contexto, mas a diversidade delas é limitada, pois todas se concentram em encontrar abrigo ou ajuda. A resolução cronológica é razoável, pois a ação do jogador tem um desfecho claro, mas a falta de aderência ao gabarito é um problema significativo."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.95
+            },
+            "justificativa": "A narração é rica e imersiva, criando uma atmosfera de desafio e determinação. As opções oferecidas são claras e relevantes para o contexto. No entanto, a descrição da formação rochosa não está de acordo com o gabarito, que especifica uma estrutura quadrada pequena de pedra com uma fonte seca, e não uma formação rochosa natural. Isso é considerado alucinação crítica e penaliza a nota de ADHERENCE."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.95
+            },
+            "justificativa": "A narração é rica e imersiva, com descrições detalhadas do ambiente e do estado físico do jogador. No entanto, a formação rochosa descrita não corresponde à descrição do gabarito, que especifica uma estrutura quadrada pequena de pedra do deserto com uma fonte seca. As opções oferecidas são claras e relevantes para o contexto, mas a diversidade delas é limitada. A resolução da ação do jogador é clara e bem narrada, com um progresso lógico na história."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.7
+            },
+            "justificativa": "A narração é rica e imersiva, com descrições que criam uma atmosfera de alívio e alerta. No entanto, a aderência ao lore é baixa, pois a formação rochosa não é descrita como uma estrutura pequena e quadrada de pedra, mas sim como uma formação natural com fendas, o que é considerado alucinação crítica. As opções oferecidas são claras e relevantes, mas a diversidade pode ser melhorada. A resolução cronológica é boa, pois a ação do jogador tem um desfecho claro e o estado do jogo muda."
+        },
+        {
+            "turno": 6,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.608,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.25
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial, criando uma atmosfera imersiva. No entanto, a história não avança de acordo com o contexto do PDF, descrevendo uma formação rochosa com fendas, o que é considerado alucinação crítica. As opções oferecidas são claras, mas não estão diretamente relacionadas ao contexto original, e a resolução da ação do jogador não é clara."
+        },
+        {
+            "turno": 7,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.742,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.625
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial, especialmente ao detalhar o brilho do cristal e a sensação de frio ao tocá-lo, o que justifica a nota alta em STYLE_REV. As opções oferecidas têm um bom nível de diversidade e relevância para o contexto, mas a clareza poderia ser melhorada, especialmente na opção 3, que implica riscos não explicitados. No entanto, a principal falha está na aderência ao lore estabelecido, pois a descrição não menciona a Área 3 (The Desert Shrine) ou a fonte seca com o símbolo 'Olho e Coroa', introduzindo elementos não presentes no gabarito, como a fenda e o cristal, o que resulta em uma nota baixa em ADHERENCE. A resolução da ação do jogador é razoável, mas a falta de progresso claro na história e a introdução de novos elementos sem resolução anterior justificam a nota mediana em TIME_ORDER."
+        },
+        {
+            "turno": 8,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.7
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes sensoriais que criam uma atmosfera sombria e de suspense. No entanto, a história não se passa na Área 3 (The Desert Shrine) como especificado no gabarito, mas sim em uma fenda, o que é uma violação direta da aderência ao lore. As opções oferecidas são claras e relevantes para a situação, mas a diversidade delas poderia ser maior. A resolução da ação do jogador é satisfatória, com um desfecho claro e uma mudança no estado do jogo."
+        },
+        {
+            "turno": 9,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.25
+            },
+            "justificativa": "A narração é rica e imersiva, com descrições viscerais que criam imagens mentais fortes. No entanto, a cena não está de acordo com o contexto do PDF, que descreve uma área desértica com uma estrutura quadrada pequena e uma fonte seca. Além disso, as opções oferecidas não levam a um desfecho claro para a ação do jogador, e a história não avança de forma significativa."
+        },
+        {
+            "turno": 10,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.775,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.95
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial e imersiva, com detalhes que ajudam a criar uma atmosfera tensa e de alívio. As opções oferecidas são claras e relevantes para o contexto. No entanto, a aderência ao lore é severamente penalizada devido à descrição de uma câmara com uma poça de água e luz azulada, que não está de acordo com o gabarito fornecido, que descreve a Área 3 como um pequeno prédio quadrado de pedra com uma fonte seca. A resolução cronológica é bem feita, com a ação do jogador sendo resolvida de forma clara e coerente."
+        }
+    ]
+}

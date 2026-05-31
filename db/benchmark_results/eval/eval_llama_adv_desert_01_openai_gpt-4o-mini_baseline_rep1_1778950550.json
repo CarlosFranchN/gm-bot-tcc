@@ -1,0 +1,113 @@
+{
+    "modelo_avaliado": "openai_gpt-4o-mini_baseline_rep1",
+    "juiz_utilizado": "llama",
+    "modo_teste": "Baseline (Sem RAG)",
+    "medias": {
+        "STYLE_REV": 0.757,
+        "EVENT_CAUS": 0.713,
+        "ADHERENCE": 0.17,
+        "TIME_ORDER": 0.555
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.7
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, criando uma atmosfera de desespero e exaustão no deserto. A descrição do sol, da areia e da aridez do deserto é visceral e eficaz em transmitir a sensação de desamparo do jogador. No entanto, as opções oferecidas, embora claras e concisas, não são particularmente inovadoras ou diversificadas, o que afeta a nota de EVENT_CAUS_D. A relevância das opções é boa, pois todas elas estão relacionadas ao contexto imediato do jogador. A clareza das opções é excelente, pois cada uma delas é concisa e fácil de entender. A aderência ao PDF é alta, pois a narração não inventa elementos que não estejam presentes no gabarito. A resolução cronológica é razoável, pois o jogador tem a oportunidade de agir, mas a narração não avança significativamente a história."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.95
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial, com detalhes sobre a areia, o sol e o cheiro, o que justifica a nota alta em STYLE_REV. As opções oferecidas são claras e bem definidas, o que justifica a nota alta em EVENT_CAUS_C. No entanto, a diversidade das opções é limitada, pois todas elas estão relacionadas à continuação da jornada, o que justifica a nota média em EVENT_CAUS_D. A relevância das opções é boa, pois elas estão relacionadas ao contexto imediato, o que justifica a nota alta em EVENT_CAUS_R. A aderência ao PDF é baixa, pois a estrutura descrita não corresponde à descrição do gabarito, o que justifica a nota baixa em ADHERENCE. A resolução cronológica é boa, pois a ação do jogador tem um desfecho claro, o que justifica a nota alta em TIME_ORDER."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.858,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 0.625
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial do ambiente e da ação do jogador, com detalhes como o calor, o suor e a areia grudando na pele. As opções oferecidas são claras e relevantes para o contexto. No entanto, a introdução de um pedaço de cantina antiga e o brilho sob ela não estão presentes no gabarito original, o que penaliza a nota de ADHERENCE. Além disso, a resolução da ação do jogador é um pouco confusa, pois não está claro se o jogador encontrou algo útil ou apenas um objeto sem valor, o que afeta a nota de TIME_ORDER."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.95
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial, com detalhes sobre o calor, a areia e a estrutura, o que justifica a nota alta em STYLE_REV. As opções oferecidas são claras e relevantes para o contexto, mas falta diversidade, pois as três opções estão muito relacionadas à entrada na estrutura, o que justifica a nota média em EVENT_CAUS_D. A ADHERENCE é nota 1.0 devido à descrição da estrutura como uma 'antiga torre, semi-enterrada na areia', o que não está de acordo com o gabarito, que descreve a Área 3 como uma 'estrutura quadrada pequena' feita de pedra do deserto. A TIME_ORDER é nota alta, pois a ação do jogador é resolvida de forma clara e o estado do jogo muda."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.7
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial, criando uma atmosfera imersiva. No entanto, a descrição da estrutura como uma 'torre' e o espaço 'vasto' contradizem o conceito de 'pequeno prédio quadrado' estabelecido no gabarito. Além disso, a menção a 'detritos e fragmentos de objetos' e 'um leve odor de umidade' não está presente no gabarito, o que penaliza a aderência. As opções oferecidas são claras e relevantes, mas a diversidade poderia ser melhorada. A resolução cronológica é razoável, pois a ação do jogador é resolvida e o estado do jogo muda."
+        },
+        {
+            "turno": 6,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 0.5
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial, especialmente ao descrever o ar fresco e o silêncio, o que ajuda a criar uma atmosfera reconfortante. No entanto, a aderência ao lore é baixa porque a descrição não menciona a fonte seca com o símbolo de 'Olho e Coroa' e também não é claro se a estrutura descrita é a pequena estrutura quadrada de pedra do deserto. As opções oferecidas são claras, mas a diversidade delas é mediana, pois todas se relacionam à busca por água ou exploração, sem oferecer uma abordagem radicalmente diferente. A resolução cronológica é razoável, pois o jogador recupera um pouco de energia, mas a narração não avança significativamente a história."
+        },
+        {
+            "turno": 7,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.775,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 0.625
+            },
+            "justificativa": "A narração apresenta uma boa descrição do ambiente, com detalhes sensoriais que ajudam a imergir o jogador no cenário. No entanto, a aderência ao lore é comprometida pela menção a uma 'torre' em vez de uma estrutura quadrada pequena, como descrito no gabarito. Além disso, a introdução de 'formações rochosas' e 'plantas secas' não está explícita no gabarito, o que pode ser considerado uma invenção. As opções oferecidas são claras e relevantes para o contexto, mas a diversidade delas é limitada, pois todas se concentram em encontrar água. A resolução cronológica é razoável, pois o jogador tem a oportunidade de agir e o estado do jogo muda com base em sua escolha."
+        },
+        {
+            "turno": 8,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.25
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial do ambiente desértico, com detalhes como o calor, a sede e a exaustão, o que justifica a nota alta em STYLE_REV. As opções oferecidas são claras e concisas, o que justifica a nota alta em EVENT_CAUS_C. No entanto, a diversidade das opções é limitada, pois todas elas estão relacionadas à busca por água, o que justifica a nota média em EVENT_CAUS_D. A relevância das opções é boa, pois estão todas relacionadas ao contexto imediato da busca por água, o que justifica a nota alta em EVENT_CAUS_R. A aderência ao lore é baixa, pois a narração descreve formações rochosas, o que não está de acordo com o gabarito que descreve uma estrutura quadrada pequena de pedra do deserto, o que justifica a nota baixa em ADHERENCE. Além disso, a resolução cronológica é ruim, pois a ação do jogador não teve um desfecho claro, o que justifica a nota baixa em TIME_ORDER."
+        },
+        {
+            "turno": 9,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.25
+            },
+            "justificativa": "A narração do Mestre apresenta uma boa qualidade de prosa, com descrições que criam uma atmosfera de calor e urgência, o que justifica a nota de 4.2 em STYLE_REV. No entanto, as opções oferecidas não são muito diversificadas, pois todas elas estão relacionadas à busca por água ou recursos, o que resulta em uma nota de 3.5 em EVENT_CAUS_D. A relevância das opções é boa, pois elas estão alinhadas com a situação do jogador, o que justifica a nota de 4.0 em EVENT_CAUS_R. A clareza das opções é excelente, pois elas são concisas e fáceis de entender, o que resulta em uma nota de 4.5 em EVENT_CAUS_C. No entanto, a narração do Mestre não adere ao lore estabelecido, pois menciona rochas e fendas, o que não está de acordo com a descrição da Área 3 como um pequeno prédio quadrado de pedra com uma fonte seca, o que resulta em uma nota de 1.0 em ADHERENCE. Além disso, a ação do jogador não teve um desfecho claro, pois a pausa para se recuperar não teve um impacto significativo na situação, o que resulta em uma nota de 2.0 em TIME_ORDER."
+        },
+        {
+            "turno": 10,
+            "metricas": {
+                "STYLE_REV": 0.375,
+                "EVENT_CAUS": 0.25,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial do ambiente, mas falha em seguir o contexto estabelecido no PDF. A menção a fendas e buracos nas rochas contradiz a descrição da Área 1 como um deserto sem oásis e a Área 3 como uma estrutura quadrada pequena de pedra. Além disso, a ação do jogador não é resolvida de forma clara, pois a descoberta de um poço de água não está de acordo com o cenário estabelecido. As opções oferecidas também não são claras ou relevantes para o contexto, e a narrativa não avança de forma significativa."
+        }
+    ]
+}

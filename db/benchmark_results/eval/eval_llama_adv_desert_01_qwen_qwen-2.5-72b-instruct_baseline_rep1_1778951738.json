@@ -1,0 +1,113 @@
+{
+    "modelo_avaliado": "qwen_qwen-2.5-72b-instruct_baseline_rep1",
+    "juiz_utilizado": "llama",
+    "modo_teste": "Baseline (Sem RAG)",
+    "medias": {
+        "STYLE_REV": 0.617,
+        "EVENT_CAUS": 0.615,
+        "ADHERENCE": 0.0,
+        "TIME_ORDER": 0.318
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.25
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, criando uma atmosfera de desespero e urgência. No entanto, não há menção à Área 3 (The Desert Shrine) ou ao Ponto Focal (a fonte seca com o símbolo de 'Olho e Coroa'), o que é uma falha crítica em termos de aderência ao lore. Além disso, as opções oferecidas não levam em consideração a presença da estrutura quadrada pequena de pedra do deserto, o que é um elemento crucial do cenário. A resolução da ação do jogador também não é clara, pois não há uma consequência direta para as escolhas feitas."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.95
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial, especialmente em relação ao calor e à exaustão do personagem, o que justifica a nota alta em STYLE_REV. As opções oferecidas são claras e relevantes para o contexto, mas falta diversidade, pois todas elas estão relacionadas à exploração do local, o que justifica a nota média em EVENT_CAUS_D. A aderência ao lore é baixa porque a descrição do local não corresponde à Área 3 do gabarito, que deveria ser um pequeno prédio quadrado de pedra com uma fonte seca, e não um promontório rochoso com rochas espalhadas. A resolução cronológica é boa, pois a ação do jogador tem um desfecho claro e o estado do jogo muda."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.625,
+                "EVENT_CAUS": 0.583,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.25
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial, com detalhes sobre o calor e a exaustão, o que ajuda a criar uma atmosfera imersiva. No entanto, a história não avança significativamente em relação à ação do jogador, que era investigar a depressão no chão. As opções oferecidas são razoavelmente claras, mas a diversidade delas é limitada, pois todas parecem seguir uma linha de investigação ou busca por recursos, sem oferecer uma escolha mais ousada ou inovadora. A maior falha está na aderência ao lore estabelecido, pois a descrição não menciona a Área 3 (The Desert Shrine) ou qualquer elemento específico do gabarito, como a fonte seca com o símbolo de 'Olho e Coroa', introduzindo elementos não mencionados, como a depressão no chão e pegadas de animais, o que configura alucinação crítica."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.95
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial e imersiva, com detalhes sobre o pano e o amuleto que capturam a atenção do jogador. No entanto, a falta de aderência ao lore estabelecido é crítica, pois o cenário descrito não corresponde à Área 3 do Deserto, que deveria ser um local com uma estrutura quadrada pequena de pedra e uma fonte seca com o símbolo de 'Olho e Coroa'. As opções oferecidas também não refletem a situação atual descrita, que não está de acordo com o contexto do PDF. A resolução da ação do jogador é clara e avança a história, mas a falta de aderência ao lore é um ponto crítico."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.933,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.275
+            },
+            "justificativa": "A narração apresenta uma boa descrição do ambiente e do estado do jogador, com detalhes sensoriais que ajudam a criar uma imagem mental forte. As opções oferecidas são claras e relevantes para o contexto. No entanto, a aderência ao lore é extremamente baixa, pois a descrição não menciona a Área 3 (The Desert Shrine) ou a fonte seca com o símbolo de 'Olho e Coroa', que são elementos cruciais do gabarito. Além disso, a introdução de uma rocha maior e mais alta e uma ravina não está de acordo com o lore estabelecido. A resolução cronológica também é prejudicada pela falta de progresso claro na história e pela introdução de elementos não mencionados no gabarito."
+        },
+        {
+            "turno": 6,
+            "metricas": {
+                "STYLE_REV": 0.375,
+                "EVENT_CAUS": 0.292,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração apresenta uma descrição razoável do ambiente, mas falha em seguir o contexto estabelecido no PDF. A menção à 'rocha maior e mais alta' e à 'estrutura irregular' contradiz a descrição da Área 3 como uma estrutura quadrada pequena de pedra. Além disso, as opções oferecidas não refletem a urgência da cena ou o contexto imediato, e a ação do jogador não teve um desfecho claro. A falta de aderência ao lore e a ausência de progresso na história justificam as notas baixas."
+        },
+        {
+            "turno": 7,
+            "metricas": {
+                "STYLE_REV": 0.0,
+                "EVENT_CAUS": 0.0,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração do Mestre não respeitou o contexto original do PDF, introduzindo conceitos não mencionados como 'distúrbio na magia do mundo' e 'conexão com o Mestre', o que é uma ALUCINAÇÃO CRÍTICA. Além disso, as opções oferecidas não têm relevância para a ação do jogador, que era explorar a fenda na base da rocha, e não lidam com a situação apresentada. A falta de progresso na história e a interrupção da ação do jogador sem resolução também justificam as notas baixas."
+        },
+        {
+            "turno": 8,
+            "metricas": {
+                "STYLE_REV": 0.375,
+                "EVENT_CAUS": 0.5,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração apresenta uma descrição razoável do ambiente, mas não está de acordo com o contexto do PDF, que descreve uma estrutura quadrada pequena de pedra com uma fonte seca e um símbolo de 'Olho e Coroa'. A menção a uma 'câmara natural' e uma 'poça de água estagnada' é uma alucinação crítica. Além disso, as opções oferecidas não refletem a situação descrita no PDF, o que afeta a aderência e a ordem temporal."
+        },
+        {
+            "turno": 9,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.25
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial, com detalhes sobre o recipiente de barro, os símbolos antigos e o conteúdo do recipiente. No entanto, a cena não está de acordo com o contexto do PDF, que descreve uma área desértica com uma estrutura quadrada pequena e uma fonte seca. Além disso, a ação do jogador não foi resolvida de forma clara, pois o jogador queria examinar o recipiente, mas a narração se concentra mais nos itens encontrados dentro dele. As opções oferecidas são claras, mas não há uma grande diversidade entre elas, pois todas se relacionam ao uso dos itens encontrados."
+        },
+        {
+            "turno": 10,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.842,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.25
+            },
+            "justificativa": "A narração apresenta uma boa qualidade de prosa, com descrições que criam imagens mentais fortes. No entanto, a história não avança de forma significativa em relação ao contexto original do PDF, que se refere à Área 3 (The Desert Shrine) e não menciona um pergaminho, um frasco de vidro ou uma poça de água estagnada. As opções oferecidas são relevantes para a situação do jogador, mas a falta de aderência ao lore original é crítica. A resolução cronológica também é afetada, pois a ação do jogador não tem um desfecho claro em relação ao contexto original."
+        }
+    ]
+}

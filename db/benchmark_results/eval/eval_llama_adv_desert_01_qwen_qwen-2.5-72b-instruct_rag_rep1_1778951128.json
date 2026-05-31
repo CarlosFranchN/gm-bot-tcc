@@ -1,0 +1,113 @@
+{
+    "modelo_avaliado": "qwen_qwen-2.5-72b-instruct_rag_rep1",
+    "juiz_utilizado": "llama",
+    "modo_teste": "RAG Ligado",
+    "medias": {
+        "STYLE_REV": 0.585,
+        "EVENT_CAUS": 0.578,
+        "ADHERENCE": 0.575,
+        "TIME_ORDER": 0.483
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.842,
+                "ADHERENCE": 0.975,
+                "TIME_ORDER": 0.775
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, criando uma atmosfera de deserto hostil. As opções oferecidas são relevantes e claras, mas poderiam ser mais diversificadas. A aderência ao PDF é alta, pois o Mestre manteve a essência da cena original. A resolução cronológica é boa, pois o jogador tem uma escolha clara a fazer."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.75
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, criando uma atmosfera de deserto hostil. As opções oferecidas são claras e relevantes para o contexto, mas poderiam ser mais diversificadas. A aderência ao PDF é alta, pois o Mestre seguiu a estrutura e os elementos descritos no gabarito. A resolução cronológica é adequada, pois o jogador pode avançar com sua ação e o Mestre respondeu de forma coerente."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.75
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, com descrições detalhadas do ambiente e das sensações do jogador. As opções oferecidas são claras e relevantes para o contexto. No entanto, a diversidade das opções poderia ser maior, com mais variações nas ações possíveis. A aderência ao PDF é alta, com a narração seguindo de perto o contexto estabelecido. A resolução cronológica é adequada, com a ação do jogador tendo um desfecho claro."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.858,
+                "ADHERENCE": 0.975,
+                "TIME_ORDER": 0.775
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, com detalhes sensoriais que transportam o jogador para o ambiente árido e abandonado. As opções oferecidas são claras e relevantes para o contexto, permitindo ao jogador avançar na história de maneira lógica. A aderência ao PDF é alta, com a inclusão do símbolo 'Olho e Coroa' e a descrição da fonte seca, que estão de acordo com o gabarito. No entanto, a resolução cronológica poderia ser mais clara, pois o jogador não tem uma noção precisa do que acontecerá em seguida."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.75
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, com detalhes sensoriais que ajudam a criar uma atmosfera sombria e misteriosa. A descrição da escada e da câmara é precisa e ajuda a estabelecer o cenário. As opções oferecidas são claras e relevantes para o contexto, mas poderiam ser mais diversificadas. A aderência ao PDF é alta, com a inclusão de detalhes como a caixa de madeira, as estátuas quebradas e as tochas apagadas. A resolução cronológica é boa, com a ação do jogador levando a um novo cenário e novas opções."
+        },
+        {
+            "turno": 6,
+            "metricas": {
+                "STYLE_REV": 0.0,
+                "EVENT_CAUS": 0.0,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração não respondeu à ação do jogador, não forneceu descrição da caixa de madeira e interrompeu a conexão sem justificativa clara no contexto do PDF. As opções oferecidas são muito limitadas e não permitem ao jogador avançar de forma significativa na história."
+        },
+        {
+            "turno": 7,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.25
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes sensoriais que criam uma atmosfera tensa e desafiadora. No entanto, a ação do jogador não está claramente relacionada ao contexto do PDF, o que penaliza a nota de ADHERENCE. Além disso, a resolução da ação do jogador não é clara, o que afeta a nota de TIME_ORDER. As opções oferecidas são claras e relevantes, mas não há muita diversidade entre elas."
+        },
+        {
+            "turno": 8,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.775
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, com detalhes sensoriais que transportam o jogador para o ambiente do deserto. A ação do jogador é resolvida de forma clara e lógica, com um progresso satisfatório. As opções oferecidas são relevantes e claras, embora possam ser um pouco previsíveis. A aderência ao PDF é alta, com elementos como a caixa de madeira e a fissura na parede que se alinham com o contexto. No entanto, a diversidade de opções pode ser um pouco limitada, e a resolução cronológica pode ser um pouco lenta."
+        },
+        {
+            "turno": 9,
+            "metricas": {
+                "STYLE_REV": 0.0,
+                "EVENT_CAUS": 0.0,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração do Mestre não respondeu à ação do jogador, interrompendo a conexão sem justificativa clara no contexto do PDF. As opções oferecidas são muito limitadas e não refletem a diversidade de ações possíveis. Além disso, a interrupção da conexão parece ser uma desculpa para não avançar a história, o que prejudica a imersão e o progresso da aventura."
+        },
+        {
+            "turno": 10,
+            "metricas": {
+                "STYLE_REV": 0.25,
+                "EVENT_CAUS": 0.333,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração é mecânica e não oferece descrições sensoriais. As opções são limitadas e não oferecem diversidade. A conexão com o gabarito foi perdida, pois o erro de API não foi mencionado. A ação do jogador não teve desfecho claro."
+        }
+    ]
+}

@@ -1,0 +1,113 @@
+{
+    "modelo_avaliado": "gemini-2.5-flash_rag_rep1",
+    "juiz_utilizado": "llama",
+    "modo_teste": "RAG Ligado",
+    "medias": {
+        "STYLE_REV": 0.815,
+        "EVENT_CAUS": 0.796,
+        "ADHERENCE": 0.905,
+        "TIME_ORDER": 0.785
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.7
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, criando uma atmosfera de desespero e urgência. As opções oferecidas são relevantes para a situação, mas poderiam ser mais diversificadas. A aderência ao PDF é alta, com detalhes como o sol implacável e a areia quente. A resolução cronológica é boa, mas poderia ser mais clara em relação às consequências das ações do jogador."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.775,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.625
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes sensoriais que transportam o jogador para o cenário desértico. A opção de focar na estrutura distante é clara e relevante, mas as outras opções poderiam ser mais distintas e atraentes. A aderência ao PDF é alta, pois a descrição da estrutura e da sombra é consistente com o contexto. No entanto, a resolução cronológica é um pouco lenta, pois o jogador ainda não tem uma noção clara do que é a estrutura ou como ela pode ajudá-los."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.775
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, com descrições detalhadas do ambiente e das sensações do jogador. A ação do jogador é resolvida de forma clara e lógica. As opções oferecidas são relevantes e claras, mas poderiam ser mais diversificadas. A aderência ao PDF é alta, com apenas pequenos ajustes na descrição do ambiente. A resolução cronológica é boa, com a ação do jogador tendo um impacto claro no estado do jogo."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.858,
+                "ADHERENCE": 0.975,
+                "TIME_ORDER": 0.775
+            },
+            "justificativa": "A narração do Mestre é rica em detalhes sensoriais, criando uma atmosfera imersiva do deserto. As opções oferecidas são claras e relevantes para o contexto, permitindo ao jogador uma escolha significativa. A aderência ao PDF é alta, com a descrição da estrutura e da fonte seca correspondendo ao gabarito. No entanto, a resolução cronológica poderia ser mais clara, com uma transição mais suave entre a caminhada e a chegada ao santuário."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.7
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, com detalhes sensoriais que transportam o jogador para o ambiente do santuário. A pergunta sobre o que o jogador está segurando em cada mão é relevante e importante para a progressão da aventura. No entanto, as opções oferecidas são um pouco limitadas e não exploram todas as possibilidades de ação do jogador. A aderência ao PDF é alta, pois o Mestre segue fielmente o contexto e a descrição do local. A resolução cronológica é razoável, pois o Mestre resolve a ação do jogador de entrar no edifício e descer os degraus, mas poderia ser mais clara e direta."
+        },
+        {
+            "turno": 6,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.858,
+                "ADHERENCE": 0.625,
+                "TIME_ORDER": 0.75
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes sensoriais que ajudam a criar uma atmosfera. As opções oferecidas são relevantes e claras, permitindo ao jogador avançar na história. No entanto, a aderência ao PDF original é questionável, pois alguns detalhes, como o tamanho da câmara e a presença de uma fonte, não estão presentes no texto original. Além disso, a narração não resolve explicitamente a ação do jogador, mas oferece opções para que ele prossiga."
+        },
+        {
+            "turno": 7,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.75
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, criando uma atmosfera de mistério e frustração. A descrição do baú e do interior é detalhada e evocativa. As opções oferecidas são claras e relevantes para o contexto. No entanto, a diversidade de opções é limitada, pois as três opções são relativamente simples e não oferecem muitas variações. A aderência ao PDF é alta, pois o Mestre segue o contexto e não inventa elementos novos. A resolução cronológica é boa, pois a ação do jogador é resolvida de forma clara e lógica."
+        },
+        {
+            "turno": 8,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 0.975,
+                "TIME_ORDER": 0.925
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, criando uma atmosfera de tensão e medo. A descrição da moeda de ouro e do som de pedra rangendo é detalhada e envolvente. As opções oferecidas são claras e relevantes para a situação, permitindo que o jogador escolha sua ação de forma eficaz. A aderência ao PDF é alta, com a narração seguindo os eventos descritos no gabarito.olução cronológica é bem A res feita, com a ação do jogador tendo um desfecho claro e coerente."
+        },
+        {
+            "turno": 9,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.842,
+                "ADHERENCE": 0.775,
+                "TIME_ORDER": 0.975
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial, com detalhes que criam uma imagem vívida da cena. A ação do jogador é resolvida de forma clara, com consequências imediatas. As opções oferecidas são relevantes e claras, embora possam ser um pouco previsíveis. A aderência ao contexto é boa, mas com alguns elementos que não estão explicitamente mencionados no PDF, como a 'sensação de dread' e o 'olho invisível'. No entanto, esses elementos não contradizem o contexto e podem ser considerados uma interpretação criativa."
+        },
+        {
+            "turno": 10,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.875
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, com descrições vívidas que criam uma atmosfera de tensão e perigo. A ação do jogador é resolvida de forma clara e coerente, com consequências lógicas para suas escolhas. No entanto, as opções oferecidas poderiam ser mais diversificadas e criativas, e a narração poderia ter explorado mais a fundo a sensação de dread e malevolência no corredor."
+        }
+    ]
+}
