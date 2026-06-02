@@ -16,7 +16,7 @@ Modelos de IA frequentemente sofrem de perda de contexto e alucinações quando 
 **Ação do Jogador:** "Entro no santuário escuro com minha tocha."
 
 **Resposta Gerada pelo Motor (Estrutura JSON Obrigatória):**
-```JSON
+```json
 {
   "raciocinio_estado": "O jogador entrou no santuário. O RAG informa que há morcegos no teto. A luz da tocha vai assustá-los e iniciar um encontro.",
   "narracao": "A luz trêmula da sua tocha revela paredes de pedra úmida. Subitamente, o calor do fogo desperta dezenas de sombras no teto que começam a voar em sua direção...",
@@ -45,13 +45,22 @@ O projeto foi construído de forma modular para isolar a geração de texto, a s
 
 Baseado nas taxonomias NarraBench e RAGBench, o juiz avalia as interações em quatro eixos, atribuindo notas normalizadas (0.00 a 1.00):
 
-- **INT (Interestingness / Estilo)**: Qualidade literária e imersão.
+- **Estilo e Revelação (STYLE_REV / INT)**: Qualidade literária, riqueza de vocabulário e imersão sensorial.
 
-- **ACT (Action Quality)**: Diversidade, Relevância e Clareza das opções dadas ao jogador.
+- **Causalidade de Eventos (EVENT_CAUS / ACT)**: Avalia o Game Design das opções dadas ao jogador (Diversidade, Relevância e Clareza).
 
-- **FID (Fidelidade / Adherence)**: Mede a taxa de alucinação baseada estritamente no material original (RAG).
+- **Aderência Factual (ADHERENCE / FID):** Métrica anti-alucinação. Penaliza a IA caso ela invente fatos que não estão no contexto recuperado pelo RAG.
 
-- **REL (Relevância Narrativa / Time Order)**: Verifica se a ação solicitada foi resolvida temporalmente sem loops.
+- **Ordem Temporal (TIME_ORDER / REL):** Verifica se a ação solicitada foi resolvida cronologicamente no presente, sem gerar loops infinitos.
+
+---
+
+## Principais Resultados (Resumo)
+Os experimentos revelaram um claro trade-off (Alignment Tax) na aplicação de LLMs em cenários narrativos:
+
+- Modo Baseline (Sem RAG): Apresentou uma prosa literária superior e alta pontuação criativa inicial, porém sofreu colapsos sistêmicos de regras e temporalidade a longo prazo.
+
+- Modo RAG: Demonstrou máxima Aderência (ADHERENCE) aos fatos e regras, resolvendo as alucinações. Contudo, a necessidade de se prender estritamente aos textos recuperados mitigou parte da fluidez criativa do modelo (engessamento).
 
 ---
 
@@ -75,7 +84,7 @@ Baseado nas taxonomias NarraBench e RAGBench, o juiz avalia as interações em q
 │   └── chroma_dnd/                       # Banco de dados vetorial
 ├── src/
 │   ├── core/
-│   │   ├── engine.py                     # Motor RAG e Chain-of-Thought
+│   │   ├── engine2.py                     # Motor RAG e Chain-of-Thought
 │   │   └── memory.py                     # Gerenciamento de memória (Janela deslizante)
 │   ├── datasets/
 │   │   └── scenarios.json                # Roteiro de cenas, dicas RAG e regras do Diretor
@@ -111,7 +120,8 @@ pip install -r requirements.txt
 
 3. Crie um arquivo .env na pasta src/ com a sua chave de API:
 ``` Plaintext
-GEMINI_API_KEY=sua_chave_aqui
+GEMINI_API_KEY=sua_chave_gemini_aqui
+OPENROUTER_API_KEY=sua_chave_openrouter_aqui
 ```
 
 4. Crie o banco de dados vetorial ingerindo o PDF:
@@ -127,6 +137,19 @@ python src/simulation/runner.py
 5. Avalie o resultado gerado (O Tribunal):
 ```Bash
 python src/evaluation/run_eval.py
+```
+
+```Raw code
+# ------------------------------------------------------------------------------
+# Configurações de API do Framework GM-BOT-TCC
+# Renomeie este arquivo para .env e insira as suas chaves de acesso.
+# ------------------------------------------------------------------------------
+
+# Chave da API do Google Gemini (utilizada no Motor de Jogo / engine.py)
+GEMINI_API_KEY=insira_sua_chave_gemini_aqui
+
+# Chave do OpenRouter (utilizada pelo Juiz Llama 3.3 no Tribunal de Avaliação)
+OPENROUTER_API_KEY=insira_sua_chave_openrouter_aqui
 ```
 
 ## ✒️ Autor e Contato
