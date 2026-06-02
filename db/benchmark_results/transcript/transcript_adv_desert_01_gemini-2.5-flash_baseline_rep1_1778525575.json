@@ -1,0 +1,142 @@
+[
+    {
+        "turno": 1,
+        "acao_solicitada": "Você está perdido no deserto de Anauroch, exausto, com pouca água e precisa decidir o que fazer.",
+        "resposta_mestre": {
+            "raciocinio_estado": "O jogador está no deserto de Anauroch, exausto e com pouca água. Meu objetivo é estabelecer a sensação de perigo e urgência. Preciso descrever o ambiente hostil e o estado físico do personagem, e então apresentar opções que reflitam a dificuldade da situação, sem oferecer soluções fáceis para a água ou exaustão. As opções devem focar na exploração, conservação ou tentativa de orientação.",
+            "narracao": "O sol impiedoso de Anauroch castiga sua pele, transformando o ar em uma fornalha dançante. A areia fina, que se estende até onde a vista alcança, reflete a luz ofuscante, fazendo seus olhos arderem. Cada passo é uma luta, seus músculos clamam por descanso, e a exaustão se manifesta como um peso esmagador em seus ombros. A boca está seca, a garganta áspera, e o cantil, que outrora parecia um oásis portátil, agora parece lamentavelmente leve. Você sabe que a água é limitada, e o tempo, um inimigo implacável neste mar de areia. Não há uma única nuvem no céu, nem uma brisa refrescante para aliviar o calor sufocante. A vastidão do deserto é esmagadora, e a sensação de estar perdido é quase tão opressiva quanto a sede.",
+            "opcoes": [
+                "Tentar identificar alguma formação rochosa ou duna mais alta que possa servir de ponto de referência ou oferecer alguma sombra.",
+                "Procurar um lugar minimamente abrigado para descansar por alguns minutos e conservar a pouca energia restante.",
+                "Escolher uma direção aleatória (por exemplo, leste) e continuar andando, na esperança de encontrar algo."
+            ],
+            "contexto_usado": "Nenhum contexto (Baseline)"
+        }
+    },
+    {
+        "turno": 2,
+        "acao_solicitada": "Escolher uma direção aleatória (por exemplo, leste) e continuar andando, na esperança de encontrar algo.",
+        "resposta_mestre": {
+            "raciocinio_estado": "O jogador escolheu continuar andando em uma direção aleatória (leste). Vou descrever a progressão da exaustão e do calor, mantendo a urgência. Como a regra pede para permitir que o jogador chegue a novos locais sem enrolação, este é o momento perfeito para introduzir a 'estrutura misteriosa'. A exaustão e a sede continuarão a ser um foco, mas a descoberta dará um novo objetivo. As opções girarão em torno de como o jogador aborda essa nova descoberta.",
+            "narracao": "Você decide que ficar parado não é uma opção e, com uma determinação desesperada, vira-se para o leste, arrastando os pés na areia escaldante. Cada passo é um esforço monumental, e a areia parece sugar suas botas, roubando a pouca energia que lhe resta. O sol, agora mais alto, parece ter intensificado sua fúria, e sua pele está repuxada e seca. A garganta queima, e uma leve tontura começa a turvar sua visão. Você aperta os olhos, tentando focar no horizonte borrado pelo calor.\n\nDepois do que parecem horas – ou talvez apenas minutos, a noção de tempo começa a se distorcer – uma mancha escura e incomum começa a surgir à distância, mal perceptível no tremeluzir do ar. A princípio, você pensa que é uma miragem, mais uma ilusão cruel do deserto para zombar de sua esperança. Mas, à medida que você se força a avançar, a mancha ganha forma, tornando-se mais definida. Não é uma duna, nem uma formação rochosa natural. Parece ser uma estrutura, antiga e imponente, meio enterrada pelas areias, com contornos que sugerem uma arquitetura que não pertence a este lugar. Sua superfície é escura, quase obsidiana, e reflete o sol de uma maneira estranha, sem o brilho opressor da areia. Uma onda de curiosidade e uma ponta de esperança, por menor que seja, surge em seu peito, lutando contra o desespero crescente.",
+            "opcoes": [
+                "Aproximar-se da estrutura com cautela, procurando por uma entrada ou sinais de atividade.",
+                "Tentar encontrar um ponto mais alto próximo à estrutura para observá-la de longe antes de se arriscar.",
+                "Ignorar a estrutura, assumindo que é uma ruína vazia ou uma armadilha, e tentar contorná-la para continuar no leste."
+            ],
+            "contexto_usado": "Nenhum contexto (Baseline)"
+        }
+    },
+    {
+        "turno": 3,
+        "acao_solicitada": "Aproximar-se da estrutura com cautela, procurando por uma entrada ou sinais de atividade.",
+        "resposta_mestre": {
+            "raciocinio_estado": "O jogador se aproxima da estrutura. Vou continuar a descrever a progressão do calor e exaustão enquanto ele caminha os últimos metros. A estrutura será revelada em mais detalhes: seu material, sua idade, sua natureza 'alienígena' ao deserto. Não haverá uma entrada óbvia à primeira vista, para manter a tensão e a necessidade de exploração. O foco será nas opções de como interagir com a estrutura agora que está perto dela.",
+            "narracao": "Com um último surto de energia, você arrasta seus pés pela areia, cada passo mais pesado que o anterior, até que a imponente estrutura escura se eleva diante de você. O que parecia uma mancha distante agora é uma massa colossal, meio engolida pelas dunas, mas ainda assim dominante na paisagem. O material é, de fato, como obsidiana polida, absorvendo a luz do sol em vez de refleti-la cegamente, e é estranhamente frio ao toque, apesar do calor infernal do deserto. \n\nNão há sinais óbvios de portas ou janelas em sua face exposta. As paredes são lisas, com algumas ranhuras e desenhos geométricos estranhos que não se assemelham a nenhuma escrita que você conheça, mas que parecem carregar um propósito antigo e esquecido. A areia se acumula em grandes montes ao redor da base, sugerindo que grande parte da estrutura ainda está enterrada. O silêncio é quase absoluto, quebrado apenas pelo zumbido da sua própria exaustão e o leve assobio do vento que move a areia.\n\nVocê sente o peso da sua escassez de água e a urgência do tempo. Esta estrutura pode ser sua salvação ou uma tumba em potencial. A promessa de sombra, ou talvez um abrigo, é tentadora, mas o mistério de sua origem e a ausência de uma entrada clara são desconcertantes.",
+            "opcoes": [
+                "Tentar encontrar uma entrada na base da estrutura, talvez parcialmente soterrada pela areia.",
+                "Começar a circundar a estrutura, na esperança de encontrar outra face ou um acesso mais evidente.",
+                "Inspecionar a superfície escura da estrutura mais de perto, tocando-a ou examinando os estranhos desenhos geométricos."
+            ],
+            "contexto_usado": "Nenhum contexto (Baseline)"
+        }
+    },
+    {
+        "turno": 4,
+        "acao_solicitada": "Começar a circundar a estrutura, na esperança de encontrar outra face ou um acesso mais evidente.",
+        "resposta_mestre": {
+            "raciocinio_estado": "O jogador decide circundar a estrutura. Isso intensificará a exaustão e a sede. Minha narrativa deve focar no esforço extra e na progressão da deterioração física. Ao completar a volta, o jogador deve encontrar um ponto de interesse que sirva como uma entrada potencial, mas que ainda apresente um desafio ou mistério, mantendo a urgência da sobrevivência. Vou descrever a descoberta de um grande arco ou abertura parcialmente soterrada, que oferece sombra e a promessa de abrigo, mas também a incerteza do que há dentro.",
+            "narracao": "Com a garganta seca e os músculos protestando a cada movimento, você começa a arrastar-se ao redor da base da imponente estrutura escura. Cada passo levanta poeira e areia fina, que se gruda em seus lábios rachados. O sol parece martelar sua cabeça com ainda mais força, e a tontura agora é uma companheira constante, fazendo o horizonte oscilar. O material obsidiano é enganosamente frio ao toque, uma estranha anomalia no calor sufocante do deserto.\n\nVocê anda, o tempo se estendendo em uma série interminável de passos dolorosos. A estrutura parece não ter fim, e a esperança começa a minguar novamente, substituída pela sensação esmagadora de que este esforço é inútil. No entanto, quando você já estava prestes a ceder ao desespero, ao virar uma das \"esquinas\" colossais da estrutura, uma visão diferente surge.\n\nEm vez da parede lisa e ininterrupta, você se depara com uma seção onde a areia parece ter sido varrida em algum ponto, revelando uma abertura maciça. É um arco imponente, feito do mesmo material escuro, com entalhes ainda mais elaborados do que os da superfície exterior, que parecem contar uma história esquecida em símbolos. Metade do arco está soterrado pela areia, mas o topo se eleva o suficiente para revelar uma escuridão convidativa lá dentro, prometendo um alívio imediato do sol causticante. Não há portas visíveis, apenas o vazio escuro, um convite silencioso para um interior desconhecido. Uma brisa leve, surpreendentemente fria, parece emanar da abertura, um contraste gritante com o ar escaldante ao seu redor.",
+            "opcoes": [
+                "Aproximar-se do arco e tentar entrar na estrutura imediatamente.",
+                "Examinar os entalhes e os arredores do arco mais de perto antes de se aventurar para dentro.",
+                "Procurar por algum sinal de que a entrada é segura ou se há perigos ocultos antes de entrar."
+            ],
+            "contexto_usado": "Nenhum contexto (Baseline)"
+        }
+    },
+    {
+        "turno": 5,
+        "acao_solicitada": "Aproximar-se do arco e tentar entrar na estrutura imediatamente.",
+        "resposta_mestre": {
+            "raciocinio_estado": "O jogador, movido pelo desespero e pela exaustão, decide entrar imediatamente na estrutura. O foco da nar narração deve ser o contraste abrupto entre o calor escaldante do deserto e o frio inesperado e a escuridão do interior. Devo descrever o alívio inicial, mas também a sensação de mistério e potencial perigo que a escuridão e o silêncio oferecem. A urgência da desidratação permanece, apesar do alívio térmico. As opções devem guiar o jogador para uma exploração mais aprofundada ou uma tentativa de se adaptar ao novo ambiente.",
+            "narracao": "Com um grito rouco de alívio, você se joga para dentro do arco imponente, deixando para trás o sol impiedoso e a areia que queima. A transição é chocante. O ar escaldante do deserto é instantaneamente substituído por uma frieza úmida e quase sobrenatural que parece penetrar seus ossos. A luz ofuscante do lado de fora dá lugar a uma escuridão quase absoluta, tão densa que seus olhos, já embaçados pela exaustão, lutam para se ajustar. Você tropeça no que parece ser o limiar do arco, sentindo a aspereza do piso de obsidiana sob seus pés, e instintivamente se encosta em uma das paredes internas, fria e lisa ao toque.\n\nO silêncio aqui dentro é ainda mais profundo do que o de fora, um vácuo que parece engolir qualquer som, exceto talvez o batimento acelerado do seu próprio coração e o chiado da sua respiração seca. Você sente o alívio imediato da sombra e do frio, mas a escuridão é opressora. Pequenas partículas de poeira e areia fina ainda flutuam no ar, dançando em feixes tênues de luz que conseguem se infiltrar pela entrada, mas o interior parece se estender em um abismo sem fim. O cheiro é de pedra antiga, poeira milenar e algo mais... algo metálico e estéril que você não consegue identificar.\n\nVocê está a salvo do sol, por enquanto, mas a sede ainda o tortura, e a escuridão esconde todos os seus segredos. Seus olhos começam a se acostumar lentamente, distinguindo apenas formas vagas e sombras mais profundas no negrume à frente. O que está à sua espera nas profundezas desta estrutura de obsidiana?",
+            "opcoes": [
+                "Tentar avançar cautelosamente para o interior da escuridão, tateando o caminho.",
+                "Ficar parado na entrada, esperando que seus olhos se ajustem completamente à escuridão antes de prosseguir.",
+                "Tentar acender alguma fonte de luz, se tiver algo inflamável ou equipamento para isso."
+            ],
+            "contexto_usado": "Nenhum contexto (Baseline)"
+        }
+    },
+    {
+        "turno": 6,
+        "acao_solicitada": "Tentar avançar cautelosamente para o interior da escuridão, tateando o caminho.",
+        "resposta_mestre": {
+            "raciocinio_estado": "O jogador decide avançar cautelosamente na escuridão. Vou descrever a dificuldade de se mover sem luz, focando nos sentidos do tato e olfato. Após alguns passos, ele deve encontrar uma ramificação (um corredor lateral) e possivelmente um objeto no chão, mantendo o mistério e a necessidade de luz/água.",
+            "narracao": "Você solta a parede fria e estende as mãos à frente, tentando sentir o caminho no vácuo da escuridão. Cada passo é incerto, o pé tateando o chão irregular de obsidiana antes de depositar seu peso. A exaustão torna seus movimentos lentos e desajeitados, e a tontura se intensifica com a falta de referências visuais. A parede à sua esquerda permanece fria e lisa, um guia constante na escuridão opressora. O ar, embora fresco, ainda carrega o cheiro metálico e estéril que você notou na entrada, agora mais forte.\n\nVocê avança alguns metros, o silêncio sendo interrompido apenas pelo arrastar dos seus pés e sua própria respiração ofegante. De repente, a parede à sua direita termina abruptamente. Suas mãos encontram o vazio. Você estende o braço e sente uma abertura, um corredor que se ramifica para a direita, desaparecendo na mesma escuridão impenetrável. Ao mesmo tempo, seus pés sentem uma pequena elevação no chão, e então, um objeto solto que rola ligeiramente sob a sola da sua bota. É pequeno e de formato irregular, não parece ser obsidiana.",
+            "opcoes": [
+                "Abaixar-se e tentar pegar o objeto no chão para examiná-lo.",
+                "Entrar no corredor que se ramifica à direita, tateando o caminho.",
+                "Continuar avançando reto pelo corredor principal, ignorando a ramificação e o objeto por enquanto."
+            ],
+            "contexto_usado": "Nenhum contexto (Baseline)"
+        }
+    },
+    {
+        "turno": 7,
+        "acao_solicitada": "Entrar no corredor que se ramifica à direita, tateando o caminho.",
+        "resposta_mestre": {
+            "raciocinio_estado": "O jogador escolheu entrar no corredor à direita. Manter a escuridão absoluta e a dependência do tato. O cheiro metálico e estéril deve permanecer, talvez com um novo elemento. A exaustão e a sede são constantes. Preciso introduzir um novo elemento sensorial ou uma mudança no ambiente que gere novas opções. A introdução de um som de gotejamento seria um bom gatilho, diretamente ligado à sede do jogador, mas sem revelar imediatamente se a água é acessível ou potável. Isso cria um novo foco e uma nova urgência dentro da estrutura.",
+            "narracao": "Você estende as mãos à frente e vira cautelosamente à direita, adentrando o corredor secundário. A escuridão aqui é tão absoluta quanto antes, mas a sensação de confinamento é imediata; as paredes de obsidiana parecem mais próximas. A parede à sua esquerda continua lisa e fria sob seus dedos, servindo como um guia constante, enquanto a direita agora é uma parede oposta, definindo o novo caminho. \n\nSeus passos arrastados ecoam fracamente no silêncio pesado, abafados pela estrutura, misturando-se à sua respiração ofegante e seca. O cheiro metálico e estéril parece se intensificar, agora com um toque adicional de mofo úmido e terra molhada que se mistura ao ar frio. Você avança com as mãos estendidas, os dedos roçando a parede fria e irregular. A cada metro, a tontura pela sede se torna mais persistente, e a sensação de que o tempo está se esgotando pesa sobre você.\n\nDe repente, a parede à sua esquerda faz uma curva acentuada para a esquerda novamente, levando-o a um novo trecho do corredor. É aqui que você ouve. Um som sutil, mas inconfundível, que rompe o silêncio opressor. Um *ping* suave e repetitivo, como uma gota d'água caindo em uma superfície dura e ressonante. Parece vir de um pouco mais à frente, na escuridão que o cerca.",
+            "opcoes": [
+                "Avançar em direção ao som do gotejamento, tentando encontrar a fonte da água.",
+                "Ficar parado e tentar identificar a origem do som e a natureza da superfície onde a água está caindo, usando o tato e a audição.",
+                "Recuar para o corredor principal, pensando que esta ramificação pode ser um beco sem saída ou perigosa."
+            ],
+            "contexto_usado": "Nenhum contexto (Baseline)"
+        }
+    },
+    {
+        "turno": 8,
+        "acao_solicitada": "Avançar em direção ao som do gotejamento, tentando encontrar a fonte da água.",
+        "resposta_mestre": {
+            "raciocinio_estado": "O jogador está avançando em direção ao som de gotejamento, desesperado por água. Irei descrever o avanço, a intensificação do som e a descoberta da fonte. A fonte será uma fresta na obsidiana, de onde goteja água para uma pequena poça. A água não será imediatamente atraente ou abundante, mantendo a urgência e a necessidade de uma decisão. A tontura e a sede devem ser acentuadas.",
+            "narracao": "Você avança, cada passo uma luta contra a tontura e a exaustão. A cada metro, o som do *ping* suave e repetitivo se torna mais nítido, crescendo em volume e clareza. É como uma melodia esperançosa no silêncio opressor da estrutura, impulsionando-o para frente apesar da fraqueza crescente. As mãos estendidas roçam a parede fria à sua esquerda, que continua a guiá-lo enquanto você se aprofunda na escuridão. O cheiro de mofo úmido e terra molhada se intensifica, sobrepondo-se ao aroma metálico. Há uma promessa de umidade no ar, quase palpável, que acende uma fagulha de esperança em seu peito ressequido.\n\nVocê avança mais alguns metros, o som do gotejamento agora inconfundível. Parece vir de uma pequena reentrância na parede à sua direita. Você estende a mão para a direita e, em vez da parede lisa de obsidiana, seus dedos encontram uma superfície áspera e irregular. O som está *bem* aqui.\n\nCom um esforço, você se vira ligeiramente, tateando a parede. Seus dedos encontram uma fenda estreita na rocha de obsidiana, de onde uma gota d'água escorre lentamente, uma a cada poucos segundos, caindo em uma pequena depressão natural no chão, formando uma poça rasa. Você se ajoelha com dificuldade, a tontura quase o derrubando, e aproxima o rosto. A poça é pequena, não muito maior que sua palma, e a água dentro dela é escura e estagnada, com um leve brilho opaco. O cheiro da água é de terra úmida e minerais, talvez um pouco de bolor. Não parece fresca, mas é água.",
+            "opcoes": [
+                "Tentar coletar a água da poça com o cantil, para beber imediatamente.",
+                "Examinar a fresta na parede para ver se a fonte é mais limpa ou se a água pode ser coletada de forma mais eficiente.",
+                "Ignorar a poça e continuar explorando o corredor principal, desconfiando da qualidade da água estagnada."
+            ],
+            "contexto_usado": "Nenhum contexto (Baseline)"
+        }
+    },
+    {
+        "turno": 9,
+        "acao_solicitada": "Tentar coletar a água da poça com o cantil, para beber imediatamente.",
+        "resposta_mestre": {
+            "raciocinio_estado": "O jogador tentou coletar a água da poça. A descrição anterior indicava que a poça era pequena e a água estagnada e de má qualidade. Vou permitir que ele colete uma quantidade mínima, apenas o suficiente para um alívio momentâneo, mas que não resolva o problema da desidratação. O cantil permanecerá quase vazio e a qualidade da água pode trazer outros problemas, mantendo a urgência. As opções subsequentes devem refletir a necessidade contínua de água e exploração.",
+            "narracao": "Você se ajoelha com dificuldade, a tontura fazendo sua visão escurecer por um instante. Com as mãos trêmulas, você abre o cantil e tenta coletar a água da pequena poça. É uma tarefa árdua; a depressão é rasa, e a água é escura e viscosa. Você consegue raspar apenas uma pequena quantidade, mal o suficiente para cobrir o fundo do cantil, misturando-se com o restante quase imperceptível. \n\nLevando o cantil aos lábios, você hesita por um breve momento, o cheiro de mofo e terra úmida inconfundível. Mas a sede é avassaladora. Você bebe o líquido escuro e frio. O alívio é imediato, mas breve, um mero sussurro contra o grito de sua garganta ressecada. A água tem um gosto metálico e terroso, com um fundo amargo. Seu estômago revira um pouco, mas a necessidade era maior. O gole é insuficiente para saciar sua sede, mas acalma a ardência imediata.\n\nO cantil agora contém apenas alguns goles de água turva e de qualidade duvidosa. A tontura persiste, e a sensação de desidratação continua a corroer suas forças, embora a urgência mais aguda tenha sido momentaneamente mitigada. Você ainda está ajoelhado, com a pequena fresta na parede e a poça rasa diante de você. O *ping* sutil continua a ecoar.",
+            "opcoes": [
+                "Examinar a fresta na parede para ver se a fonte é mais limpa ou se a água pode ser coletada de forma mais eficiente.",
+                "Levantar-se e continuar explorando o corredor em que você está, seguindo em frente.",
+                "Voltar para a bifurcação e seguir pelo corredor principal."
+            ],
+            "contexto_usado": "Nenhum contexto (Baseline)"
+        }
+    },
+    {
+        "turno": 10,
+        "acao_solicitada": "Voltar para a bifurcação e seguir pelo corredor principal.",
+        "resposta_mestre": {
+            "raciocinio_estado": "Ocorreu um erro técnico: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 33.878680357s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '33s'}]}}",
+            "narracao": "Houve um distúrbio na magia do mundo. A conexão com o Mestre foi interrompida temporariamente.",
+            "opcoes": [
+                "Tentar novamente a mesma ação",
+                "Esperar que a conexão volte",
+                "Fazer uma pausa"
+            ],
+            "contexto_usado": "Erro de API"
+        }
+    }
+]

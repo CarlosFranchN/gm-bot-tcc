@@ -1,0 +1,103 @@
+{
+    "modelo_avaliado": "gemini-2.5-flash_baseline_rep1",
+    "juiz_utilizado": "llama",
+    "modo_teste": "Baseline (Sem RAG)",
+    "medias": {
+        "STYLE_REV": 0.958,
+        "EVENT_CAUS": 0.894,
+        "ADHERENCE": 1.0,
+        "TIME_ORDER": 1.0
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando um cenário de deserto hostil e desolado. As opções oferecidas são relevantes e claras, e a ação atual do jogador é resolvida no presente. A aderência ao contexto original é total, sem invenções."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando um ambiente hostil e desolado. As opções oferecidas são relevantes e claras, e a história segue uma ordem temporal lógica. A aderência ao contexto do PDF é perfeita, sem invenções ou desvios. A única nota que não é perfeita é a diversidade de opções, pois as três opções são razoáveis, mas não extremamente diferentes entre si."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando um ambiente hostil e desafiador. As opções oferecem caminhos distintos e relevantes para a situação, e o texto é claro e direto. A aderência ao contexto original é total, sem invenções. A resolução da ação do jogador é cronologicamente correta."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.875,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando uma atmosfera opressora e desolada. As opções oferecidas são relevantes e claras, e a resolução da ação do jogador é cronologicamente correta. A aderência ao contexto original é perfeita, sem invenções ou desvios. A única crítica é que as opções poderiam ser um pouco mais diversificadas, mas ainda assim são interessantes e relevantes."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando um cenário de desespero e urgência. As opções oferecidas são relevantes e claras, e a resolução da ação do jogador é feita de forma cronológica. A aderência ao contexto original é total, sem invenções."
+        },
+        {
+            "turno": 6,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando um cenário de deserto implacável e desolador. As opções oferecidas são relevantes e claras, e a resolução da ação do jogador é cronologicamente correta. A aderência ao contexto do PDF é total, sem invenções ou desvios."
+        },
+        {
+            "turno": 7,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando um ambiente hostil e desesperador. As opções oferecidas são relevantes e claras, e a resolução da ação do jogador é cronologicamente coerente. A aderência ao contexto original é total, sem invenções."
+        },
+        {
+            "turno": 8,
+            "metricas": {
+                "STYLE_REV": 1.0,
+                "EVENT_CAUS": 0.917,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e descritiva, criando uma atmosfera de desespero e agonia. As opções oferecidas são relevantes e claras, e a resolução da ação do jogador é cronologicamente correta. A aderência ao contexto original é perfeita, sem invenções ou desvios. As opções oferecem caminhos distintos, mas a diversidade poderia ser um pouco maior."
+        },
+        {
+            "turno": 9,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 1.0,
+                "TIME_ORDER": 1.0
+            },
+            "justificativa": "A narração é rica e descritiva, criando uma atmosfera de deserto implacável e oferecendo uma sensação de desespero e esperança. As opções são relevantes e claras, e a resolução da ação do jogador é feita de forma cronológica. A aderência ao contexto do PDF é total, sem invenções."
+        }
+    ]
+}
