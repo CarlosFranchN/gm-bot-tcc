@@ -1,0 +1,113 @@
+{
+    "modelo_avaliado": "openai_gpt-4o-mini_rag_rep1",
+    "juiz_utilizado": "llama",
+    "modo_teste": "RAG Ligado",
+    "medias": {
+        "STYLE_REV": 0.8,
+        "EVENT_CAUS": 0.779,
+        "ADHERENCE": 0.887,
+        "TIME_ORDER": 0.68
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.842,
+                "ADHERENCE": 0.975,
+                "TIME_ORDER": 0.775
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, criando uma atmosfera de deserto árido e perigoso. As opções oferecidas são claras e relevantes para o contexto, embora possam ser um pouco limitadas em termos de diversidade. A aderência ao PDF é alta, com o Mestre mantendo a essência da aventura original. No entanto, a resolução cronológica pode ser um pouco mais clara, com o Mestre precisando explicitar melhor as consequências das ações do jogador."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.842,
+                "ADHERENCE": 0.975,
+                "TIME_ORDER": 0.775
+            },
+            "justificativa": "A narração do Mestre apresenta uma descrição vívida e imersiva do ambiente desértico, com detalhes sensoriais que transportam o jogador para a cena. A opção de avançar em direção à estrutura estranha ao leste é clara e relevante para o contexto da aventura. As opções oferecidas são claras e concisas, permitindo que o jogador tome decisões informadas. No entanto, a diversidade de opções poderia ser um pouco maior, com mais variações nas ações possíveis. A aderência ao PDF é alta, com a narração se mantendo fiel ao contexto e às descrições originais. A resolução cronológica é boa, com a ação do jogador sendo resolvida de forma clara e coerente."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.858,
+                "ADHERENCE": 0.975,
+                "TIME_ORDER": 0.775
+            },
+            "justificativa": "A narração do Mestre apresenta uma boa descrição sensorial, com detalhes sobre a areia, o calor e a sombra, o que ajuda a imergir o jogador no ambiente. As opções oferecidas são claras e relevantes para o contexto, permitindo ao jogador escolher como proceder. A aderência ao PDF é alta, pois o Mestre não inventou elementos fora do contexto. No entanto, a resolução cronológica poderia ser mais clara, pois não está explicito o que acontecerá em seguida, independentemente da escolha do jogador."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.7
+            },
+            "justificativa": "A narração do Mestre apresenta uma boa descrição sensorial, criando uma imagem mental clara do cenário. A opção de descansar sob a sombra é coerente com o contexto e oferece um momento de alívio para o jogador. No entanto, as opções oferecidas não são extremamente diversificadas, pois todas elas estão relacionadas à construção ou ao descanso. A relevância das opções é boa, pois elas se encaixam no contexto da cena. A clareza das opções é excelente, pois elas são concisas e fáceis de entender. A aderência ao PDF é alta, pois a narração não apresenta invenções significativas. A resolução cronológica é razoável, pois a ação do jogador é resolvida de forma clara, mas a narração poderia ter avançado um pouco mais no tempo."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.75
+            },
+            "justificativa": "A narração do Mestre é rica em detalhes sensoriais, como a areia quente sob os pés e a sede insuportável, o que ajuda a criar uma atmosfera imersiva. As opções oferecidas são claras e relevantes para o contexto, embora possam ser um pouco previsíveis. A aderência ao PDF é alta, pois o Mestre não inventou elementos novos ou contraditórios. No entanto, a resolução da ação do jogador poderia ser mais clara e direta, com mais ênfase no progresso da história."
+        },
+        {
+            "turno": 6,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.5,
+                "TIME_ORDER": 0.375
+            },
+            "justificativa": "A narração do Mestre apresenta uma boa descrição sensorial do ambiente desértico, com detalhes como o calor implacável, a areia quente e a sede, o que ajuda a criar uma atmosfera imersiva. No entanto, a história não avança significativamente em termos de enredo ou resolução da situação do jogador. As opções oferecidas são claras, mas a diversidade delas é limitada, pois todas se concentram em seguir as pegadas ou desviar delas. A aderência ao PDF original é questionável, pois não há menção direta a elementos específicos do gabarito, como o 'Scimitar Spires' ou a 'Desert Shrine'. A resolução cronológica é afetada pela falta de progresso claro na história."
+        },
+        {
+            "turno": 7,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.7
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, criando uma atmosfera de deserto hostil e desolado. A descrição da estrutura antiga e coberta de areia é particularmente eficaz em criar uma imagem mental forte. No entanto, as opções oferecidas ao jogador são um pouco limitadas e não exploram completamente as possibilidades da cena. A opção de voltar para as pegadas parece um pouco fora de contexto, considerando a proximidade da estrutura. A resolução cronológica é razoável, mas poderia ser mais clara em termos de como as ações do jogador afetam o estado do jogo."
+        },
+        {
+            "turno": 8,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.7
+            },
+            "justificativa": "A narração do Mestre apresenta uma boa descrição sensorial, criando uma atmosfera imersiva do deserto e da estrutura antiga. No entanto, as opções oferecidas, embora claras, não apresentam uma diversidade extrema, o que afeta a nota de EVENT_CAUS_D. A relevância das opções é boa, pois estão alinhadas com a ação do jogador e o contexto. A clareza das opções é excelente, pois são concisas e fáceis de entender. A aderência ao PDF é alta, pois a narração não apresenta invenções significativas. A resolução cronológica é razoável, pois a ação do jogador é resolvida, mas a narração poderia avançar mais no progresso da história."
+        },
+        {
+            "turno": 9,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.7,
+                "TIME_ORDER": 0.55
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial, especialmente em relação ao calor e à sede, o que ajuda a imergir o jogador na cena. No entanto, as opções oferecidas, embora claras, não apresentam uma diversidade extremamente alta, pois duas delas envolvem a busca por água de maneira similar. A aderência ao contexto do PDF é razoável, mas poderia ser melhor se incorporasse elementos específicos do gabarito de forma mais explícita. A resolução cronológica é afetada pela falta de um desfecho claro para a ação do jogador, além de não apresentar uma mudança significativa no estado do jogo."
+        },
+        {
+            "turno": 10,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.7
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial, com detalhes sobre o calor, a areia e a poeira, o que ajuda a criar uma atmosfera imersiva. No entanto, as opções oferecidas não são muito diversificadas, pois todas elas estão relacionadas à busca por suprimentos ou água. Além disso, a narração não apresenta um desfecho claro para a ação do jogador, o que afeta a nota de TIME_ORDER. A aderência ao PDF é alta, pois a narração não apresenta invenções significativas ou desvios do contexto original."
+        }
+    ]
+}

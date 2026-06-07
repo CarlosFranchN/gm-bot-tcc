@@ -1,0 +1,142 @@
+[
+    {
+        "turno": 1,
+        "acao_solicitada": "Você está perdido no deserto de Anauroch, exausto, com pouca água e precisa decidir o que fazer.",
+        "resposta_mestre": {
+            "raciocinio_estado": "O jogador está em uma situação crítica, com pouco recurso e sob condições extremas. É preciso manter a tensão e a urgência, permitindo que o jogador tome decisões que podem levar a novos desafios ou soluções.",
+            "narracao": "O sol escaldante de Anauroch continua batendo implacavelmente sobre você, e a areia parece se estender infinitamente em todas as direções. Sua garganta está seca, e o calor começa a afetar sua visão, fazendo com que miragens apareçam no horizonte. Você sabe que o tempo é seu inimigo mais cruel. O que você fará?",
+            "opcoes": [
+                "Seguir em direção ao que parece ser uma coluna de fumaça ao longe.",
+                "Procurar por um abrigo para se proteger do sol e descansar um pouco.",
+                "Continuar em linha reta, na esperança de encontrar água ou algum sinal de vida."
+            ],
+            "contexto_usado": "Nenhum contexto (Baseline)"
+        }
+    },
+    {
+        "turno": 2,
+        "acao_solicitada": "Seguir em direção ao que parece ser uma coluna de fumaça ao longe.",
+        "resposta_mestre": {
+            "raciocinio_estado": "O jogador decidiu seguir a coluna de fumaça, o que pode ser um sinal de vida ou civilização. É uma decisão arriscada, pois o calor e a exaustão estão aumentando. Vou descrever a jornada e as dificuldades que ele enfrentará, e eventualmente revelar o que encontra.",
+            "narracao": "Você decide seguir em direção à coluna de fumaça, esperando que ela seja um sinal de vida ou, pelo menos, um lugar onde possa encontrar água. O calor é implacável, e a areia movediça parece sugar seus pés a cada passo. Seu corpo está exausto, e a água que resta em sua cantina está quase acabando. A miragem do horizonte parece zombar de você, mas você tenta manter a cabeça clara e focar na fumaça distante. Após horas de caminhada, o sol começa a se pôr, e a coluna de fumaça parece estar mais perto, mas ainda distante. Você percebe que a escuridão está se aproximando, e a temperatura começa a cair rapidamente. O que você fará?",
+            "opcoes": [
+                "Continuar em direção à coluna de fumaça, mesmo com a noite caindo.",
+                "Procurar um abrigo para passar a noite e retomar a jornada ao amanhecer.",
+                "Parar e tentar acender uma fogueira para sinalizar sua presença."
+            ],
+            "contexto_usado": "Nenhum contexto (Baseline)"
+        }
+    },
+    {
+        "turno": 3,
+        "acao_solicitada": "Parar e tentar acender uma fogueira para sinalizar sua presença.",
+        "resposta_mestre": {
+            "raciocinio_estado": "O jogador decidiu parar e tentar acender uma fogueira para sinalizar sua presença. Isso pode chamar a atenção de quem está produzindo a fumaça distante, mas também pode atrair outros perigos. Preciso avaliar a dificuldade de acender uma fogueira no deserto e as possíveis consequências.",
+            "narracao": "Você decide parar e procurar algum material para acender uma fogueira. A escuridão cai rapidamente, e o frio noturno começa a se fazer sentir. Com as mãos trêmulas de exaustão, você busca alguns pedaços de madeira seca e folhas ressecadas que o vento trouxe para o local. Após vários tentativas, você finalmente consegue produzir uma pequena chama. A fogueira começa a crepitar, lançando sombras dançantes ao redor. O calor da fogueira é um alívio temporário, mas você sabe que precisa manter a chama viva para que possa ser vista. O que você fará?",
+            "opcoes": [
+                "Manter a fogueira viva, adicionando mais material seco.",
+                "Procurar um abrigo mais seguro nas proximidades para passar a noite.",
+                "Desistir da fogueira e seguir em direção à coluna de fumaça, confiando na sorte."
+            ],
+            "contexto_usado": "Nenhum contexto (Baseline)"
+        }
+    },
+    {
+        "turno": 4,
+        "acao_solicitada": "Desistir da fogueira e seguir em direção à coluna de fumaça, confiando na sorte.",
+        "resposta_mestre": {
+            "raciocinio_estado": "Ocorreu um erro técnico: {'message': 'Provider returned error', 'code': 400}",
+            "narracao": "Houve um distúrbio na magia do mundo. A conexão com o Mestre foi interrompida temporariamente.",
+            "opcoes": [
+                "Tentar novamente a mesma ação",
+                "Esperar que a conexão volte",
+                "Fazer uma pausa"
+            ],
+            "contexto_usado": "Erro de API"
+        }
+    },
+    {
+        "turno": 5,
+        "acao_solicitada": "Tentar novamente a mesma ação",
+        "resposta_mestre": {
+            "raciocinio_estado": "Ocorreu um erro técnico: {'message': 'Provider returned error', 'code': 400}",
+            "narracao": "Houve um distúrbio na magia do mundo. A conexão com o Mestre foi interrompida temporariamente.",
+            "opcoes": [
+                "Tentar novamente a mesma ação",
+                "Esperar que a conexão volte",
+                "Fazer uma pausa"
+            ],
+            "contexto_usado": "Erro de API"
+        }
+    },
+    {
+        "turno": 6,
+        "acao_solicitada": "Tentar novamente a mesma ação",
+        "resposta_mestre": {
+            "raciocinio_estado": "O jogador decide se aproximar cautelosamente da estrutura, mantendo-se em alerta. Ele precisa ser cuidadoso para não ser notado, mas também observar os movimentos do contorno escuro perto da fogueira para entender melhor a situação.",
+            "narracao": "Você se move silenciosamente em direção à estrutura, tomando cuidado para não fazer barulho ou atrair atenção indesejada. A areia movediça sob seus pés faz um leve ranger, mas você consegue manter-se o mais discreto possível. À medida que se aproxima, você vê melhor o contorno escuro perto da fogueira. Parece ser uma figura humana, mas está envolta em um manto escuro, dificultando a identificação. A fogueira projeta sombras que dançam nas paredes desmoronadas, criando um ambiente sinistro. A figura parece estar envolvida em alguma atividade, mas você não consegue distinguir o que está fazendo. Você está agora a cerca de 10 metros de distância.",
+            "opcoes": [
+                "Aproximar-se ainda mais silenciosamente, tentando não ser notado.",
+                "Chamar a atenção da figura, gritando para ver se há alguém amigável.",
+                "Esconder-se e observar a figura por mais tempo, tentando entender suas intenções."
+            ],
+            "contexto_usado": "Nenhum contexto (Baseline)"
+        }
+    },
+    {
+        "turno": 7,
+        "acao_solicitada": "Aproximar-se ainda mais silenciosamente, tentando não ser notado.",
+        "resposta_mestre": {
+            "raciocinio_estado": "O jogador está se aproximando cautelosamente da estrutura, tentando não ser notado pela figura perto da fogueira. A tensão é alta, e a exaustão começa a pesar, mas a figura pode ser a chave para encontrar abrigo e água.",
+            "narracao": "Você se aproxima ainda mais silenciosamente, tomando cuidado para não fazer nenhum ruído que possa alertar a figura perto da fogueira. A areia movediça sob seus pés faz um leve ranger, mas você consegue manter-se o mais discreto possível. Agora, a cerca de 5 metros de distância, você consegue ver melhor a figura. Ela parece estar envolvida em algum tipo de ritual, mexendo em um pequeno objeto perto da fogueira. O contorno é difícil de identificar, mas você percebe que está usando um manto escuro e um capuz que cobre seu rosto. A fogueira projeta sombras sinistras em sua direção. Você está perto o suficiente para ouvir sussurros baixos, mas as palavras são ininteligíveis. O que você fará?",
+            "opcoes": [
+                "Aproximar-se ainda mais, tentando ouvir o que a figura está sussurrando.",
+                "Revelar-se, gritando para chamar a atenção da figura.",
+                "Esconder-se atrás de uma das paredes desmoronadas e observar por mais tempo, tentando entender as intenções da figura."
+            ],
+            "contexto_usado": "Nenhum contexto (Baseline)"
+        }
+    },
+    {
+        "turno": 8,
+        "acao_solicitada": "Aproximar-se ainda mais, tentando ouvir o que a figura está sussurrando.",
+        "resposta_mestre": {
+            "raciocinio_estado": "O jogador optou por se aproximar ainda mais da figura, tentando ouvir os sussurros. A tensão e o perigo são altos, pois a figura parece envolvida em um ritual. É necessário manter a cautela para não ser notado.",
+            "narracao": "Você se move com extrema cautela, aproximando-se ainda mais da figura. A areia movediça sob seus pés faz um leve ranger, mas você consegue manter-se discreto. Agora, a apenas alguns metros de distância, você consegue ouvir melhor os sussurros. As palavras são quase ininteligíveis, mas você percebe que a figura está murmurando uma espécie de encantamento ou oração. A voz é suave, mas carregada de uma energia mística. As sombras dançam ao redor da fogueira, criando um ambiente sobrenatural. Você está perto o suficiente para ver que a figura está segurando um pequeno amuleto em suas mãos, mexendo nele enquanto sussurra. O que você fará?",
+            "opcoes": [
+                "Aproximar-se ainda mais, tentando entender melhor as palavras do ritual.",
+                "Revelar-se, chamando a atenção da figura de forma amigável.",
+                "Esconder-se atrás de uma das paredes desmoronadas e observar por mais tempo, tentando entender as intenções da figura."
+            ],
+            "contexto_usado": "Nenhum contexto (Baseline)"
+        }
+    },
+    {
+        "turno": 9,
+        "acao_solicitada": "Aproximar-se ainda mais, tentando entender melhor as palavras do ritual.",
+        "resposta_mestre": {
+            "raciocinio_estado": "Ocorreu um erro técnico: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{\"code\":400,\"reason\":\"INVALID_REQUEST_BODY\",\"message\":\"model: qwen/qwen-2.5-72b-instruct does not support endpoint: completions\",\"metadata\":{}}', 'provider_name': 'Novita', 'is_byok': False}}, 'user_id': 'user_3C07UNiFAplsvXQMAEfNsrnhYNV'}",
+            "narracao": "Houve um distúrbio na magia do mundo. A conexão com o Mestre foi interrompida temporariamente.",
+            "opcoes": [
+                "Tentar novamente a mesma ação",
+                "Esperar que a conexão volte",
+                "Fazer uma pausa"
+            ],
+            "contexto_usado": "Erro de API"
+        }
+    },
+    {
+        "turno": 10,
+        "acao_solicitada": "Tentar novamente a mesma ação",
+        "resposta_mestre": {
+            "raciocinio_estado": "O jogador está determinado a entender o ritual em andamento. Aproximar-se ainda mais pode oferecer mais detalhes, mas aumenta o risco de ser notado. A figura está claramente envolvida em algo importante e poderoso, e a cautela é essencial.",
+            "narracao": "Você se move ainda mais silenciosamente, quase tocando a areia com apenas a ponta dos pés. A fogueira projeta sombras dançantes, e o cheiro de madeira queimada preenche o ar. Agora, você consegue ouvir claramente as palavras murmuradas pela figura: 'escuridão', 'força' e 'proteção'. O amuleto em suas mãos brilha fracamente, e a energia mística no ar é quase palpável. Você está tão perto que quase consegue ver detalhes do rosto oculto sob o capuz. O suor escorre pela sua testa, e o calor do deserto começa a se fazer sentir. A exaustão de sua longa jornada também está pesando, mas a curiosidade e a necessidade de entender o que está acontecendo te mantêm determinado.",
+            "opcoes": [
+                "Aproximar-se ainda mais e tentar tocar o amuleto para entender seu propósito.",
+                "Revelar-se, chamando a atenção da figura de forma amigável e perguntando o que está acontecendo.",
+                "Esconder-se atrás de uma das paredes desmoronadas e observar por mais tempo, tentando entender as intenções da figura."
+            ],
+            "contexto_usado": "Nenhum contexto (Baseline)"
+        }
+    }
+]

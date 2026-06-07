@@ -1,0 +1,113 @@
+{
+    "modelo_avaliado": "qwen_qwen-2.5-72b-instruct_rag_rep1",
+    "juiz_utilizado": "llama",
+    "modo_teste": "RAG Ligado",
+    "medias": {
+        "STYLE_REV": 0.732,
+        "EVENT_CAUS": 0.73,
+        "ADHERENCE": 0.765,
+        "TIME_ORDER": 0.625
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.858,
+                "ADHERENCE": 0.975,
+                "TIME_ORDER": 0.775
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, criando uma atmosfera de desespero e urgência. As opções oferecidas são claras e relevantes para o contexto, permitindo que o jogador tome decisões significativas. A aderência ao PDF é alta, com a menção às Scimitar Spires e ao Deserto de Anauroch. No entanto, a resolução cronológica poderia ser mais clara, pois não está explicitado o que acontecerá em seguida, independentemente da escolha do jogador."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.775
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, criando uma atmosfera de desafio e urgência. A descrição do calor, da sede e da exaustão é visceral e eficaz. As opções oferecidas são claras e relevantes para o contexto, embora possam ser um pouco limitadas em termos de diversidade. A aderência ao PDF é alta, pois o Mestre segue a trama e o cenário estabelecidos. A resolução cronológica é boa, pois o Mestre resolve a ação do jogador e apresenta as consequências de suas escolhas."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.775
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, criando uma atmosfera de desafio e sobrevivência no deserto. A descrição do sol, areia e sede é visceral e eficaz. As opções oferecidas são claras e relevantes para o contexto, embora possam ser um pouco previsíveis. A aderência ao PDF é alta, pois o Mestre manteve a essência da aventura e do ambiente. A resolução cronológica é boa, pois o jogador pode ver o progresso de sua jornada e as consequências de suas ações."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.858,
+                "ADHERENCE": 0.975,
+                "TIME_ORDER": 0.775
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, com descrições detalhadas do ambiente e do estado físico do jogador. As opções oferecidas são claras e relevantes para o contexto, e a ação do jogador é resolvida de forma lógica. A aderência ao PDF é alta, com a descrição do santuário e da fonte seca correspondendo ao gabarito. A única falha é a falta de menção explícita ao símbolo 'Olho e Coroa' na fonte, o que poderia ter sido incluído para reforçar a aderência."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.775
+            },
+            "justificativa": "A narração do Mestre é rica em detalhes sensoriais, como a sombra fresca, o ar mais fresco e o som do próprio passo ecoando, o que ajuda a criar uma atmosfera imersiva. As opções oferecidas são claras e relevantes para o contexto, embora possam ser um pouco limitadas em termos de diversidade. A aderência ao PDF é alta, pois o Mestre manteve a essência do local e dos elementos descritos. No entanto, a resolução cronológica poderia ser mais clara, pois a ação do jogador não teve um desfecho claro em termos de encontrar água."
+        },
+        {
+            "turno": 6,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.7,
+                "TIME_ORDER": 0.55
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial, com detalhes sobre o aroma e a luz, criando uma atmosfera imersiva. As opções oferecidas são claras e relevantes para o contexto, mas a diversidade delas é limitada, pois todas se concentram em ações de exploração ou investigação. A aderência ao PDF é razoável, mas há alguns elementos que não estão explicitamente mencionados no gabarito, como o aroma antigo e esquecido. A resolução cronológica é adequada, pois a ação do jogador tem um desfecho claro, mas a narração poderia avançar mais em termos de progresso na história."
+        },
+        {
+            "turno": 7,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.75
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, com detalhes sensoriais que ajudam a criar uma imagem mental clara da cena. As opções oferecidas são claras e relevantes para o contexto, mas podem ser um pouco limitadas em termos de diversidade. A aderência ao PDF é alta, com o Mestre seguindo fielmente o gabarito. A resolução cronológica é boa, com a ação do jogador tendo um desfecho claro."
+        },
+        {
+            "turno": 8,
+            "metricas": {
+                "STYLE_REV": 0.125,
+                "EVENT_CAUS": 0.333,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração do Mestre não respondeu à ação do jogador, interrompendo a conexão sem justificativa clara no contexto do PDF. As opções oferecidas são muito semelhantes e não oferecem diversidade real para o jogador. A clareza das opções é a única aspecto positivo, mas não compensa as falhas nas outras áreas."
+        },
+        {
+            "turno": 9,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 0.375
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial, mas as opções oferecidas não estão diretamente relacionadas ao contexto do PDF. A ação do jogador não teve um desfecho claro, e o Mestre não resolveu a intenção do jogador de forma satisfatória."
+        },
+        {
+            "turno": 10,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.7
+            },
+            "justificativa": "A narração oferece uma boa imersão, com detalhes sensoriais que ajudam a criar uma atmosfera. As opções são claras e relevantes para o contexto, mas poderiam ser mais diversificadas em termos de abordagem. A aderência ao lore é boa, mantendo a coerência com o cenário original. No entanto, a resolução da ação do jogador poderia ser mais direta e eficaz em termos de progresso na história."
+        }
+    ]
+}

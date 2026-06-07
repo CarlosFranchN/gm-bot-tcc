@@ -1,0 +1,113 @@
+{
+    "modelo_avaliado": "qwen_qwen-2.5-72b-instruct_rag_rep1",
+    "juiz_utilizado": "llama",
+    "modo_teste": "RAG Ligado",
+    "medias": {
+        "STYLE_REV": 0.53,
+        "EVENT_CAUS": 0.552,
+        "ADHERENCE": 0.365,
+        "TIME_ORDER": 0.225
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.842,
+                "ADHERENCE": 0.975,
+                "TIME_ORDER": 0.775
+            },
+            "justificativa": "A narração do Mestre é visceral e eficaz em transmitir a sensação de desespero e urgência, com uma boa descrição do ambiente e do estado do jogador. As opções oferecidas são claras e relevantes para o contexto, mas poderiam ser mais diversificadas em termos de estratégia e risco. A aderência ao PDF é alta, pois o Mestre manteve a essência da cena e do desafio. A resolução cronológica é boa, pois o Mestre apresentou as opções e aguarda a decisão do jogador."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.7
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, criando uma atmosfera de deserto hostil e implacável. A descrição do sol escaldante, da areia movediça e do suor escorrendo pelo rosto do jogador são detalhes que ajudam a criar uma imagem mental forte. No entanto, as opções oferecidas não são muito diversificadas, pois todas elas se concentram em continuar a caminhar ou descansar, sem oferecer uma solução mais criativa para o problema do jogador. Além disso, a narração não avança significativamente a história, pois o jogador continua em uma situação de sobrevivência sem um objetivo claro. A aderência ao PDF é alta, pois a narração segue o contexto do deserto e da sobrevivência."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.125,
+                "EVENT_CAUS": 0.25,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração do Mestre não respondeu à ação do jogador de forma significativa, interrompendo a conexão sem justificativa clara no contexto do PDF. As opções oferecidas são muito similares e não promovem diversidade ou relevância para o progresso da história."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando uma atmosfera desértica convincente. No entanto, a ação do jogador não teve desfecho claro, e as opções oferecidas não estão diretamente relacionadas ao contexto do PDF. Além disso, a narração inventou elementos que não estão presentes no gabarito, como a areia incandescente e a brisa desértica, o que penaliza a aderência ao Lore."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.842,
+                "ADHERENCE": 0.975,
+                "TIME_ORDER": 0.775
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, com detalhes sensoriais que transportam o jogador para o cenário do deserto. A opção de investigar a estrutura é clara e relevante para o contexto. No entanto, as opções de continuar caminhando ou parar para descansar parecem um pouco menos atraentes em comparação com a descoberta da estrutura, o que reduz um pouco a diversidade. A aderência ao PDF é alta, pois o Mestre manteve o tom e o cenário descritos no gabarito. A resolução cronológica é boa, pois o jogador pode avançar com a ação, mas poderia ser mais clara em termos de consequências imediatas."
+        },
+        {
+            "turno": 6,
+            "metricas": {
+                "STYLE_REV": 0.125,
+                "EVENT_CAUS": 0.25,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração não apresentou nenhuma descrição sensorial ou imersiva, apenas uma mensagem genérica sobre um distúrbio na magia do mundo. As opções oferecidas são muito semelhantes e não apresentam diversidade. A conexão com o contexto original do PDF foi perdida, não apresentando nenhuma relação com o erro de API. A resolução da ação do jogador não foi clara, apenas apresentando uma mensagem de erro."
+        },
+        {
+            "turno": 7,
+            "metricas": {
+                "STYLE_REV": 0.25,
+                "EVENT_CAUS": 0.333,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração é breve e não traz elementos sensoriais fortes, resultando em uma nota baixa para STYLE_REV. As opções oferecidas são limitadas e não apresentam diversidade significativa, o que afeta a nota de EVENT_CAUS_D. A relevância das opções é mediana, pois elas não ignoram completamente o contexto, mas também não oferecem soluções criativas. A clareza das opções é razoável, mas poderia ser melhor. A aderência ao PDF é baixa porque a narração introduz um elemento (distúrbio na magia do mundo) que não está presente no contexto original. A resolução cronológica é prejudicada porque a ação do jogador não tem um desfecho claro, resultando em uma nota baixa para TIME_ORDER."
+        },
+        {
+            "turno": 8,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando uma atmosfera desértica convincente. No entanto, a ação do jogador não teve desfecho claro, e as opções oferecidas não estão diretamente relacionadas ao contexto do PDF. Além disso, a narração inventou elementos não presentes no gabarito, como a areia incandescente e a brisa desértica, o que penaliza a aderência."
+        },
+        {
+            "turno": 9,
+            "metricas": {
+                "STYLE_REV": 0.0,
+                "EVENT_CAUS": 0.0,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração não respondeu à ação do jogador, interrompendo a conexão sem justificativa clara no contexto do PDF. As opções oferecidas são limitadas e não avançam a história de forma significativa."
+        },
+        {
+            "turno": 10,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração é rica e imersiva, criando uma atmosfera desértica convincente. No entanto, a ação do jogador não teve desfecho claro, e as opções oferecidas não estão diretamente relacionadas ao contexto do PDF. Além disso, a narração inventou elementos não presentes no gabarito, como a areia incandescente e a brisa desértica, o que penaliza a aderência ao lore."
+        }
+    ]
+}

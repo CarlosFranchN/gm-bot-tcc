@@ -53,6 +53,7 @@ class TribunalOrchestrator:
         # O Fim do "Juiz Cego": Injetando a verdade absoluta se for Baseline
         if modo_teste == "Baseline (Sem RAG)":
             contexto_para_o_juiz = self.gabaritos.get(id_cenario, "Gabarito não encontrado.")
+            # print(contexto_para_o_juiz)
         else:
             contexto_para_o_juiz = resp.get('contexto_usado', 'Nenhum')
 

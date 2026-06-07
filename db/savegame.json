@@ -1,21 +1,45 @@
 {
-    "resumo_geral": "**Resumo Executivo:**\n\nOs aventureiros continuam avançando em direção à elevação no deserto de Anauroch, mantendo um ritmo firme apesar da crescente exaustão e desidratação. O sol implacável e a areia escorregadia tornam cada passo um desafio, mas a elevação está cada vez mais próxima, revelando detalhes da grande rocha projetando-se do topo. A esperança de encontrar abrigo ou água mantém a determinação do grupo, mesmo com a garganta seca e a cabeça latejando. Eles agora precisam decidir se continuam seguindo em direção à elevação, mantendo o ritmo firme, aceleram o passo para chegar mais rápido, ou fazem outra breve parada para tentar se hidratar com a pouca água que sobrou.\n\n**Local:** Deserto de Anauroch.\n**Itens:** Pouca água.\n**NPCs:** Nenhum encontrado.",
+    "resumo_geral": "O grupo, exausto e com água quase acabada, se aproxima cautelosamente de uma antiga construção parcialmente enterrada no deserto de Anauroch. As paredes de pedra desmoronadas criam um cenário assustador, e uma fogueira ainda queima no centro do pátio. O vento sopra areia, dificultando a visão, e um leve sussurro ecoa da estrutura. O coração dos aventureiros bate mais forte ao avistar um contorno escuro se movendo perto da fogueira. O grupo está no meio do deserto, sem itens coletados ou perdidos, e nenhum NPC encontrado ou derrotado. Agora, eles enfrentam a decisão de aproximar-se ainda mais silenciosamente, chamar a atenção do contorno, ou esconder-se e observar por mais tempo.",
     "historico_recente": [
         {
             "role": "user",
-            "content": "Continuar seguindo em direção à elevação, mantendo o ritmo firme."
+            "content": "Tentar novamente a mesma ação"
         },
         {
             "role": "assistant",
-            "content": "Você continua a avançar, cada passo mais difícil que o anterior. A areia escorregadia e o calor implacável do sol tornam cada movimento uma luta. A elevação à sua frente, no entanto, está cada vez mais perto, e a silhueta da rocha projetando-se do topo começa a ganhar detalhes. A esperança de encontrar algum abrigo ou água cresce dentro de você, mas a desidratação é quase insuportável. Sua garganta está seca, e cada respiração parece sugar o último resto de umidade do seu corpo. A cabeça lateja, e a exaustão começa a afetar seus movimentos. No entanto, a promessa de um refúgio mantém você em movimento. Finalmente, você alcança a base da elevação e começa a subir. A areia escorregadia torna o caminho mais difícil, mas a rocha no topo oferece uma visão promissora.\nOpções: Continuar subindo em direção à rocha no topo., Fazer uma breve parada para tentar se recuperar antes de subir., Procurar por quaisquer sinais de água ou vegetação na base da elevação."
+            "content": "Você se move silenciosamente em direção à estrutura, tomando cuidado para não fazer barulho ou atrair atenção indesejada. A areia movediça sob seus pés faz um leve ranger, mas você consegue manter-se o mais discreto possível. À medida que se aproxima, você vê melhor o contorno escuro perto da fogueira. Parece ser uma figura humana, mas está envolta em um manto escuro, dificultando a identificação. A fogueira projeta sombras que dançam nas paredes desmoronadas, criando um ambiente sinistro. A figura parece estar envolvida em alguma atividade, mas você não consegue distinguir o que está fazendo. Você está agora a cerca de 10 metros de distância.\nOpções: Aproximar-se ainda mais silenciosamente, tentando não ser notado., Chamar a atenção da figura, gritando para ver se há alguém amigável., Esconder-se e observar a figura por mais tempo, tentando entender suas intenções."
         },
         {
             "role": "user",
-            "content": "Fazer uma breve parada para tentar se recuperar antes de subir."
+            "content": "Aproximar-se ainda mais silenciosamente, tentando não ser notado."
         },
         {
             "role": "assistant",
-            "content": "Você decide fazer uma breve parada para tentar se recuperar antes de continuar a subida. A areia escorregadia e o calor implacável do sol tornam cada momento de inatividade um desafio, mas você sabe que precisa recuperar um pouco de força. Você se senta na base da elevação, tentando encontrar um lugar onde a areia não escorrega tanto. A cabeça ainda lateja, e a respiração é pesada, mas você tenta aproveitar ao máximo este momento de descanso. A água que sobrou no seu cantil é suficiente apenas para um gole, mas você sabe que precisa economizá-la. Após alguns momentos, você se sente um pouco mais forte, mas a desidratação e o calor continuam sendo uma ameaça constante. É hora de continuar.\nOpções: Continuar subindo em direção à rocha no topo., Procurar por quaisquer sinais de água ou vegetação na base da elevação., Fazer mais um breve descanso, tentando encontrar uma rocha ou pedra onde possa se proteger do sol."
+            "content": "Você se aproxima ainda mais silenciosamente, tomando cuidado para não fazer nenhum ruído que possa alertar a figura perto da fogueira. A areia movediça sob seus pés faz um leve ranger, mas você consegue manter-se o mais discreto possível. Agora, a cerca de 5 metros de distância, você consegue ver melhor a figura. Ela parece estar envolvida em algum tipo de ritual, mexendo em um pequeno objeto perto da fogueira. O contorno é difícil de identificar, mas você percebe que está usando um manto escuro e um capuz que cobre seu rosto. A fogueira projeta sombras sinistras em sua direção. Você está perto o suficiente para ouvir sussurros baixos, mas as palavras são ininteligíveis. O que você fará?\nOpções: Aproximar-se ainda mais, tentando ouvir o que a figura está sussurrando., Revelar-se, gritando para chamar a atenção da figura., Esconder-se atrás de uma das paredes desmoronadas e observar por mais tempo, tentando entender as intenções da figura."
+        },
+        {
+            "role": "user",
+            "content": "Aproximar-se ainda mais, tentando ouvir o que a figura está sussurrando."
+        },
+        {
+            "role": "assistant",
+            "content": "Você se move com extrema cautela, aproximando-se ainda mais da figura. A areia movediça sob seus pés faz um leve ranger, mas você consegue manter-se discreto. Agora, a apenas alguns metros de distância, você consegue ouvir melhor os sussurros. As palavras são quase ininteligíveis, mas você percebe que a figura está murmurando uma espécie de encantamento ou oração. A voz é suave, mas carregada de uma energia mística. As sombras dançam ao redor da fogueira, criando um ambiente sobrenatural. Você está perto o suficiente para ver que a figura está segurando um pequeno amuleto em suas mãos, mexendo nele enquanto sussurra. O que você fará?\nOpções: Aproximar-se ainda mais, tentando entender melhor as palavras do ritual., Revelar-se, chamando a atenção da figura de forma amigável., Esconder-se atrás de uma das paredes desmoronadas e observar por mais tempo, tentando entender as intenções da figura."
+        },
+        {
+            "role": "user",
+            "content": "Aproximar-se ainda mais, tentando entender melhor as palavras do ritual."
+        },
+        {
+            "role": "assistant",
+            "content": "Você se aproxima ainda mais, seus movimentos agora quase imperceptíveis. A fogueira projeta sombras dançantes, e o cheiro de madeira queimada preenche o ar. A figura continua murmurando, e você consegue distinguir algumas palavras: 'escuridão', 'força' e 'proteção'. O amuleto em suas mãos brilha fracamente, e a energia mística no ar é quase palpável. Você está a apenas dois metros de distância, perto o suficiente para ver detalhes do rosto oculto sob o capuz. O que você fará?\nOpções: Aproximar-se ainda mais e tentar tocar o amuleto para entender seu propósito., Revelar-se, chamando a atenção da figura de forma amigável e perguntando o que está acontecendo., Esconder-se atrás de uma das paredes desmoronadas e observar por mais tempo, tentando entender as intenções da figura."
+        },
+        {
+            "role": "user",
+            "content": "Tentar novamente a mesma ação"
+        },
+        {
+            "role": "assistant",
+            "content": "Você se move ainda mais silenciosamente, quase tocando a areia com apenas a ponta dos pés. A fogueira projeta sombras dançantes, e o cheiro de madeira queimada preenche o ar. Agora, você consegue ouvir claramente as palavras murmuradas pela figura: 'escuridão', 'força' e 'proteção'. O amuleto em suas mãos brilha fracamente, e a energia mística no ar é quase palpável. Você está tão perto que quase consegue ver detalhes do rosto oculto sob o capuz. O suor escorre pela sua testa, e o calor do deserto começa a se fazer sentir. A exaustão de sua longa jornada também está pesando, mas a curiosidade e a necessidade de entender o que está acontecendo te mantêm determinado.\nOpções: Aproximar-se ainda mais e tentar tocar o amuleto para entender seu propósito., Revelar-se, chamando a atenção da figura de forma amigável e perguntando o que está acontecendo., Esconder-se atrás de uma das paredes desmoronadas e observar por mais tempo, tentando entender as intenções da figura."
         }
     ]
 }

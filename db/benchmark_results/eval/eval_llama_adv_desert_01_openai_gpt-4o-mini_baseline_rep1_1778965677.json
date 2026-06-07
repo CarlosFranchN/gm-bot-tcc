@@ -1,0 +1,113 @@
+{
+    "modelo_avaliado": "openai_gpt-4o-mini_baseline_rep1",
+    "juiz_utilizado": "llama",
+    "modo_teste": "Baseline (Sem RAG)",
+    "medias": {
+        "STYLE_REV": 0.8,
+        "EVENT_CAUS": 0.788,
+        "ADHERENCE": 0.275,
+        "TIME_ORDER": 0.61
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.842,
+                "ADHERENCE": 0.275,
+                "TIME_ORDER": 0.625
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, criando uma atmosfera de deserto árido e perigo iminente. As opções oferecidas são claras e relevantes para o contexto, mas a descrição da estrutura no horizonte foge do conceito estabelecido de uma pequena estrutura quadrada de pedra com fonte seca, o que penaliza a aderência ao lore. A resolução da ação do jogador é razoável, mas poderia ser mais clara e direta."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 0.5
+            },
+            "justificativa": "A narração é rica e imersiva, com descrições detalhadas do ambiente e do estado do jogador. No entanto, a descrição da estrutura não coincide com o gabarito, que descreve uma estrutura pequena e quadrada, e não os restos de um antigo templo ou fortaleza. Além disso, as opções oferecidas são claras e relevantes, mas a diversidade delas é limitada. A resolução da ação do jogador é razoável, mas o estado do jogo não muda significativamente."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.842,
+                "ADHERENCE": 0.975,
+                "TIME_ORDER": 0.775
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, com uma boa descrição do ambiente e do estado do jogador. As opções oferecidas são claras e relevantes para a situação, mas poderiam ser mais diversificadas. A aderência ao lore é boa, com apenas alguns detalhes que não contradizem o contexto original. A resolução cronológica é adequada, com o jogador tendo que decidir rapidamente o que fazer a seguir."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.775,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 0.75
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial, especialmente em relação ao calor e ao alívio proporcionado pela sombra da estrutura. As opções oferecidas são claras e relevantes para o contexto. No entanto, a descrição do local como um 'templo desmoronado' com 'inscrições desgastadas' e 'colunas' não está de acordo com o gabarito, que descreve a estrutura como 'pequena' e 'de um único andar', sem mencionar detalhes arquitetônicos como colunas. Além disso, a menção a 'aberturas que levam mais profundamente para o interior do templo' sugere uma complexidade não presente no gabarito. A aderência ao lore é, portanto, baixa."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.775,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 0.625
+            },
+            "justificativa": "A narração apresenta uma boa descrição do ambiente, criando uma atmosfera imersiva. No entanto, a aderência ao lore é baixa devido à menção de inscrições antigas e uma caixa de madeira, que não estão presentes no gabarito. As opções oferecidas são claras e relevantes, mas a diversidade poderia ser melhorada. A resolução cronológica é razoável, pois o jogador avança em sua exploração, mas a falta de detalhes sobre o que foi encontrado no templo até o momento é notável."
+        },
+        {
+            "turno": 6,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 0.5
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial e imersiva, especialmente ao descrever as inscrições e a sensação de reverência. No entanto, a falta de aderência ao lore estabelecido é notável, pois não há menção à fonte seca ou ao símbolo de 'Olho e Coroa', elementos cruciais do contexto original. As opções oferecidas são claras, mas a diversidade delas é questionável, pois todas parecem seguir uma linha de investigação ou exploração sem oferecer uma abordagem significativamente diferente. A resolução cronológica é razoável, pois o jogador pode avançar com sua ação, mas a falta de progresso claro em relação à sobrevivência no deserto ou ao propósito do templo é um ponto negativo."
+        },
+        {
+            "turno": 7,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.775,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.25
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial, especialmente ao detalhar a textura da madeira e o som da caixa rangendo. As opções oferecidas são claras e relevantes para o contexto imediato. No entanto, a falta de aderência ao lore é crítica, pois a cena não ocorre na Área 3 (The Desert Shrine) como especificado, mas sim em um local não descrito com uma caixa de madeira, o que é uma invenção não presente no gabarito. Além disso, a resolução da ação do jogador não avança significativamente no progresso da história, apenas introduzindo itens que, embora úteis, não resolvem o problema imediato de encontrar água de forma satisfatória."
+        },
+        {
+            "turno": 8,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.842,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.75
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes sensoriais que transportam o jogador para o ambiente do templo. As opções oferecidas são claras e relevantes para o contexto imediato. No entanto, a descrição do templo foge completamente do conceito estabelecido no gabarito, introduzindo elementos como corredores entrelaçados, câmaras laterais, relevos nas paredes e uma fonte de água estagnada, o que constitui uma alucinação crítica. A resolução da ação do jogador é clara, com o jogador encontrando um local para descansar, mas a falta de aderência ao lore estabelecido é severa."
+        },
+        {
+            "turno": 9,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.775,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 0.625
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial, com detalhes sobre a luz e as sombras, criando uma atmosfera imersiva. As opções oferecidas são claras e relevantes para o contexto. No entanto, a aderência ao lore é comprometida pela menção a uma câmara e um altar rústico, que não estão presentes no gabarito. Além disso, a menção a uma 'divindade esquecida' e 'rituais de adoração' também não está presente no gabarito, o que diminui a nota de aderência. A resolução cronológica é razoável, pois o jogador pode avançar na exploração do templo, mas a falta de clareza sobre o que foi encontrado anteriormente (madeira) e a menção a uma 'fonte de água estagnada' que não está claramente relacionada ao contexto atual diminui a nota de tempo e ordem."
+        },
+        {
+            "turno": 10,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.25,
+                "TIME_ORDER": 0.7
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial, especialmente ao descrever a caixa de cerâmica e o conteúdo do frasco. No entanto, a falta de aderência ao contexto original do PDF é notável, pois não há menção à Área 3 (The Desert Shrine) ou à fonte seca com o símbolo de 'Olho e Coroa', introduzindo elementos não presentes no gabarito, como a caixa de cerâmica e o altar. As opções oferecidas são claras, mas a diversidade delas poderia ser melhor explorada para oferecer mais variações de ação ao jogador. A resolução cronológica é razoável, pois o jogador avança em sua investigação, mas a pressão do tempo e a urgência da situação poderiam ser mais enfatizadas."
+        }
+    ]
+}

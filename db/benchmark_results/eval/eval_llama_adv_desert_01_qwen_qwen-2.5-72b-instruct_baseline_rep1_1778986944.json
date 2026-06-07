@@ -1,0 +1,113 @@
+{
+    "modelo_avaliado": "qwen_qwen-2.5-72b-instruct_baseline_rep1",
+    "juiz_utilizado": "llama",
+    "modo_teste": "Baseline (Sem RAG)",
+    "medias": {
+        "STYLE_REV": 0.585,
+        "EVENT_CAUS": 0.563,
+        "ADHERENCE": 0.0,
+        "TIME_ORDER": 0.22
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.25
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, criando uma atmosfera de deserto hostil. No entanto, a falta de aderência ao lore estabelecido é crítica, pois não há menção à Área 3 ou ao Desert Shrine, que são elementos fundamentais do cenário. Além disso, as opções oferecidas não levam a um progresso claro na história, e a resolução da ação do jogador não é satisfatória."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.25
+            },
+            "justificativa": "A narração é rica e imersiva, com descrições detalhadas do ambiente e do estado do jogador. No entanto, a história não avança de acordo com o contexto do PDF, que especifica a Área 1 como um deserto sem oásis e a Área 3 como um pequeno prédio quadrado de pedra com uma fonte seca. A opção de seguir uma coluna de fumaça não está alinhada com o lore estabelecido. Além disso, a resolução da ação do jogador é limitada, e as opções oferecidas não levam a um desfecho claro."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.25
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes sensoriais que criam uma atmosfera convincente. No entanto, a ação do jogador não está de acordo com o contexto do PDF, que especifica que a área é um deserto sem oásis, e não há menção a madeira seca ou folhas ressecadas. Além disso, a opção de procurar um abrigo mais seguro não está clara, pois não há menção a estruturas ou locais que possam oferecer abrigo. A resolução da ação do jogador também não é clara, pois não há menção a como a fogueira afetará a situação do jogador."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.125,
+                "EVENT_CAUS": 0.0,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração não seguiu a ação do jogador, interrompendo a história de forma abrupta e sem resolução. As opções oferecidas não são relevantes para o contexto da aventura e não permitem ao jogador avançar de forma significativa. Além disso, a descrição não apresenta elementos que sejam coerentes com o contexto original do PDF."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.125,
+                "EVENT_CAUS": 0.333,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração não apresenta descrições sensoriais ou imersivas, e a ação do jogador não teve desfecho claro. Além disso, a história não avança e as opções oferecidas são muito limitadas e não levam a resultados diferentes. A conexão com o gabarito foi perdida, pois não há menção à Área 3 ou ao Deserto."
+        },
+        {
+            "turno": 6,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.25
+            },
+            "justificativa": "A narração é rica e imersiva, com descrições que criam um ambiente sinistro e tenso. No entanto, a aderência ao lore é baixa, pois a estrutura descrita não corresponde à descrição do gabarito, que menciona uma estrutura quadrada pequena de pedra com uma fonte seca e um símbolo de 'Olho e Coroa', e não uma fogueira ou uma figura humana. Além disso, a ordem temporal é afetada, pois a ação do jogador não teve um desfecho claro e a cena parece ter mudado de contexto."
+        },
+        {
+            "turno": 7,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.775,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.95
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes que criam uma atmosfera tensa e misteriosa. As opções oferecidas são claras e relevantes para o contexto. No entanto, a cena descrita não se encaixa no contexto do PDF, que especifica uma área desértica com uma estrutura quadrada pequena e uma fonte seca, sem menção a uma fogueira ou figura com manto escuro. A ação do jogador é resolvida de forma clara e cronologicamente coerente."
+        },
+        {
+            "turno": 8,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.775,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.25
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes sensoriais que criam uma atmosfera sobrenatural. No entanto, a cena descrita não se encaixa no contexto do PDF, que descreve uma área desértica com uma estrutura quadrada pequena e uma fonte seca, sem menção a uma fogueira ou figura sussurrando. As opções oferecidas são claras, mas a diversidade delas é limitada, pois todas envolvem aproximar-se ou observar a figura. Além disso, a resolução da ação do jogador não é clara, pois não há um desfecho definido para a aproximação ou observação."
+        },
+        {
+            "turno": 9,
+            "metricas": {
+                "STYLE_REV": 0.0,
+                "EVENT_CAUS": 0.0,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração do Mestre não respeitou o contexto do PDF, não descreveu a cena de forma imersiva, e as opções oferecidas não foram relevantes para a ação do jogador. Além disso, a interrupção da conexão com o Mestre foi uma desculpa para não resolver a ação do jogador, o que afetou negativamente a ordem temporal e o progresso da história."
+        },
+        {
+            "turno": 10,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.0
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes sensoriais que criam uma atmosfera tensa e misteriosa. No entanto, a cena descrita não se encaixa no contexto do PDF, que especifica uma área desértica com uma estrutura quadrada pequena e uma fonte seca, sem menção a uma fogueira, figura ou amuleto. Além disso, a ação do jogador não teve um desfecho claro, e as opções oferecidas não levam a uma resolução direta da situação."
+        }
+    ]
+}

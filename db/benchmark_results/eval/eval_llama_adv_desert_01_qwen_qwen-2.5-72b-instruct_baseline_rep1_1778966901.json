@@ -1,0 +1,113 @@
+{
+    "modelo_avaliado": "qwen_qwen-2.5-72b-instruct_baseline_rep1",
+    "juiz_utilizado": "llama",
+    "modo_teste": "Baseline (Sem RAG)",
+    "medias": {
+        "STYLE_REV": 0.74,
+        "EVENT_CAUS": 0.762,
+        "ADHERENCE": 0.095,
+        "TIME_ORDER": 0.593
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.55
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, criando uma atmosfera de desespero e urgência. As opções oferecidas são claras e relevantes para a situação, mas podem ser consideradas um pouco limitadas em termos de diversidade. A aderência ao contexto do PDF é alta, pois a descrição do deserto e da situação do jogador está de acordo com o gabarito. No entanto, a resolução cronológica é um pouco prejudicada pela falta de uma opção que permita ao jogador avançar de forma mais significativa na história."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.775,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.625
+            },
+            "justificativa": "A narração oferece uma descrição vívida do ambiente e do estado físico do jogador, mantendo o tom de sobrevivência. As opções são claras e relevantes para o contexto. No entanto, a descrição da elevação rochosa não se alinha com o gabarito, que especifica a Área 3 como uma estrutura quadrada pequena de pedra do deserto, e não menciona elevações rochosas. Além disso, a menção a 'pedra molhada' não está de acordo com o gabarito, que descreve a fonte como seca."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.842,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.75
+            },
+            "justificativa": "A narração é rica e imersiva, com descrições vívidas da exaustão e do alívio. As opções são claras e relevantes para o contexto. No entanto, a aderência ao lore é zero, pois a elevação rochosa e o riacho não estão presentes no gabarito original. Além disso, a introdução de um riacho e a possibilidade de beber água contradiz a descrição original do deserto como um local com 'calor letal' e sem oásis."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.858,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.75
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes sensoriais que criam uma imagem clara do ambiente. As opções oferecidas são claras e relevantes para o contexto. No entanto, a descrição da área não se alinha com o gabarito fornecido, introduzindo elementos não mencionados, como o riacho, musgos, plantas rasteiras, samambaias e ervas daninhas, o que constitui uma alucinação crítica."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.775,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.625
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes sensoriais que transportam o jogador para a caverna. As opções oferecidas são claras e relevantes para o contexto. No entanto, a descrição da caverna e do salão natural não se alinha com o gabarito fornecido, que descreve uma estrutura quadrada pequena de pedra no deserto com uma fonte seca e um símbolo de 'Olho e Coroa', indicando uma falha crítica de aderência ao lore estabelecido."
+        },
+        {
+            "turno": 6,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.775,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.625
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial, especialmente em relação à atmosfera e ao ajuste dos olhos à penumbra. As opções oferecidas são claras e relevantes para o contexto imediato. No entanto, a falta de aderência ao lore estabelecido é crítica, pois a descrição não se encaixa no contexto da Área 3 (The Desert Shrine) como definido no gabarito. A introdução de elementos como caverna, nichos, musgo e brisa sutil não está de acordo com o conceito de 'pequeno prédio quadrado de pedra com fonte seca'. Além disso, a resolução da ação do jogador é razoável, mas poderia ser mais direta e eficaz em termos de progresso na história."
+        },
+        {
+            "turno": 7,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.775,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.75
+            },
+            "justificativa": "A narração é rica e imersiva, com descrições que criam uma atmosfera misteriosa e opressiva. As opções oferecidas são claras e relevantes para o contexto. No entanto, a história não está de acordo com o contexto original do PDF, que descreve uma área desértica e um pequeno prédio quadrado de pedra, e não uma caverna. Isso é considerado alucinação crítica e penaliza a nota de ADHERENCE."
+        },
+        {
+            "turno": 8,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.775,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.75
+            },
+            "justificativa": "A narração é rica e imersiva, com descrições detalhadas da câmara subterrânea e da atmosfera opressiva. As opções oferecidas são claras e relevantes para o contexto. No entanto, a descrição da câmara subterrânea não se alinha com o contexto original do PDF, que descreve uma estrutura pequena e quadrada feita de pedra do deserto, com uma fonte seca e um símbolo de 'Olho e Coroa'. A narração do Mestre inventa elementos que não estão presentes no gabarito, como a fogueira, o baú de madeira antigo e as inscrições nas paredes, o que justifica a nota baixa em ADHERENCE."
+        },
+        {
+            "turno": 9,
+            "metricas": {
+                "STYLE_REV": 0.375,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.25
+            },
+            "justificativa": "A narração é clara e objetiva, mas falta um apelo sensorial mais forte. As opções oferecidas são relevantes e claras, mas a diversidade poderia ser maior. A maior falha é a completa desvinculação do contexto original do PDF, que especifica um cenário de deserto e uma estrutura quadrada pequena, o que não é mencionado na narração. Além disso, a resolução da ação do jogador é limitada e não avança significativamente a história."
+        },
+        {
+            "turno": 10,
+            "metricas": {
+                "STYLE_REV": 0.625,
+                "EVENT_CAUS": 0.542,
+                "ADHERENCE": 0.0,
+                "TIME_ORDER": 0.25
+            },
+            "justificativa": "A narração apresenta uma boa descrição sensorial, mas falha em manter a aderência ao contexto original do PDF, introduzindo elementos não mencionados, como a câmara subterrânea e as esculpuras antigas. As opções oferecidas são claras, mas a diversidade delas é limitada e não há uma opção que se destaque claramente como a mais relevante ou urgente. A resolução cronológica é afetada pela falta de clareza sobre o que aconteceu antes e como as ações do jogador afetam o estado do jogo."
+        }
+    ]
+}

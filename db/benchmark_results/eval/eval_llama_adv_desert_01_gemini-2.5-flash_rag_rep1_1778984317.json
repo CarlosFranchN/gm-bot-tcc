@@ -1,0 +1,113 @@
+{
+    "modelo_avaliado": "gemini-2.5-flash_rag_rep1",
+    "juiz_utilizado": "llama",
+    "modo_teste": "RAG Ligado",
+    "medias": {
+        "STYLE_REV": 0.807,
+        "EVENT_CAUS": 0.779,
+        "ADHERENCE": 0.935,
+        "TIME_ORDER": 0.77
+    },
+    "detalhes": [
+        {
+            "turno": 1,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.842,
+                "ADHERENCE": 0.975,
+                "TIME_ORDER": 0.775
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, capturando bem o clima do deserto de Anauroch. As opções oferecidas são relevantes para o contexto, mas poderiam ser mais diversificadas. A aderência ao PDF é alta, com o Mestre mantendo a essência da aventura. A resolução cronológica é boa, mas poderia ser mais clara em relação às consequências das ações do jogador."
+        },
+        {
+            "turno": 2,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.75
+            },
+            "justificativa": "A narração do Mestre é rica e imersiva, com descrições vívidas do ambiente desértico. A opção de seguir em direção à estrutura misteriosa é clara e relevante para o contexto. No entanto, as opções oferecidas poderiam ser mais diversificadas e criativas. A aderência ao PDF é alta, pois o Mestre segue fielmente o contexto e os elementos descritos no gabarito."
+        },
+        {
+            "turno": 3,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.842,
+                "ADHERENCE": 0.975,
+                "TIME_ORDER": 0.775
+            },
+            "justificativa": "A narração apresenta uma descrição vívida e imersiva do ambiente desértico, com detalhes sensoriais que transportam o jogador para a cena. As opções oferecidas são relevantes e claras, embora possam ser um pouco previsíveis. A aderência ao lore é excelente, com a inclusão do símbolo 'Olho e Coroa' e a descrição do santuário, que estão de acordo com o contexto do PDF. A resolução cronológica é boa, pois o jogador pode avançar na história e tomar decisões que afetam o progresso da aventura."
+        },
+        {
+            "turno": 4,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.775
+            },
+            "justificativa": "A narração do Mestre é rica em detalhes sensoriais, como a sensação de alívio ao entrar na sombra, o ar denso e abafado, e a descrição da câmara inferior. A inclusão do feixe de luz solar e do assobio do vento adiciona profundidade à cena. No entanto, as opções oferecidas, embora claras, não apresentam uma grande diversidade em termos de consequências imediatas. A aderência ao PDF é alta, pois o Mestre manteve a essência da descrição original. A resolução cronológica é boa, pois o jogador pode avançar na história com base nas opções escolhidas."
+        },
+        {
+            "turno": 5,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.775
+            },
+            "justificativa": "A narração é rica e imersiva, com descrições detalhadas que criam uma atmosfera de deserto árido e sede. A ação do jogador é resolvida de forma clara, com a abertura do cofre e a descoberta de seus conteúdos. As opções oferecidas são relevantes e claras, embora um pouco limitadas em termos de diversidade. A aderência ao lore é boa, com a menção ao cofre e ao pergaminho, que estão presentes no PDF. No entanto, a narração poderia ser mais precisa em relação ao contexto do PDF, com mais detalhes sobre a sala e o cofre."
+        },
+        {
+            "turno": 6,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.75
+            },
+            "justificativa": "A narração é rica e imersiva, com detalhes sensoriais que transportam o jogador para o ambiente. A ação do jogador é resolvida de forma clara, e as opções oferecidas são relevantes para o contexto. No entanto, a diversidade de opções poderia ser maior, e a resolução cronológica é boa, mas não excepcional. A aderência ao PDF é alta, com apenas pequenos detalhes inventados que não afetam a história."
+        },
+        {
+            "turno": 7,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.7
+            },
+            "justificativa": "A narração apresenta uma descrição vívida e imersiva do ambiente, com detalhes sensoriais que ajudam a criar uma atmosfera opressora. As opções oferecidas são relevantes para o contexto e permitem ao jogador avançar na história. No entanto, a diversidade de opções é limitada e as consequências de cada escolha não são claras. A aderência ao PDF é alta, pois a narração segue fielmente o contexto e os elementos descritos no gabarito."
+        },
+        {
+            "turno": 8,
+            "metricas": {
+                "STYLE_REV": 0.875,
+                "EVENT_CAUS": 0.833,
+                "ADHERENCE": 0.75,
+                "TIME_ORDER": 0.875
+            },
+            "justificativa": "A narração é rica e imersiva, criando uma atmosfera de tensão e medo. As opções oferecidas são relevantes e claras, e a resolução da ação do jogador é bem feita. No entanto, a aderência ao PDF é boa, mas não perfeita, pois alguns detalhes foram adicionados ou modificados."
+        },
+        {
+            "turno": 9,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.75,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.75
+            },
+            "justificativa": "A narração é rica e imersiva, com uma boa descrição da cena e do estado do jogador. As opções oferecidas são claras e relevantes para a situação, mas poderiam ser mais diversificadas. A aderência ao PDF é boa, com a menção à porta de mosaico e à mão rastejante. A resolução cronológica é adequada, com a ação do jogador sendo resolvida de forma clara."
+        },
+        {
+            "turno": 10,
+            "metricas": {
+                "STYLE_REV": 0.8,
+                "EVENT_CAUS": 0.775,
+                "ADHERENCE": 0.95,
+                "TIME_ORDER": 0.775
+            },
+            "justificativa": "A narração é rica e imersiva, com descrições vívidas da ação e do ambiente. As opções oferecidas são relevantes e claras, embora um pouco limitadas em termos de diversidade. A aderência ao PDF é alta, com a inclusão de elementos como a mão rastejante e a porta de mosaico. A resolução cronológica é boa, com a ação do jogador tendo um desfecho claro."
+        }
+    ]
+}
